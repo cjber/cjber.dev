@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: 'Software engineer @ thirdweb',
   keywords: ['developer', 'portfolio', 'full-stack', 'web development'],
   authors: [{ name: 'cjber' }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'cjber.dev | Portfolio',
     description: 'Software engineer @ thirdweb',
