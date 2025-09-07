@@ -16,7 +16,7 @@ export default {
         const timeout = setTimeout(() => controller.abort(), 3000) // 3 second timeout
         
         const response = await fetch(url, {
-          method: 'HEAD',
+          method: 'GET',
           signal: controller.signal,
           redirect: 'follow'
         })
