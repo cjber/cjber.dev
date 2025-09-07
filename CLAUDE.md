@@ -16,12 +16,18 @@
 
 ### Development Standards
 
-#### Quality Checks
-After making changes, always run:
+#### Pre-Commit Checklist
+ALWAYS run before committing:
 ```bash
-npx tsc --noEmit  # Type checking
+npm install       # Sync package-lock.json
+npx tsc --noEmit  # Type checking  
 npm run build     # Build verification
 ```
+
+This prevents:
+- Package-lock sync errors in CI/CD
+- TypeScript errors in production
+- Build failures on deployment
 
 #### Code Conventions
 - Use Tailwind CSS with the established color variables

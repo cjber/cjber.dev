@@ -5,16 +5,36 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
+  const [statuses, setStatuses] = useState<Record<string, boolean>>({})
+  const [statusLoading, setStatusLoading] = useState(true)
 
   useEffect(() => {
     setMounted(true)
+    
+    // Fetch service statuses
+    const fetchStatuses = async () => {
+      try {
+        const response = await fetch('https://status-checker.cjberragan.workers.dev')
+        const data = await response.json()
+        setStatuses(data)
+      } catch (error) {
+        console.error('Failed to fetch statuses:', error)
+      } finally {
+        setStatusLoading(false)
+      }
+    }
+    
+    fetchStatuses()
+    // Refresh every 60 seconds
+    const interval = setInterval(fetchStatuses, 60000)
+    return () => clearInterval(interval)
   }, [])
 
   const links = [
-    { name: 'Me', href: '/me', description: 'About me' },
-    { name: 'HA', href: 'https://ha.cjber.dev', description: 'Home Assistant' },
-    { name: 'NAS', href: 'https://plex.cjber.dev', description: 'Plex media server' },
-    { name: 'Req', href: 'https://req.cjber.dev', description: 'Overseerr requests' },
+    { name: 'Home', href: 'https://ha.cjber.dev', description: 'Smart home control', statusKey: 'home' },
+    { name: 'Storage', href: 'https://nas.cjber.dev', description: 'File management', statusKey: 'storage' },
+    { name: 'Plex', href: 'https://plex.cjber.dev', description: 'Media streaming', statusKey: 'plex' },
+    { name: 'Request', href: 'https://req.cjber.dev', description: 'Media requests', statusKey: 'request' },
   ]
 
   if (!mounted) return null
@@ -24,7 +44,12 @@ export default function Home() {
       <div className="max-w-2xl w-full">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-mono font-bold mb-4 text-primary">cjber.dev</h1>
-          <p className="text-muted-foreground font-mono">Software engineer @ <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">thirdweb</a></p>
+          <p className="text-muted-foreground font-mono">
+            <a href="/me" className="text-secondary hover:text-primary transition-colors">
+              Software engineer
+            </a>
+            {' '}@ <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">thirdweb</a>
+          </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -38,6 +63,13 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="relative">
+                {/* Status indicator */}
+                <div className="absolute -top-3 -right-3">
+                  <div className={`w-2 h-2 rounded-full ${
+                    statusLoading ? 'bg-muted animate-pulse' :
+                    statuses[link.statusKey] ? 'bg-emerald-600' : 'bg-destructive'
+                  }`} />
+                </div>
                 <h2 className="text-xl font-mono font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors">
                   {link.name}
                 </h2>
