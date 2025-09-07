@@ -1,69 +1,43 @@
 # cjber.dev Development Guide
 
-## Post-Change Testing Checklist
+## Design System
 
-After making any code changes, **ALWAYS** run these commands to ensure quality:
+### Visual Identity
+- **Font**: JetBrains Mono (monospace) - Used consistently across all interfaces
+- **Color Scheme**: Catppuccin Mocha theme
+  - Background: `#1e1e2e` (base)
+  - Foreground: `#cdd6f4` (text)
+  - Primary: `#89b4fa` (blue)
+  - Secondary: `#f38ba8` (red)
+  - Muted: `#585b70` (surface2)
+  - Border: `#313244` (surface0)
+- **Style**: Minimal, terminal-inspired aesthetic with subtle hover effects
+- **Layout**: Centered content with responsive grid layouts
 
-### 1. Type Checking
+### Development Standards
+
+#### Quality Checks
+After making changes, always run:
 ```bash
-npx tsc --noEmit
-```
-Ensures all TypeScript types are correct.
-
-### 2. Build Test
-```bash
-npm run build
-```
-Verifies the application builds successfully without errors.
-
-### 3. Development Server Test
-```bash
-npm run dev
-```
-Check that the site runs locally and test functionality:
-- Terminal commands work (help, whoami, about, links, clear, echo)
-- Enter key properly submits commands
-- Clear command clears history
-- Cursor follows text input
-- Colors display correctly
-
-### 4. Manual Testing Checklist
-- [ ] Last login timestamp displays correctly
-- [ ] Terminal output has proper line breaks
-- [ ] Commands respond when Enter is pressed
-- [ ] Cursor is visible and moves with text
-- [ ] No underline on input field
-- [ ] Click anywhere focuses terminal
-- [ ] Background is Catppuccin Mocha dark (#1E1D2D)
-- [ ] Text uses consistent font size (14px)
-
-## Project Structure
-
-- **Colors**: Catppuccin Mocha theme constants in `app/page.tsx`
-- **Font**: JetBrains Mono from Google Fonts
-- **Styling**: Inline styles for consistency with Tailwind v4
-- **Features**: Interactive terminal with working commands
-
-## Known Commands
-
-- `help` - Show available commands
-- `whoami` - Display username
-- `about` - Show about text
-- `links` - Display contact links
-- `clear` - Clear terminal history
-- `echo [text]` - Echo input text
-
-## Deployment
-
-Push to GitHub and deploy via Cloudflare Pages:
-```bash
-git add -A
-git commit -m "Update terminal interface"
-git push origin main
+npx tsc --noEmit  # Type checking
+npm run build     # Build verification
 ```
 
-## Notes
+#### Code Conventions
+- Use Tailwind CSS with the established color variables
+- Maintain consistent component patterns (see existing components)
+- Keep interactions subtle and functional
+- Preserve the monospace, technical aesthetic
 
-- Always use constants for colors and font sizes
-- Test all interactive features after changes
-- Ensure proper newline rendering in terminal output
+### Architecture
+- **Framework**: Next.js 14+ with App Router
+- **Styling**: Tailwind CSS v3
+- **Type Safety**: TypeScript strict mode
+- **Deployment**: Cloudflare Pages
+
+### Key Principles
+1. **Minimalism**: Clean, uncluttered interfaces
+2. **Consistency**: Unified design language across all pages
+3. **Performance**: Fast loading, optimized assets
+4. **Accessibility**: Semantic HTML, proper contrast ratios
+5. **Developer-Friendly**: Terminal aesthetic that appeals to technical users
