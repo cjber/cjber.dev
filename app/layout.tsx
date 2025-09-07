@@ -9,12 +9,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'cjber@dev:~$',
-  description: 'Full-stack developer',
+  description: 'Software engineer @ thirdweb',
   keywords: ['developer', 'portfolio', 'full-stack', 'web development'],
   authors: [{ name: 'cjber' }],
   openGraph: {
     title: 'cjber.dev | Portfolio',
-    description: 'Full-stack developer portfolio website',
+    description: 'Software engineer @ thirdweb',
     url: 'https://cjber.dev',
     siteName: 'cjber.dev',
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'cjber.dev | Portfolio',
-    description: 'Full-stack developer portfolio website',
+    description: 'Software engineer @ thirdweb',
     images: ['https://cjber.dev/og.png'],
   },
   robots: {

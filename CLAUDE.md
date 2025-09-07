@@ -3,15 +3,15 @@
 ## Design System
 
 ### Visual Identity
-- **Font**: JetBrains Mono (monospace) - Used consistently across all interfaces
-- **Color Scheme**: Catppuccin Mocha theme
-  - Background: `#1e1e2e` (base)
-  - Foreground: `#cdd6f4` (text)
-  - Primary: `#89b4fa` (blue)
-  - Secondary: `#f38ba8` (red)
-  - Muted: `#585b70` (surface2)
-  - Border: `#313244` (surface0)
-- **Style**: Minimal, terminal-inspired aesthetic with subtle hover effects
+- **Theme**: DarkMatter from [tweakcn](https://tweakcn.com/editor/theme?theme=darkmatter)
+- **Fonts**: 
+  - Sans: Geist Mono (monospace)
+  - Mono: JetBrains Mono
+- **Color Scheme**: Uses OKLCH color space with automatic dark/light mode support
+  - Defined in shadcn/ui theme system via CSS variables
+  - Primary colors: Orange/amber tones in dark mode
+  - Consistent use of CSS variables for all colors (no hardcoded values)
+- **Style**: Minimal, clean aesthetic with subtle shadows and transitions
 - **Layout**: Centered content with responsive grid layouts
 
 ### Development Standards

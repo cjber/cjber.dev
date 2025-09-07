@@ -1,62 +1,21 @@
 'use client'
 
-import { useState, useEffect, useRef, useLayoutEffect } from 'react'
-
-// Catppuccin Mocha colors
-const colors = {
-  bg: '#1E1D2D',
-  fg: '#CDD6F4',
-  muted: '#6C7086',
-  purple: '#CBA6F7',
-  blue: '#89B4FA',
-  yellow: '#F9E2AF',
-  green: '#A6E3A1',
-  cyan: '#94E2D5',
-  red: '#F38BA8',
-}
+import { useState, useEffect, useRef, ReactElement } from 'react'
+import { useRouter } from 'next/navigation'
 
 const fontSize = '16px'
 const lineHeight = '1.6'
 
 export default function Home() {
+  const router = useRouter()
   const [currentInput, setCurrentInput] = useState('')
-  const [history, setHistory] = useState<string[]>([])
+  const [history, setHistory] = useState<(ReactElement | null)[]>([])
   const [commandHistory, setCommandHistory] = useState<string[]>([])
   const [historyIndex, setHistoryIndex] = useState(-1)
   const [loginTime, setLoginTime] = useState('Loading...')
   const [cursorPosition, setCursorPosition] = useState(0)
-  const [currentTheme, setCurrentTheme] = useState('orange')
-  const [showMatrix, setShowMatrix] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
   const terminalRef = useRef<HTMLDivElement>(null)
-
-  const themes: { [key: string]: typeof colors } = {
-    orange: {
-      bg: 'oklch(0.1797 0.0043 308.1928)',      // Exact dark background from main theme
-      fg: 'oklch(0.8109 0 0)',                   // Exact foreground
-      muted: 'oklch(0.6268 0 0)',                // Exact muted
-      purple: 'oklch(0.7214 0.1337 49.9802)',    // Orange primary (for prompt)
-      blue: 'oklch(0.5940 0.0443 196.0233)',     // Secondary blue
-      yellow: 'oklch(0.7214 0.1337 49.9802)',    // Orange for commands
-      green: 'oklch(0.8721 0.0864 68.5474)',     // Chart-3 (yellow-green)
-      cyan: 'oklch(0.5940 0.0443 196.0233)',     // Using secondary as cyan
-      red: 'oklch(0.5940 0.0443 196.0233)',      // Using secondary for consistency
-    },
-    dark: colors,
-    light: {
-      bg: '#E8E6E1',
-      fg: '#2E3440',
-      muted: '#6C7086',
-      purple: '#8839EF',
-      blue: '#1E66F5',
-      yellow: '#DF8E1D',
-      green: '#40A02B',
-      cyan: '#04A5E5',
-      red: '#D20F39',
-    }
-  }
-
-  const theme = themes[currentTheme]
 
   useEffect(() => {
     // Update time every second
@@ -98,214 +57,119 @@ export default function Home() {
     setCursorPosition(currentInput.length)
   }, [currentInput])
 
-  // Auto-scroll to bottom when history changes
-  useLayoutEffect(() => {
-    if (terminalRef.current) {
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight
-    }
-  }, [history])
-
-  const initialOutput = [
-    `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">whoami</span>`,
-    `<span style="color: ${theme.green}">cjber</span>`,
-    '',
-    `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">cat</span> about.txt`,
-    'Software engineer at thirdweb.',
-    '',
-    `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">ls</span> <span style="color: ${theme.muted}">-la</span> links/`,
-    'total 12',
-    `drwxr-xr-x  2 cjber cjber 4096 Jan  1 00:00 <span style="color: ${theme.blue}">.</span>`,
-    `drwxr-xr-x 10 cjber cjber 4096 Jan  1 00:00 <span style="color: ${theme.blue}">..</span>`,
-    '-rw-r--r--  1 cjber cjber   42 Jan  1 00:00 github.txt',
-    '-rw-r--r--  1 cjber cjber   42 Jan  1 00:00 linkedin.txt',
-    '-rw-r--r--  1 cjber cjber   42 Jan  1 00:00 email.txt',
-    '',
-    `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">cat</span> links/*`,
-    `<a href="https://github.com/cjber" target="_blank" rel="noopener noreferrer" style="color: ${theme.blue}; text-decoration: underline; cursor: pointer">https://github.com/cjber</a>`,
-    `<a href="https://linkedin.com/in/cjberr" target="_blank" rel="noopener noreferrer" style="color: ${theme.blue}; text-decoration: underline; cursor: pointer">https://linkedin.com/in/cjberr</a>`,
-    `<a href="mailto:cjberragan@gmail.com" style="color: ${theme.cyan}; text-decoration: none; cursor: pointer">cjberragan@gmail.com</a>`,
-    '',
-  ]
-
-  // Function to generate calendar
-  const generateCalendar = (year?: number, month?: number): string[] => {
-    const now = new Date()
-    const calYear = year || now.getFullYear()
-    const calMonth = month !== undefined ? month : now.getMonth()
-    const today = now.getDate()
-    const currentMonth = now.getMonth()
-    const currentYear = now.getFullYear()
-    
-    const monthNames = [
-      'January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'
-    ]
-    
-    const firstDay = new Date(calYear, calMonth, 1).getDay()
-    const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate()
-    
-    const lines: string[] = []
-    
-    // Header
-    lines.push(`<span style="color: ${theme.cyan}">${monthNames[calMonth]} ${calYear}</span>`)
-    lines.push(`<span style="color: ${theme.muted}">Su Mo Tu We Th Fr Sa</span>`)
-    
-    // Days
-    let week = '  '.repeat(firstDay)
-    for (let day = 1; day <= daysInMonth; day++) {
-      const isToday = day === today && calMonth === currentMonth && calYear === currentYear
-      const dayStr = day.toString().padStart(2, ' ')
-      
-      if (isToday) {
-        week += `<span style="background-color: ${theme.purple}; color: ${theme.bg}">${dayStr}</span>`
-      } else {
-        week += dayStr
+  const commands: Record<string, () => string | ReactElement> = {
+    help: () => (
+      <div>
+        <div className="text-primary">Available commands:</div>
+        <div className="text-muted-foreground ml-4">help     - Show this help menu</div>
+        <div className="text-muted-foreground ml-4">whoami   - Display user information</div>
+        <div className="text-muted-foreground ml-4">links    - Show my links</div>
+        <div className="text-muted-foreground ml-4">clear    - Clear terminal</div>
+        <div className="text-muted-foreground ml-4">echo     - Print text</div>
+        <div className="text-muted-foreground ml-4">cd       - Navigate (cd .. returns home)</div>
+      </div>
+    ),
+    whoami: () => (
+      <div>
+        <div className="text-foreground">Cillian Berragan</div>
+        <div className="text-muted-foreground">Software engineer @ <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">thirdweb</a></div>
+      </div>
+    ),
+    links: () => (
+      <div>
+        <div className="text-foreground ml-4">
+          <a href="https://github.com/cjber" target="_blank" rel="noopener noreferrer" 
+             className="text-secondary hover:text-primary transition-colors">
+            GitHub
+          </a>
+        </div>
+        <div className="text-foreground ml-4">
+          <a href="https://linkedin.com/in/cjberr" target="_blank" rel="noopener noreferrer"
+             className="text-secondary hover:text-primary transition-colors">
+            LinkedIn
+          </a>
+        </div>
+        <div className="text-foreground ml-4">
+          <a href="mailto:cjberragan@gmail.com"
+             className="text-secondary hover:text-primary transition-colors">
+            Email
+          </a>
+        </div>
+      </div>
+    ),
+    clear: () => {
+      setHistory([])
+      return ''
+    },
+    echo: () => {
+      const text = currentInput.replace(/^echo\s+/, '')
+      return text || ''
+    },
+    cd: () => {
+      const args = currentInput.replace(/^cd\s*/, '').trim()
+      if (!args || args === '..' || args === '../' || args === '~' || args === '/') {
+        router.push('/')
+        return ''
       }
-      
-      if ((firstDay + day) % 7 === 0) {
-        lines.push(week)
-        week = ''
-      } else {
-        week += ' '
-      }
+      return `bash: cd: ${args}: No such file or directory`
     }
-    
-    if (week.trim()) {
-      lines.push(week)
-    }
-    
-    return lines
   }
 
-  const commands: { [key: string]: string[] } = {
-    help: [
-      'Available commands:',
-      `  <span style="color: ${theme.yellow}">help</span>     - Show this help message`,
-      `  <span style="color: ${theme.yellow}">whoami</span>   - Display username`,
-      `  <span style="color: ${theme.yellow}">about</span>    - About me`,
-      `  <span style="color: ${theme.yellow}">links</span>    - Show contact links`,
-      `  <span style="color: ${theme.yellow}">clear</span>    - Clear terminal`,
-      `  <span style="color: ${theme.yellow}">cal</span>      - Display calendar`,
-      `  <span style="color: ${theme.yellow}">neofetch</span> - System information`,
-      `  <span style="color: ${theme.yellow}">pfetch</span>   - System information (minimal)`,
-      `  <span style="color: ${theme.yellow}">theme</span>    - Change color theme`,
-      `  <span style="color: ${theme.yellow}">matrix</span>   - Enter the Matrix`,
-    ],
-    whoami: [`<span style="color: ${theme.green}">cjber</span>`],
-    about: ['Software engineer at thirdweb.'],
-    links: [
-      `<a href="https://github.com/cjber" target="_blank" rel="noopener noreferrer" style="color: ${theme.blue}; text-decoration: underline; cursor: pointer">https://github.com/cjber</a>`,
-      `<a href="https://linkedin.com/in/cjberr" target="_blank" rel="noopener noreferrer" style="color: ${theme.blue}; text-decoration: underline; cursor: pointer">https://linkedin.com/in/cjberr</a>`,
-      `<a href="mailto:cjberragan@gmail.com" style="color: ${theme.cyan}; text-decoration: none; cursor: pointer">cjberragan@gmail.com</a>`,
-    ],
-    cal: generateCalendar(),
-    clear: ['CLEAR'],
-    neofetch: [
-      `<pre style="color: ${theme.cyan}; line-height: 1.2">       /\\
-      /  \\
-     /\\   \\
-<span style="color: ${theme.blue}">    /      \\
-   /   ,,   \\
-  /   |  |  -\\
- /_-''    ''-_\\</span></pre>`,
-      `<span style="color: ${theme.purple}">cjber</span>@<span style="color: ${theme.purple}">dev</span>`,
-      `<span style="color: ${theme.blue}">os</span>       Arch Linux`,
-      `<span style="color: ${theme.blue}">shell</span>    bash`,
-      `<span style="color: ${theme.blue}">terminal</span> web`,
-      `<span style="color: ${theme.blue}">location</span> Glasgow, Scotland`,
-      `<span style="color: ${theme.blue}">role</span>     Software Engineer @ thirdweb`,
-    ],
-    pfetch: [
-      `<pre style="color: ${theme.cyan}; line-height: 1.2">       /\\
-      /  \\
-     /\\   \\
-<span style="color: ${theme.blue}">    /      \\
-   /   ,,   \\
-  /   |  |  -\\
- /_-''    ''-_\\</span></pre>`,
-      `<span style="color: ${theme.purple}">cjber</span>@<span style="color: ${theme.purple}">dev</span>`,
-      `<span style="color: ${theme.blue}">os</span>       Arch Linux`,
-      `<span style="color: ${theme.blue}">shell</span>    bash`,
-      `<span style="color: ${theme.blue}">terminal</span> web`,
-      `<span style="color: ${theme.blue}">location</span> Glasgow, Scotland`,
-      `<span style="color: ${theme.blue}">role</span>     Software Engineer @ thirdweb`,
-    ],
-    matrix: ['MATRIX'],
+  const handleCommand = (input: string) => {
+    const trimmedInput = input.trim()
+    const [command, ...args] = trimmedInput.split(' ')
+    
+    const newEntry = (
+      <div className="mb-2">
+        <span className="text-primary">cjber@dev</span>
+        <span className="text-foreground">:</span>
+        <span className="text-secondary">~</span>
+        <span className="text-foreground">$ </span>
+        <span className="text-foreground">{trimmedInput}</span>
+      </div>
+    )
+    
+    if (trimmedInput && command !== 'clear') {
+      setCommandHistory(prev => [...prev, trimmedInput])
+    }
+    
+    if (command === 'clear') {
+      commands.clear()
+      return
+    }
+    
+    let output = null
+    if (trimmedInput) {
+      if (command in commands) {
+        const result = commands[command]()
+        if (result) {
+          output = (
+            <div className="mb-3 text-foreground">
+              {typeof result === 'string' ? result : result}
+            </div>
+          )
+        }
+      } else if (trimmedInput) {
+        output = (
+          <div className="mb-3 text-destructive">
+            bash: {command}: command not found
+          </div>
+        )
+      }
+    }
+    
+    setHistory(prev => [...prev, newEntry, output].filter(Boolean))
+    setHistoryIndex(-1)
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      e.preventDefault()
-      const trimmedInput = currentInput.trim()
-      
-      // Add to command history if not empty
-      if (trimmedInput) {
-        setCommandHistory(prev => [...prev, trimmedInput])
-        setHistoryIndex(-1)
-      }
-      
-      const commandLine = `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">${trimmedInput}</span>`
-      
-      if (trimmedInput === 'clear') {
-        setHistory([])
-      } else if (trimmedInput === 'matrix') {
-        setHistory([...history, commandLine, 'Initializing Matrix rain...', ''])
-        setTimeout(() => setShowMatrix(true), 500)
-      } else if (trimmedInput.startsWith('cal')) {
-        const parts = trimmedInput.split(' ').filter(p => p)
-        let calendarOutput: string[]
-        
-        if (parts.length === 1) {
-          // cal - current month
-          calendarOutput = generateCalendar()
-        } else if (parts.length === 2) {
-          // cal YYYY - specific year, current month
-          const year = parseInt(parts[1])
-          if (isNaN(year) || year < 1 || year > 9999) {
-            calendarOutput = [`<span style="color: ${theme.red}">cal: invalid year '${parts[1]}'</span>`]
-          } else {
-            calendarOutput = generateCalendar(year, new Date().getMonth())
-          }
-        } else if (parts.length === 3) {
-          // cal MM YYYY - specific month and year
-          const month = parseInt(parts[1]) - 1 // Convert to 0-indexed
-          const year = parseInt(parts[2])
-          
-          if (isNaN(month) || month < 0 || month > 11) {
-            calendarOutput = [`<span style="color: ${theme.red}">cal: invalid month '${parts[1]}'</span>`]
-          } else if (isNaN(year) || year < 1 || year > 9999) {
-            calendarOutput = [`<span style="color: ${theme.red}">cal: invalid year '${parts[2]}'</span>`]
-          } else {
-            calendarOutput = generateCalendar(year, month)
-          }
-        } else {
-          calendarOutput = [`<span style="color: ${theme.red}">Usage: cal [month] [year]</span>`]
-        }
-        
-        setHistory([...history, commandLine, ...calendarOutput, ''])
-      } else if (trimmedInput.startsWith('theme')) {
-        const parts = trimmedInput.split(' ')
-        if (parts.length === 2 && themes[parts[1]]) {
-          setCurrentTheme(parts[1])
-          setHistory([...history, commandLine, `Theme changed to ${parts[1]}`, ''])
-        } else if (parts.length === 1) {
-          setHistory([...history, commandLine, `Current theme: ${currentTheme}`, 'Available themes: orange, dark, light', 'Usage: theme <name>', ''])
-        } else {
-          setHistory([...history, commandLine, `<span style="color: ${theme.red}">Invalid theme. Available: orange, dark, light</span>`, ''])
-        }
-      } else if (commands[trimmedInput]) {
-        setHistory([...history, commandLine, ...commands[trimmedInput], ''])
-      } else if (trimmedInput) {
-        setHistory([...history, commandLine, `<span style="color: ${theme.red}">bash: ${trimmedInput}: command not found</span>`, ''])
-      } else {
-        setHistory([...history, commandLine, ''])
-      }
-      
+      handleCommand(currentInput)
       setCurrentInput('')
     } else if (e.key === 'ArrowUp') {
       e.preventDefault()
-      if (commandHistory.length > 0) {
-        const newIndex = historyIndex < commandHistory.length - 1 ? historyIndex + 1 : historyIndex
+      if (historyIndex < commandHistory.length - 1) {
+        const newIndex = historyIndex + 1
         setHistoryIndex(newIndex)
         setCurrentInput(commandHistory[commandHistory.length - 1 - newIndex])
       }
@@ -319,232 +183,70 @@ export default function Home() {
         setHistoryIndex(-1)
         setCurrentInput('')
       }
-    } else if (e.key === 'Tab') {
-      e.preventDefault()
-      // Tab completion
-      let availableCommands = [...Object.keys(commands), 'theme', 'matrix']
-      
-      // Add theme subcommands
-      if (currentInput.startsWith('theme ')) {
-        const themeArg = currentInput.substring(6)
-        const themeOptions = ['orange', 'dark', 'light']
-        const themeMatches = themeOptions.filter(t => t.startsWith(themeArg))
-        if (themeMatches.length === 1) {
-          setCurrentInput(`theme ${themeMatches[0]}`)
-        } else if (themeMatches.length > 1) {
-          const commandLine = `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">${currentInput}</span>`
-          setHistory([...history, commandLine, themeMatches.join('  '), ''])
-        }
-      } else {
-        const matches = availableCommands.filter(cmd => cmd.startsWith(currentInput))
-        if (matches.length === 1) {
-          setCurrentInput(matches[0])
-        } else if (matches.length > 1) {
-          // Show available completions
-          const commandLine = `<span style="color: ${theme.purple}">cjber@dev</span>:<span style="color: ${theme.blue}">~</span>$ <span style="color: ${theme.yellow}">${currentInput}</span>`
-          setHistory([...history, commandLine, matches.join('  '), ''])
-        }
-      }
     }
   }
 
-  const handleClick = () => {
-    inputRef.current?.focus()
-  }
-
-  // Matrix rain effect component
-  const MatrixRain = () => {
-    const canvasRef = useRef<HTMLCanvasElement>(null)
-    
-    useEffect(() => {
-      const canvas = canvasRef.current
-      if (!canvas) return
-      
-      const ctx = canvas.getContext('2d')
-      if (!ctx) return
-      
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-      
-      const matrix = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}'.split('')
-      const fontSize = 14
-      const columns = canvas.width / fontSize
-      const drops: number[] = []
-      
-      // Initialize drops with varied starting positions for seamless effect
-      for (let x = 0; x < columns; x++) {
-        drops[x] = Math.floor(Math.random() * -canvas.height/fontSize)
-      }
-      
-      const draw = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
-        
-        ctx.fillStyle = '#0F0'
-        ctx.font = fontSize + 'px monospace'
-        
-        for (let i = 0; i < drops.length; i++) {
-          const text = matrix[Math.floor(Math.random() * matrix.length)]
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize)
-          
-          // Reset at the top when reaching bottom, creating seamless loop
-          if (drops[i] * fontSize > canvas.height) {
-            drops[i] = -1
-          }
-          drops[i]++
-        }
-      }
-      
-      const interval = setInterval(draw, 50)
-      
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Escape' || (e.ctrlKey && e.key === 'c')) {
-          setShowMatrix(false)
-        }
-      }
-      
-      const handleResize = () => {
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-      }
-      
-      window.addEventListener('keydown', handleKeyDown)
-      window.addEventListener('resize', handleResize)
-      
-      return () => {
-        clearInterval(interval)
-        window.removeEventListener('keydown', handleKeyDown)
-        window.removeEventListener('resize', handleResize)
-      }
-    }, [])
-    
-    return (
-      <div 
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          zIndex: 9999,
-          backgroundColor: 'black',
-        }}
-      >
-        <canvas ref={canvasRef} style={{ display: 'block' }} />
-        <div 
-          style={{
-            position: 'absolute',
-            bottom: '20px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            color: '#0F0',
-            fontFamily: 'monospace',
-            fontSize: '14px',
-            textAlign: 'center',
-            animation: 'blink 1s infinite',
-          }}
-        >
-          Press ESC or Ctrl+C to exit
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <main 
-      className="min-h-screen font-mono" 
-      style={{ 
-        backgroundColor: theme.bg, 
-        color: theme.fg,
-        padding: '20px',
-        fontSize: fontSize,
-        lineHeight: lineHeight,
-        transition: 'background-color 0.3s, color 0.3s',
-      }}
+    <div 
+      className="min-h-screen bg-background text-foreground p-8 font-mono overflow-hidden"
+      style={{ fontSize, lineHeight }}
+      onClick={() => inputRef.current?.focus()}
     >
       <div className="max-w-4xl mx-auto">
-        <div 
-          ref={terminalRef}
-          className="rounded-lg border cursor-text transition-all overflow-y-auto terminal-scroll"
-          style={{ 
-            borderColor: currentTheme === 'light' ? 'oklch(0.9276 0.0058 264.5313)' : 'oklch(0.2520 0 0)',
-            backgroundColor: currentTheme === 'light' ? 'oklch(1.0000 0 0)' : 'oklch(0.1822 0 0)',
-            padding: '24px',
-            boxShadow: '0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05)',
-            height: '600px',
-            scrollBehavior: 'smooth',
-          }}
-          onClick={handleClick}
-        >
-        <div style={{ color: theme.muted, marginBottom: '0.5em' }}>
+        <div className="mb-4 text-muted-foreground">
           Last login: {loginTime}
         </div>
-        <div style={{ marginBottom: '0.5em' }}></div>
         
-        {initialOutput.map((line, i) => (
-          <div 
-            key={`initial-${i}`}
-            dangerouslySetInnerHTML={{ __html: line || '&nbsp;' }}
-            style={{ minHeight: '1.5em' }}
-          />
-        ))}
+        <div className="mb-4 text-foreground">
+          <div>Welcome to cjber.dev terminal</div>
+          <div>Type 'help' for available commands</div>
+        </div>
         
-        {history.map((line, i) => (
-          <div 
-            key={`history-${i}`}
-            dangerouslySetInnerHTML={{ __html: line || '&nbsp;' }}
-            style={{ minHeight: '1.5em' }}
-          />
-        ))}
-        
-        <div className="flex" style={{ position: 'relative', minHeight: '1.5em' }}>
-          <span dangerouslySetInnerHTML={{ __html: `<span style="color: ${colors.purple}">cjber@dev</span>:<span style="color: ${colors.blue}">~</span>$&nbsp;` }} />
-          <div className="flex-1" style={{ position: 'relative' }}>
-            <input
-              ref={inputRef}
-              type="text"
-              value={currentInput}
-              onChange={(e) => {
-                setCurrentInput(e.target.value)
-                setCursorPosition(e.target.selectionStart || 0)
-              }}
-              onKeyDown={handleKeyDown}
-              onKeyUp={(e) => setCursorPosition(e.currentTarget.selectionStart || 0)}
-              onClick={(e) => setCursorPosition(e.currentTarget.selectionStart || 0)}
-              style={{ 
-                color: colors.yellow,
-                background: 'transparent',
-                border: 'none',
-                outline: 'none',
-                width: '100%',
-                font: 'inherit',
-                fontSize: fontSize,
-                lineHeight: lineHeight,
-                padding: 0,
-                margin: 0,
-                caretColor: 'transparent',  // Hide native cursor
-              }}
-              spellCheck={false}
-              autoComplete="off"
-            />
-            <span 
-              className="cursor-blink"
-              style={{
-                position: 'absolute',
-                left: `${currentInput.length * 9.5}px`,
-                top: '50%',
-                transform: 'translateY(-50%)',
-                backgroundColor: theme.fg,
-                width: '10px',
-                height: '20px',
-                display: 'inline-block',
-              }}
-            />
+        <div 
+          ref={terminalRef}
+          className="terminal-scroll overflow-y-auto"
+          style={{ maxHeight: 'calc(100vh - 200px)' }}
+        >
+          {history.map((item, index) => (
+            <div key={index}>{item}</div>
+          ))}
+          
+          <div className="flex items-center">
+            <span className="text-primary">cjber@dev</span>
+            <span className="text-foreground">:</span>
+            <span className="text-secondary">~</span>
+            <span className="text-foreground">$</span>
+            <span>&nbsp;</span>
+            <div className="relative flex-1">
+              <input
+                ref={inputRef}
+                type="text"
+                value={currentInput}
+                onChange={(e) => setCurrentInput(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="bg-transparent border-none outline-none text-foreground w-full"
+                style={{ 
+                  caretColor: 'transparent',
+                  fontSize,
+                }}
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+              />
+              <span 
+                className="absolute top-0 pointer-events-none text-primary cursor-blink"
+                style={{ 
+                  left: `${cursorPosition * 0.6}em`,
+                  fontSize,
+                }}
+              >
+                █
+              </span>
+            </div>
           </div>
         </div>
-        </div>
       </div>
-      {showMatrix && <MatrixRain />}
-    </main>
+    </div>
   )
 }

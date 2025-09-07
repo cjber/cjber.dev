@@ -26,7 +26,7 @@ export default function Home() {
       <div className="max-w-2xl w-full">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-mono font-bold mb-4 text-primary">cjber.dev</h1>
-          <p className="text-muted-foreground font-mono">Personal services & projects</p>
+          <p className="text-muted-foreground font-mono">Software engineer @ <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">thirdweb</a></p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -103,7 +103,7 @@ export default function Home() {
                         <button
                           onClick={() => {
                             navigator.clipboard.writeText(link.server!)
-                            setCopied(link.server)
+                            setCopied(link.server!)
                             setTimeout(() => {
                               setCopied(null)
                             }, 1000)
