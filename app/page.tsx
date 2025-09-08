@@ -43,7 +43,9 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center p-8">
       <div className="max-w-2xl w-full">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-mono font-bold mb-4 text-primary">cjber.dev</h1>
+          <h1 className="text-4xl font-mono font-bold mb-4 text-primary">
+            cjber<Link href="/bins" className="hover:text-secondary transition-colors">.</Link>dev
+          </h1>
           <p className="text-muted-foreground font-mono">
             <a href="/me" className="text-secondary hover:text-primary transition-colors">
               Software engineer
@@ -64,12 +66,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="relative">
                 {/* Status indicator */}
-                <div className="absolute -top-3 -right-3">
-                  <div className={`w-2 h-2 rounded-full ${
-                    statusLoading ? 'bg-muted animate-pulse' :
-                    statuses[link.statusKey] ? 'bg-emerald-600' : 'bg-destructive'
-                  }`} />
-                </div>
+                {link.statusKey && (
+                  <div className="absolute -top-3 -right-3">
+                    <div 
+                      className={`w-2 h-2 rounded-full ${
+                        statusLoading ? 'bg-muted animate-pulse' :
+                        statuses[link.statusKey] ? 'bg-emerald-600 animate-pulse' : 'bg-destructive animate-pulse'
+                      }`}
+                    />
+                  </div>
+                )}
                 <h2 className="text-xl font-mono font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors">
                   {link.name}
                 </h2>

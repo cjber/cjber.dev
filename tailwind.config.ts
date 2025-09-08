@@ -53,6 +53,7 @@ const config: Config = {
         'fade-in': 'fade-in 0.5s ease-out',
         'fade-up': 'fade-up 0.5s ease-out',
         'gradient': 'gradient 8s linear infinite',
+        'blink': 'blink 1.5s ease-in-out infinite',
       },
       keyframes: {
         'fade-in': {
@@ -72,6 +73,16 @@ const config: Config = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           }
+        },
+        'blink': {
+          '0%, 100%': { 
+            opacity: '1',
+            transform: 'scale(1)'
+          },
+          '50%': { 
+            opacity: '0.3',
+            transform: 'scale(0.8)'
+          },
         },
       },
     },
