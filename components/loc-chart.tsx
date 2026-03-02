@@ -23,7 +23,7 @@ interface Summary {
   totalAdditions: number
   totalDeletions: number
   totalNet: number
-  daysWithCommits: number
+  activeWeeks: number
   repositories: number
 }
 
@@ -41,12 +41,11 @@ export function LocChart({ initialData }: LocChartProps) {
   const [summary, setSummary] = useState<Summary | null>(initialData?.summary ?? null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(initialData ? null : 'Failed to load stats')
-  const [days, setDays] = useState(30)
+  const [days, setDays] = useState(90)
   const [chartType, setChartType] = useState<'all' | 'additions' | 'deletions' | 'net'>('net')
 
   useEffect(() => {
-    // Skip fetching for initial 30d since we have server data
-    if (days === 30 && initialData) return
+    if (days === 90 && initialData) return
 
     const fetchData = async () => {
       setLoading(true)
@@ -79,7 +78,7 @@ export function LocChart({ initialData }: LocChartProps) {
   }
 
   const formatNumber = (num: number) => {
-    if (num >= 1000) {
+    if (Math.abs(num) >= 1000) {
       return `${(num / 1000).toFixed(1)}k`
     }
     return num.toString()
@@ -89,7 +88,7 @@ export function LocChart({ initialData }: LocChartProps) {
     return (
       <Card className="w-full">
         <CardHeader>
-          <CardTitle className="text-base font-mono">Lines of Code per Day</CardTitle>
+          <CardTitle className="text-base font-mono">Lines of Code per Week</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="text-sm text-destructive font-mono">Error: {error}</div>
@@ -102,12 +101,12 @@ export function LocChart({ initialData }: LocChartProps) {
     <Card className="w-full">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="text-base font-mono">Lines of Code per Day</CardTitle>
+          <CardTitle className="text-base font-mono">Lines of Code per Week</CardTitle>
           <div className="flex gap-2">
             {[
-              { value: 7, label: '7d' },
-              { value: 30, label: '30d' },
-              { value: 90, label: '90d' },
+              { value: 30, label: '1m' },
+              { value: 90, label: '3m' },
+              { value: 180, label: '6m' },
               { value: 365, label: '1y' },
             ].map(({ value, label }) => (
               <button
@@ -143,8 +142,8 @@ export function LocChart({ initialData }: LocChartProps) {
               </span>
             </div>
             <div>
-              <span className="text-muted-foreground">Active days: </span>
-              <span>{summary.daysWithCommits}</span>
+              <span className="text-muted-foreground">Active weeks: </span>
+              <span>{summary.activeWeeks}</span>
             </div>
             <div>
               <span className="text-muted-foreground">Repos: </span>
@@ -196,7 +195,6 @@ export function LocChart({ initialData }: LocChartProps) {
                 tickFormatter={formatDate}
                 stroke="hsl(var(--muted-foreground))"
                 fontSize={11}
-                interval={Math.floor(data.length / 6)}
               />
               <YAxis
                 stroke="hsl(var(--muted-foreground))"
@@ -210,7 +208,7 @@ export function LocChart({ initialData }: LocChartProps) {
                   borderRadius: '6px',
                   fontSize: '12px'
                 }}
-                labelFormatter={(value) => formatDate(value as string)}
+                labelFormatter={(value) => `Week of ${formatDate(value as string)}`}
                 formatter={(value: number) => formatNumber(value)}
               />
               {(chartType === 'all' || chartType === 'additions') && (

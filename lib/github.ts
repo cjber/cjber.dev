@@ -26,59 +26,34 @@ interface WeeklyData {
 }
 
 function buildResponse(allWeekly: Map<number, { additions: number; deletions: number }>, days: number) {
-  const endDate = new Date()
   const startDate = new Date()
   startDate.setDate(startDate.getDate() - days)
   const startTimestamp = Math.floor(startDate.getTime() / 1000)
-  const today = new Date().toISOString().split('T')[0]
 
-  const statsMap = new Map<string, { additions: number; deletions: number }>()
+  // Collect weekly data points sorted by timestamp
+  const weeks: CommitStats[] = []
 
-  for (const [weekTimestamp, stats] of allWeekly) {
+  const sortedEntries = Array.from(allWeekly.entries()).sort((a, b) => a[0] - b[0])
+
+  for (const [weekTimestamp, stats] of sortedEntries) {
     if (weekTimestamp < startTimestamp) continue
-    // GitHub stats/contributors returns weekly data (Sunday-aligned)
-    // Attribute the whole week to the week start date
-    const date = new Date(weekTimestamp * 1000).toISOString().split('T')[0]
-    const existing = statsMap.get(date) || { additions: 0, deletions: 0 }
-    statsMap.set(date, {
-      additions: existing.additions + stats.additions,
-      deletions: existing.deletions + stats.deletions,
+    weeks.push({
+      date: new Date(weekTimestamp * 1000).toISOString().split('T')[0],
+      additions: stats.additions,
+      deletions: stats.deletions,
+      net: stats.additions - stats.deletions,
     })
   }
 
-  // Build filled daily array
-  const filledStats: CommitStats[] = []
-  const currentDate = new Date(startDate)
-
-  while (currentDate <= endDate) {
-    const dateStr = currentDate.toISOString().split('T')[0]
-    if (dateStr === today) {
-      currentDate.setDate(currentDate.getDate() + 1)
-      continue
-    }
-
-    // Find the week this date belongs to (stats are weekly, keyed by week start)
-    const existing = statsMap.get(dateStr)
-
-    filledStats.push({
-      date: dateStr,
-      additions: existing?.additions || 0,
-      deletions: existing?.deletions || 0,
-      net: (existing?.additions || 0) - (existing?.deletions || 0),
-    })
-
-    currentDate.setDate(currentDate.getDate() + 1)
-  }
-
-  const nonZero = filledStats.filter(s => s.additions > 0 || s.deletions > 0)
+  const activeWeeks = weeks.filter(s => s.additions > 0 || s.deletions > 0)
 
   return {
-    stats: filledStats,
+    stats: weeks,
     summary: {
-      totalAdditions: nonZero.reduce((sum, s) => sum + s.additions, 0),
-      totalDeletions: nonZero.reduce((sum, s) => sum + s.deletions, 0),
-      totalNet: nonZero.reduce((sum, s) => sum + s.net, 0),
-      daysWithCommits: nonZero.length,
+      totalAdditions: activeWeeks.reduce((sum, s) => sum + s.additions, 0),
+      totalDeletions: activeWeeks.reduce((sum, s) => sum + s.deletions, 0),
+      totalNet: activeWeeks.reduce((sum, s) => sum + s.net, 0),
+      activeWeeks: activeWeeks.length,
       repositories: 0, // filled below
     },
   }

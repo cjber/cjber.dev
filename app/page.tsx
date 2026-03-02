@@ -7,7 +7,7 @@ export const revalidate = 3600
 export default async function Home() {
   let initialData = null
   try {
-    initialData = await fetchGitHubStats(30)
+    initialData = await fetchGitHubStats(90)
   } catch {
     // Will show error state in chart
   }
