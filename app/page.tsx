@@ -48,9 +48,9 @@ export default async function Home() {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Nebula
+              thirdweb AI
             </a>
-            {' '}at thirdweb, now building nebula.gg.
+            , now building nebula.gg.
           </p>
         </div>
 
