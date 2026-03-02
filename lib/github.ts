@@ -1,6 +1,7 @@
 import { Octokit } from '@octokit/rest'
 
-const USERNAME = 'cjber'
+const USERNAME = 'cjber' // fallback
+
 const CACHE_TTL = 60 * 60 * 1000 // 1 hour
 
 // In-memory cache: survives across requests within the same server instance
@@ -157,10 +158,19 @@ async function fetchFromGitHub(): Promise<CachedWeeklyData> {
 
     await Promise.all(batch.map(async (repo) => {
       try {
-        const { data: contributors } = await octokit.repos.getContributorsStats({
-          owner: repo.owner,
-          repo: repo.name,
-        })
+        let contributors: unknown = null
+        for (let attempt = 0; attempt < 4; attempt++) {
+          const response = await octokit.repos.getContributorsStats({
+            owner: repo.owner,
+            repo: repo.name,
+          })
+          if (response.status === 202) {
+            await new Promise(r => setTimeout(r, 2000 * (attempt + 1)))
+            continue
+          }
+          contributors = response.data
+          break
+        }
 
         if (!Array.isArray(contributors)) return
 
