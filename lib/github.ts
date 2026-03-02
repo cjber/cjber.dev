@@ -117,7 +117,7 @@ function cacheToRepoMap(cached: CachedWeeklyData): Map<string, Map<number, { add
   return map
 }
 
-async function fetchFromGitHub(): Promise<CachedWeeklyData> {
+async function fetchFromGitHub(retry = false): Promise<CachedWeeklyData> {
   const token = process.env.GITHUB_TOKEN
   if (!token) {
     throw new Error('GitHub token not configured')
@@ -159,12 +159,13 @@ async function fetchFromGitHub(): Promise<CachedWeeklyData> {
     await Promise.all(batch.map(async (repo) => {
       try {
         let contributors: unknown = null
-        for (let attempt = 0; attempt < 4; attempt++) {
+        const maxAttempts = retry ? 4 : 1
+        for (let attempt = 0; attempt < maxAttempts; attempt++) {
           const response = await octokit.repos.getContributorsStats({
             owner: repo.owner,
             repo: repo.name,
           })
-          if (response.status === 202) {
+          if (response.status === 202 && attempt < maxAttempts - 1) {
             await new Promise(r => setTimeout(r, 2000 * (attempt + 1)))
             continue
           }
@@ -222,7 +223,7 @@ async function fetchFromGitHub(): Promise<CachedWeeklyData> {
   return cacheData
 }
 
-export async function fetchGitHubStats(days: number = 90) {
+export async function fetchGitHubStats(days: number = 90, retry = false) {
   // 1. Check in-memory cache (fresh)
   const mem = getCache()
   if (mem && isFresh(mem)) {
@@ -232,7 +233,7 @@ export async function fetchGitHubStats(days: number = 90) {
   // 2. Try fetching from GitHub
   const staleCache = mem
   try {
-    const fresh = await fetchFromGitHub()
+    const fresh = await fetchFromGitHub(retry)
     return buildResponse(cacheToMap(fresh), days, fresh.repositories, cacheToRepoMap(fresh))
   } catch (error) {
     // 4. If GitHub fails (rate limit, network), serve stale cache

@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   const days = parseInt(searchParams.get('days') || '30')
 
   try {
-    const data = await fetchGitHubStats(days)
+    const data = await fetchGitHubStats(days, true)
     return NextResponse.json(data)
   } catch (error) {
     console.error('GitHub API error:', error)
