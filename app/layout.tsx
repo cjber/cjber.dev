@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cillian Berragan",
-  description: "Software Engineer at thirdweb. Building AI for blockchain.",
-  keywords: "Cillian Berragan, Software Engineer, thirdweb, AI, Blockchain",
+  description: "Founding Engineer at Nebula. Previously thirdweb.",
+  keywords: "Cillian Berragan, Software Engineer, Nebula, AI, ML",
   authors: [{ name: "Cillian Berragan" }],
   creator: "Cillian Berragan",
   openGraph: {
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     url: "https://cillian.dev",
     siteName: "Cillian Berragan",
     title: "Cillian Berragan",
-    description: "Software Engineer at thirdweb",
+    description: "Founding Engineer at Nebula",
   },
   twitter: {
     card: "summary",
     title: "Cillian Berragan",
-    description: "Software Engineer at thirdweb",
+    description: "Founding Engineer at Nebula",
   },
 };
 
