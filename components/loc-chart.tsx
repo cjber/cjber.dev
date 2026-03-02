@@ -189,24 +189,27 @@ export function LocChart({ initialData }: LocChartProps) {
                   <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" opacity={0.3} />
               <XAxis
                 dataKey="date"
                 tickFormatter={formatDate}
-                stroke="hsl(var(--muted-foreground))"
+                stroke="var(--muted-foreground)"
+                tick={{ fill: 'var(--muted-foreground)' }}
                 fontSize={11}
               />
               <YAxis
-                stroke="hsl(var(--muted-foreground))"
+                stroke="var(--muted-foreground)"
+                tick={{ fill: 'var(--muted-foreground)' }}
                 fontSize={11}
                 tickFormatter={formatNumber}
               />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: 'hsl(var(--card))',
-                  border: '1px solid hsl(var(--border))',
+                  backgroundColor: 'var(--card)',
+                  border: '1px solid var(--border)',
                   borderRadius: '6px',
-                  fontSize: '12px'
+                  fontSize: '12px',
+                  color: 'var(--card-foreground)',
                 }}
                 labelFormatter={(value) => `Week of ${formatDate(value as string)}`}
                 formatter={(value: number) => formatNumber(value)}
