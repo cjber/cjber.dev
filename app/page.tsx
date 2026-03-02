@@ -40,7 +40,17 @@ export default async function Home() {
             </a>
           </p>
           <p className="text-muted-foreground/80 font-mono text-sm mt-4 max-w-md mx-auto">
-            Software engineer with a background in geospatial data science. Building tools at the intersection of AI and infrastructure.
+            PhD in NLP and geospatial data science from the University of Liverpool.
+            Built{' '}
+            <a
+              href="https://thirdweb.com/ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Nebula
+            </a>
+            {' '}at thirdweb, now building nebula.gg.
           </p>
         </div>
 
