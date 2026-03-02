@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx shadcn@latest add:*)",
+      "Read(//home/cjber/drive/proj/**)",
+      "Bash(npm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npm run lint)",
+      "WebSearch",
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(git log:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
