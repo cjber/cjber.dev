@@ -1,15 +1,7 @@
 import { Octokit } from '@octokit/rest'
-import { readFile, writeFile, mkdir } from 'fs/promises'
-import path from 'path'
 
 const USERNAME = 'cjber'
 const CACHE_TTL = 60 * 60 * 1000 // 1 hour
-
-// Disk cache: works at build time, persists across cold starts in some environments
-const CACHE_PATHS = [
-  path.join(process.cwd(), '.cache', 'github-stats.json'),
-  '/tmp/github-stats.json',
-]
 
 // In-memory cache: survives across requests within the same server instance
 let memoryCache: CachedWeeklyData | null = null
@@ -91,30 +83,6 @@ function buildResponse(
       activeWeeks: activeWeeks.length,
       repositories,
     },
-  }
-}
-
-async function readDiskCache(): Promise<CachedWeeklyData | null> {
-  for (const cachePath of CACHE_PATHS) {
-    try {
-      const raw = await readFile(cachePath, 'utf-8')
-      return JSON.parse(raw) as CachedWeeklyData
-    } catch {
-      // Try next path
-    }
-  }
-  return null
-}
-
-async function writeDiskCache(data: CachedWeeklyData) {
-  for (const cachePath of CACHE_PATHS) {
-    try {
-      await mkdir(path.dirname(cachePath), { recursive: true })
-      await writeFile(cachePath, JSON.stringify(data))
-      return
-    } catch {
-      // Try next path
-    }
   }
 }
 
@@ -239,9 +207,7 @@ async function fetchFromGitHub(): Promise<CachedWeeklyData> {
     repoWeeks: repoWeeksObj,
   }
 
-  // Persist to memory + disk
   memoryCache = cacheData
-  await writeDiskCache(cacheData)
 
   return cacheData
 }
@@ -253,15 +219,8 @@ export async function fetchGitHubStats(days: number = 90) {
     return buildResponse(cacheToMap(mem), days, mem.repositories, cacheToRepoMap(mem))
   }
 
-  // 2. Check disk cache (fresh)
-  const disk = await readDiskCache()
-  if (disk && isFresh(disk)) {
-    memoryCache = disk
-    return buildResponse(cacheToMap(disk), days, disk.repositories, cacheToRepoMap(disk))
-  }
-
-  // 3. Try fetching from GitHub
-  const staleCache = mem || disk
+  // 2. Try fetching from GitHub
+  const staleCache = mem
   try {
     const fresh = await fetchFromGitHub()
     return buildResponse(cacheToMap(fresh), days, fresh.repositories, cacheToRepoMap(fresh))
