@@ -39,16 +39,12 @@ export default async function Home() {
               thirdweb
             </a>
           </p>
+          <p className="text-muted-foreground/80 font-mono text-sm mt-4 max-w-md mx-auto">
+            Software engineer with a background in geospatial data science. Building tools at the intersection of AI and infrastructure.
+          </p>
         </div>
 
         <div className="mb-12">
-          <div className="flex justify-center gap-6 mb-10 text-sm font-mono text-muted-foreground">
-            <span>AI/ML</span>
-            <span className="text-muted-foreground/30">·</span>
-            <span>Python</span>
-            <span className="text-muted-foreground/30">·</span>
-            <span>Arch/Neovim</span>
-          </div>
 
           <div className="bg-card rounded-lg border border-border p-4 overflow-hidden mb-6">
             <div className="w-full max-w-full">
