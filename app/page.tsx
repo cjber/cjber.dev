@@ -40,8 +40,7 @@ export default async function Home() {
             </a>
           </p>
           <p className="text-muted-foreground/80 font-mono text-sm mt-4 max-w-md mx-auto">
-            PhD in NLP and geospatial data science from the University of Liverpool.
-            Built{' '}
+            PhD. Built{' '}
             <a
               href="https://thirdweb.com/ai"
               target="_blank"
@@ -50,7 +49,7 @@ export default async function Home() {
             >
               thirdweb AI
             </a>
-            , now building nebula.gg.
+            .
           </p>
         </div>
 

@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import {
-  AreaChart,
-  Area,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -17,6 +17,7 @@ interface ChartData {
   additions: number
   deletions: number
   net: number
+  [repo: string]: string | number
 }
 
 interface Summary {
@@ -29,6 +30,7 @@ interface Summary {
 
 interface StatsResponse {
   stats: ChartData[]
+  repos?: string[]
   summary: Summary
 }
 
@@ -36,16 +38,24 @@ interface LocChartProps {
   initialData: StatsResponse | null
 }
 
+const REPO_COLORS = [
+  '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+  '#ec4899', '#06b6d4', '#84cc16', '#f97316', '#6366f1',
+]
+
 export function LocChart({ initialData }: LocChartProps) {
   const [data, setData] = useState<ChartData[]>(initialData?.stats ?? [])
+  const [repos, setRepos] = useState<string[]>(initialData?.repos ?? [])
   const [summary, setSummary] = useState<Summary | null>(initialData?.summary ?? null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(initialData ? null : 'Failed to load stats')
   const [days, setDays] = useState(90)
   const [chartType, setChartType] = useState<'all' | 'additions' | 'deletions' | 'net'>('net')
+  const [hasNavigated, setHasNavigated] = useState(false)
 
   useEffect(() => {
-    if (days === 90 && initialData) return
+    if (days === 90 && initialData && !hasNavigated) return
+    setHasNavigated(true)
 
     const fetchData = async () => {
       setLoading(true)
@@ -67,6 +77,7 @@ export function LocChart({ initialData }: LocChartProps) {
 
         const result = await response.json()
         setData(result.stats)
+        setRepos(result.repos ?? [])
         setSummary(result.summary)
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred')
@@ -89,6 +100,11 @@ export function LocChart({ initialData }: LocChartProps) {
     }
     return num.toString()
   }
+
+  // Only show repos that have data in the current view
+  const activeRepos = useMemo(() => {
+    return repos.filter(repo => data.some(d => (d[repo] as number) !== undefined && (d[repo] as number) !== 0))
+  }, [repos, data])
 
   if (error && !loading) {
     return (
@@ -180,22 +196,8 @@ export function LocChart({ initialData }: LocChartProps) {
           </div>
         ) : (
           <ResponsiveContainer width="100%" height={300}>
-            <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <defs>
-                <linearGradient id="colorAdditions" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#10b981" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorDeletions" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ef4444" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#ef4444" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorNet" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" opacity={0.3} />
+            <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" opacity={0.3} vertical={false} />
               <XAxis
                 dataKey="date"
                 tickFormatter={formatDate}
@@ -217,40 +219,30 @@ export function LocChart({ initialData }: LocChartProps) {
                   fontSize: '12px',
                   color: 'var(--card-foreground)',
                 }}
+                cursor={{ fill: 'var(--muted-foreground)', opacity: 0.05 }}
                 labelFormatter={(value) => `Week of ${formatDate(value as string)}`}
                 formatter={(value: number) => formatNumber(value)}
               />
               {(chartType === 'all' || chartType === 'additions') && (
-                <Area
-                  type="monotone"
-                  dataKey="additions"
-                  stroke="#10b981"
-                  fillOpacity={1}
-                  fill="url(#colorAdditions)"
-                  name="Additions"
-                />
+                <Bar dataKey="additions" fill="#10b981" opacity={0.7} name="Additions" />
               )}
               {(chartType === 'all' || chartType === 'deletions') && (
-                <Area
-                  type="monotone"
-                  dataKey="deletions"
-                  stroke="#ef4444"
-                  fillOpacity={1}
-                  fill="url(#colorDeletions)"
-                  name="Deletions"
-                />
+                <Bar dataKey="deletions" fill="#ef4444" opacity={0.7} name="Deletions" />
               )}
-              {chartType === 'net' && (
-                <Area
-                  type="monotone"
-                  dataKey="net"
-                  stroke="#3b82f6"
-                  fillOpacity={1}
-                  fill="url(#colorNet)"
-                  name="Net"
+              {chartType === 'net' && activeRepos.length > 0 && activeRepos.map((repo, i) => (
+                <Bar
+                  key={repo}
+                  dataKey={repo}
+                  stackId="net"
+                  fill={REPO_COLORS[i % REPO_COLORS.length]}
+                  opacity={0.7}
+                  name={repo}
                 />
+              ))}
+              {chartType === 'net' && activeRepos.length === 0 && (
+                <Bar dataKey="net" fill="#3b82f6" opacity={0.7} name="Net" />
               )}
-            </AreaChart>
+            </BarChart>
           </ResponsiveContainer>
         )}
       </CardContent>
