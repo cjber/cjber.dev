@@ -1,6 +1,11 @@
 import { Octokit } from '@octokit/rest'
+import { readFile, writeFile, mkdir } from 'fs/promises'
+import path from 'path'
 
 const USERNAME = 'cjber'
+const CACHE_DIR = path.join(process.cwd(), '.cache')
+const CACHE_FILE = path.join(CACHE_DIR, 'github-stats.json')
+const CACHE_TTL = 60 * 60 * 1000 // 1 hour
 
 const KNOWN_REPOS = [
   { owner: 'thirdweb-dev', name: 'nebula' },
@@ -19,20 +24,25 @@ interface CommitStats {
 }
 
 interface WeeklyData {
-  w: number // unix timestamp
-  a: number // additions
-  d: number // deletions
-  c: number // commits
+  w: number
+  a: number
+  d: number
+  c: number
 }
 
-function buildResponse(allWeekly: Map<number, { additions: number; deletions: number }>, days: number) {
+interface CachedWeeklyData {
+  timestamp: number
+  repositories: number
+  // week timestamp -> {additions, deletions}
+  weeks: Record<string, { additions: number; deletions: number }>
+}
+
+function buildResponse(allWeekly: Map<number, { additions: number; deletions: number }>, days: number, repositories: number) {
   const startDate = new Date()
   startDate.setDate(startDate.getDate() - days)
   const startTimestamp = Math.floor(startDate.getTime() / 1000)
 
-  // Collect weekly data points sorted by timestamp
   const weeks: CommitStats[] = []
-
   const sortedEntries = Array.from(allWeekly.entries()).sort((a, b) => a[0] - b[0])
 
   for (const [weekTimestamp, stats] of sortedEntries) {
@@ -54,25 +64,51 @@ function buildResponse(allWeekly: Map<number, { additions: number; deletions: nu
       totalDeletions: activeWeeks.reduce((sum, s) => sum + s.deletions, 0),
       totalNet: activeWeeks.reduce((sum, s) => sum + s.net, 0),
       activeWeeks: activeWeeks.length,
-      repositories: 0, // filled below
+      repositories,
     },
   }
 }
 
-export async function fetchGitHubStats(days: number = 30) {
+async function readCache(): Promise<CachedWeeklyData | null> {
+  try {
+    const raw = await readFile(CACHE_FILE, 'utf-8')
+    const cached: CachedWeeklyData = JSON.parse(raw)
+    if (Date.now() - cached.timestamp < CACHE_TTL) {
+      return cached
+    }
+  } catch {
+    // No cache or invalid
+  }
+  return null
+}
+
+async function writeCache(data: CachedWeeklyData) {
+  try {
+    await mkdir(CACHE_DIR, { recursive: true })
+    await writeFile(CACHE_FILE, JSON.stringify(data))
+  } catch {
+    // Non-fatal
+  }
+}
+
+function cacheToMap(cached: CachedWeeklyData): Map<number, { additions: number; deletions: number }> {
+  const map = new Map<number, { additions: number; deletions: number }>()
+  for (const [key, value] of Object.entries(cached.weeks)) {
+    map.set(Number(key), value)
+  }
+  return map
+}
+
+async function fetchFromGitHub(): Promise<{ allWeekly: Map<number, { additions: number; deletions: number }>; repositories: number }> {
   const token = process.env.GITHUB_TOKEN
   if (!token) {
     throw new Error('GitHub token not configured')
   }
 
   const octokit = new Octokit({ auth: token })
-
-  // Collect weekly stats from all repos using the efficient contributors stats endpoint
-  // This returns pre-aggregated weekly data - 1 API call per repo instead of N per commit
   const allWeekly = new Map<number, { additions: number; deletions: number }>()
   let reposWithData = 0
 
-  // Get user's recently pushed repos
   const userRepos = await octokit.paginate(
     octokit.repos.listForAuthenticatedUser,
     {
@@ -82,16 +118,14 @@ export async function fetchGitHubStats(days: number = 30) {
     }
   )
 
-  const maxDays = 365
   const cutoff = new Date()
-  cutoff.setDate(cutoff.getDate() - maxDays)
+  cutoff.setDate(cutoff.getDate() - 365)
 
   const recentRepos = userRepos.filter(repo => {
     const pushedAt = new Date(repo.pushed_at!)
     return pushedAt >= cutoff
   })
 
-  // Merge with known repos
   const reposToCheck = [...KNOWN_REPOS]
   for (const repo of recentRepos) {
     if (!reposToCheck.some(r => r.owner === repo.owner.login && r.name === repo.name)) {
@@ -99,7 +133,6 @@ export async function fetchGitHubStats(days: number = 30) {
     }
   }
 
-  // Fetch contributor stats in parallel batches
   const BATCH_SIZE = 10
   for (let i = 0; i < reposToCheck.length; i += BATCH_SIZE) {
     const batch = reposToCheck.slice(i, i + BATCH_SIZE)
@@ -113,7 +146,6 @@ export async function fetchGitHubStats(days: number = 30) {
 
         if (!Array.isArray(contributors)) return
 
-        // Find the user's stats
         const userStats = contributors.find(
           (c) => c.author?.login?.toLowerCase() === USERNAME.toLowerCase()
         )
@@ -136,7 +168,26 @@ export async function fetchGitHubStats(days: number = 30) {
     }))
   }
 
-  const result = buildResponse(allWeekly, days)
-  result.summary.repositories = reposWithData
-  return result
+  // Write to cache
+  const cacheData: CachedWeeklyData = {
+    timestamp: Date.now(),
+    repositories: reposWithData,
+    weeks: Object.fromEntries(allWeekly),
+  }
+  await writeCache(cacheData)
+
+  return { allWeekly, repositories: reposWithData }
+}
+
+export async function fetchGitHubStats(days: number = 90) {
+  // Try cache first
+  const cached = await readCache()
+  if (cached) {
+    const allWeekly = cacheToMap(cached)
+    return buildResponse(allWeekly, days, cached.repositories)
+  }
+
+  // Fetch fresh data from GitHub
+  const { allWeekly, repositories } = await fetchFromGitHub()
+  return buildResponse(allWeekly, days, repositories)
 }
