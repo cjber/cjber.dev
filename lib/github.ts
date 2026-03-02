@@ -3,9 +3,16 @@ import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 
 const USERNAME = 'cjber'
-const CACHE_DIR = path.join(process.cwd(), '.cache')
-const CACHE_FILE = path.join(CACHE_DIR, 'github-stats.json')
 const CACHE_TTL = 60 * 60 * 1000 // 1 hour
+
+// Disk cache: works at build time, persists across cold starts in some environments
+const CACHE_PATHS = [
+  path.join(process.cwd(), '.cache', 'github-stats.json'),
+  '/tmp/github-stats.json',
+]
+
+// In-memory cache: survives across requests within the same server instance
+let memoryCache: CachedWeeklyData | null = null
 
 const KNOWN_REPOS = [
   { owner: 'thirdweb-dev', name: 'nebula' },
@@ -33,7 +40,6 @@ interface WeeklyData {
 interface CachedWeeklyData {
   timestamp: number
   repositories: number
-  // week timestamp -> {additions, deletions}
   weeks: Record<string, { additions: number; deletions: number }>
 }
 
@@ -69,26 +75,37 @@ function buildResponse(allWeekly: Map<number, { additions: number; deletions: nu
   }
 }
 
-async function readCache(): Promise<CachedWeeklyData | null> {
-  try {
-    const raw = await readFile(CACHE_FILE, 'utf-8')
-    const cached: CachedWeeklyData = JSON.parse(raw)
-    if (Date.now() - cached.timestamp < CACHE_TTL) {
-      return cached
+async function readDiskCache(): Promise<CachedWeeklyData | null> {
+  for (const cachePath of CACHE_PATHS) {
+    try {
+      const raw = await readFile(cachePath, 'utf-8')
+      return JSON.parse(raw) as CachedWeeklyData
+    } catch {
+      // Try next path
     }
-  } catch {
-    // No cache or invalid
   }
   return null
 }
 
-async function writeCache(data: CachedWeeklyData) {
-  try {
-    await mkdir(CACHE_DIR, { recursive: true })
-    await writeFile(CACHE_FILE, JSON.stringify(data))
-  } catch {
-    // Non-fatal
+async function writeDiskCache(data: CachedWeeklyData) {
+  for (const cachePath of CACHE_PATHS) {
+    try {
+      await mkdir(path.dirname(cachePath), { recursive: true })
+      await writeFile(cachePath, JSON.stringify(data))
+      return
+    } catch {
+      // Try next path
+    }
   }
+}
+
+function getCache(): CachedWeeklyData | null {
+  if (memoryCache) return memoryCache
+  return null
+}
+
+function isFresh(cached: CachedWeeklyData): boolean {
+  return Date.now() - cached.timestamp < CACHE_TTL
 }
 
 function cacheToMap(cached: CachedWeeklyData): Map<number, { additions: number; deletions: number }> {
@@ -99,7 +116,7 @@ function cacheToMap(cached: CachedWeeklyData): Map<number, { additions: number; 
   return map
 }
 
-async function fetchFromGitHub(): Promise<{ allWeekly: Map<number, { additions: number; deletions: number }>; repositories: number }> {
+async function fetchFromGitHub(): Promise<CachedWeeklyData> {
   const token = process.env.GITHUB_TOKEN
   if (!token) {
     throw new Error('GitHub token not configured')
@@ -168,26 +185,44 @@ async function fetchFromGitHub(): Promise<{ allWeekly: Map<number, { additions: 
     }))
   }
 
-  // Write to cache
   const cacheData: CachedWeeklyData = {
     timestamp: Date.now(),
     repositories: reposWithData,
     weeks: Object.fromEntries(allWeekly),
   }
-  await writeCache(cacheData)
 
-  return { allWeekly, repositories: reposWithData }
+  // Persist to memory + disk
+  memoryCache = cacheData
+  await writeDiskCache(cacheData)
+
+  return cacheData
 }
 
 export async function fetchGitHubStats(days: number = 90) {
-  // Try cache first
-  const cached = await readCache()
-  if (cached) {
-    const allWeekly = cacheToMap(cached)
-    return buildResponse(allWeekly, days, cached.repositories)
+  // 1. Check in-memory cache (fresh)
+  const mem = getCache()
+  if (mem && isFresh(mem)) {
+    return buildResponse(cacheToMap(mem), days, mem.repositories)
   }
 
-  // Fetch fresh data from GitHub
-  const { allWeekly, repositories } = await fetchFromGitHub()
-  return buildResponse(allWeekly, days, repositories)
+  // 2. Check disk cache (fresh)
+  const disk = await readDiskCache()
+  if (disk && isFresh(disk)) {
+    memoryCache = disk
+    return buildResponse(cacheToMap(disk), days, disk.repositories)
+  }
+
+  // 3. Try fetching from GitHub
+  const staleCache = mem || disk
+  try {
+    const fresh = await fetchFromGitHub()
+    return buildResponse(cacheToMap(fresh), days, fresh.repositories)
+  } catch (error) {
+    // 4. If GitHub fails (rate limit, network), serve stale cache
+    if (staleCache) {
+      console.warn('GitHub fetch failed, serving stale cache:', error)
+      return buildResponse(cacheToMap(staleCache), days, staleCache.repositories)
+    }
+    throw error
+  }
 }

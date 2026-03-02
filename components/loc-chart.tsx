@@ -55,8 +55,14 @@ export function LocChart({ initialData }: LocChartProps) {
         const response = await fetch(`/api/github-stats-direct?days=${days}&username=cjber`)
 
         if (!response.ok) {
-          const errorData = await response.json()
-          throw new Error(errorData.error || 'Failed to fetch data')
+          let message = 'Failed to fetch data'
+          try {
+            const errorData = await response.json()
+            message = errorData.error || message
+          } catch {
+            // Response wasn't JSON
+          }
+          throw new Error(message)
         }
 
         const result = await response.json()
