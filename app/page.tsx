@@ -1,17 +1,10 @@
-import { GitHubCalendarWrapper } from '@/components/github-calendar'
+import { GitHubCalendar } from '@/components/github-calendar'
 import { LocChart } from '@/components/loc-chart'
-import { fetchGitHubStats } from '@/lib/github'
+import { githubSnapshot } from '@/lib/github-data'
 
-export const revalidate = 3600
+export const dynamic = 'force-static'
 
-export default async function Home() {
-  let initialData = null
-  try {
-    initialData = await fetchGitHubStats(90)
-  } catch {
-    // Will show error state in chart
-  }
-
+export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-8">
       <div className="max-w-3xl w-full">
@@ -54,56 +47,28 @@ export default async function Home() {
         </div>
 
         <div className="mb-12">
-
           <div className="bg-card rounded-lg border border-border p-4 overflow-hidden mb-6">
             <div className="w-full max-w-full">
-              <GitHubCalendarWrapper />
+              <GitHubCalendar
+                weeks={githubSnapshot.calendar.weeks}
+                totalContributions={githubSnapshot.calendar.totalContributions}
+              />
             </div>
           </div>
 
-          <LocChart initialData={initialData} />
+          <LocChart
+            weeks={githubSnapshot.weeks}
+            repoNames={githubSnapshot.repoNames}
+          />
         </div>
 
         <footer className="text-center text-sm text-muted-foreground font-mono">
           <div className="flex justify-center gap-6">
-            <a
-              href="https://github.com/cjber"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://x.com/cjberragan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://scholar.google.com/citations?user=mBNb4rgAAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              Scholar
-            </a>
-            <a
-              href="https://linkedin.com/in/cjberr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:cjberragan@gmail.com"
-              className="hover:text-primary transition-colors"
-            >
-              Email
-            </a>
+            <a href="https://github.com/cjber" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+            <a href="https://x.com/cjberragan" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a>
+            <a href="https://scholar.google.com/citations?user=mBNb4rgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Scholar</a>
+            <a href="https://linkedin.com/in/cjberr" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="mailto:cillian@berragan.co.uk" className="hover:text-primary transition-colors">Email</a>
           </div>
         </footer>
       </div>

@@ -1,0 +1,31 @@
+name: Refresh GitHub stats (rebuild Cloudflare Pages)
+
+# Triggers a Cloudflare Pages deploy hook on a schedule so the build re-runs
+# `pnpm prebuild` and the GitHub data snapshot is regenerated.
+#
+# Setup:
+#   1. In the Cloudflare Pages dashboard for this project: Settings →
+#      Builds & deployments → Deploy hooks → "Add deploy hook" (production).
+#   2. Copy the URL into a GitHub Actions secret named CLOUDFLARE_DEPLOY_HOOK.
+#   3. Ensure GITHUB_TOKEN (with `repo` scope, for contributor stats) is set
+#      under Cloudflare Pages → Settings → Environment variables (Production).
+
+on:
+  schedule:
+    # Daily at 06:30 UTC — pre-morning, off-peak.
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST to Cloudflare Pages deploy hook
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::error::CLOUDFLARE_DEPLOY_HOOK secret is not set"
+            exit 1
+          fi
+          curl --fail --show-error --silent -X POST "$HOOK" -o /dev/null -w "HTTP %{http_code}\n"
