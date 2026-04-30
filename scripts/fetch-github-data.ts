@@ -142,7 +142,8 @@ async function fetchAuthoredCommits(
     }
     const all: Commit[] = []
     let cursor: string | null = null
-    for (let page = 0; page < 10; page++) {
+    let page = 0
+    while (true) {
       const data: HistoryResp = await graphql<HistoryResp>(HISTORY_QUERY, {
         owner,
         name,
@@ -155,8 +156,12 @@ async function fetchAuthoredCommits(
       all.push(...history.nodes)
       if (!history.pageInfo.hasNextPage) return all
       cursor = history.pageInfo.endCursor
+      page++
+      if (page > 100) {
+        console.warn(`[stats] ${owner}/${name} pagination > 10k commits — stopping`)
+        return all
+      }
     }
-    return all
   } catch (err) {
     console.warn(`[stats] ${owner}/${name} failed: ${(err as Error).message}`)
     return null
@@ -179,17 +184,15 @@ async function discoverRepos(): Promise<Array<{ owner: string; name: string }>> 
   const repos = await ghPaginate<ListRepo>(
     'https://api.github.com/user/repos?per_page=100&sort=pushed&affiliation=owner,collaborator,organization_member',
   )
-  const cutoff = Date.now() - 365 * 24 * 60 * 60 * 1000
-  const recent = repos.filter((r) => r.pushed_at && new Date(r.pushed_at).getTime() >= cutoff)
   const seen = new Set<string>()
   const out: Array<{ owner: string; name: string }> = []
-  for (const repo of [...PINNED_REPOS, ...recent.map((r) => ({ owner: r.owner.login, name: r.name }))]) {
+  for (const repo of [...PINNED_REPOS, ...repos.map((r) => ({ owner: r.owner.login, name: r.name }))]) {
     const key = `${repo.owner}/${repo.name}`
     if (seen.has(key)) continue
     seen.add(key)
     out.push(repo)
   }
-  console.log(`[discover] ${out.length} candidates (${PINNED_REPOS.length} pinned + ${out.length - PINNED_REPOS.length} recent)`)
+  console.log(`[discover] ${out.length} candidates (no recency filter)`)
   return out
 }
 
