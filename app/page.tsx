@@ -60,6 +60,53 @@ export default function Home() {
             weeks={githubSnapshot.weeks}
             repoNames={githubSnapshot.repoNames}
           />
+
+          <div className="bg-card rounded-lg border border-border p-5 mt-6">
+            <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-4">
+              Projects
+            </h2>
+            <ul className="space-y-4 font-mono text-sm">
+              <li>
+                <a
+                  href="https://github.com/cjber/hyprview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  hyprview
+                </a>
+                <p className="text-muted-foreground mt-0.5">
+                  Workspace overview for Hyprland 0.55+. Lua module, no C++ plugin.
+                </p>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/cjber/oxide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  oxide
+                </a>
+                <p className="text-muted-foreground mt-0.5">
+                  Dark colour scheme with rust-orange, teal, and peach accents. Palette plus thirteen application ports.
+                </p>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/cjber/dotfiles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  dotfiles
+                </a>
+                <p className="text-muted-foreground mt-0.5">
+                  Arch Linux setup: Hyprland, Neovim, Zellij, Kitty, Waybar.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <footer className="text-center text-sm text-muted-foreground font-mono">

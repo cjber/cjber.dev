@@ -163,7 +163,7 @@ export function LocChart({ weeks, repoNames }: Props) {
                 itemStyle={{ padding: '2px 0' }}
                 labelStyle={{ color: 'var(--muted-foreground)', marginBottom: 4, fontSize: 10 }}
                 labelFormatter={(value) => `Week of ${formatDate(value as string)}`}
-                formatter={(value: number, name) => [formatNumber(value), name]}
+                formatter={(value, name) => [formatNumber(Number(value)), name]}
               />
 
               {(mode === 'all' || mode === 'additions') && (
