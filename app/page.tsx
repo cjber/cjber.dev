@@ -46,15 +46,16 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mb-12">
-          <div className="bg-card rounded-lg border border-border p-4 overflow-hidden mb-6">
-            <div className="w-full max-w-full">
-              <GitHubCalendar
-                weeks={githubSnapshot.calendar.weeks}
-                totalContributions={githubSnapshot.calendar.totalContributions}
-              />
-            </div>
-          </div>
+        <div className="mb-12 space-y-8">
+          <section>
+            <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-3">
+              Contributions
+            </h2>
+            <GitHubCalendar
+              weeks={githubSnapshot.calendar.weeks}
+              totalContributions={githubSnapshot.calendar.totalContributions}
+            />
+          </section>
 
           <LocChart
             weeks={githubSnapshot.weeks}

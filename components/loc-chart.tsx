@@ -94,10 +94,10 @@ export function LocChart({ weeks, repoNames }: Props) {
   const isEmpty = data.length === 0
 
   return (
-    <Card className="w-full border-border/60 bg-card shadow-none">
-      <CardHeader className="pb-3">
+    <Card className="w-full border-0 bg-transparent shadow-none">
+      <CardHeader className="px-0 pb-3">
         <div className="flex items-center justify-between gap-4 flex-wrap">
-          <CardTitle className="text-sm font-mono font-medium tracking-wide text-foreground/90">
+          <CardTitle className="text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
             Lines of code · weekly
           </CardTitle>
           <SegmentedControl
@@ -108,7 +108,7 @@ export function LocChart({ weeks, repoNames }: Props) {
         </div>
       </CardHeader>
 
-      <CardContent className="pt-3">
+      <CardContent className="px-0 pt-3">
         <StatStrip summary={summary} />
 
         <div className="mt-4 mb-6">
