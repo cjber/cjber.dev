@@ -125,38 +125,39 @@
 }
 
 .dark {
-  --background: oklch(0.1797 0.0043 308.1928);
-  --foreground: oklch(0.8109 0 0);
-  --card: oklch(0.1822 0 0);
-  --card-foreground: oklch(0.8109 0 0);
-  --popover: oklch(0.1797 0.0043 308.1928);
-  --popover-foreground: oklch(0.8109 0 0);
-  --primary: oklch(0.7214 0.1337 49.9802);
-  --primary-foreground: oklch(0.1797 0.0043 308.1928);
-  --secondary: oklch(0.5940 0.0443 196.0233);
-  --secondary-foreground: oklch(0.1797 0.0043 308.1928);
-  --muted: oklch(0.2520 0 0);
-  --muted-foreground: oklch(0.6268 0 0);
-  --accent: oklch(0.3211 0 0);
-  --accent-foreground: oklch(0.8109 0 0);
-  --destructive: oklch(0.5940 0.0443 196.0233);
-  --border: oklch(0.2520 0 0);
-  --input: oklch(0.2520 0 0);
-  --ring: oklch(0.7214 0.1337 49.9802);
-  --chart-1: oklch(0.5940 0.0443 196.0233);
-  --chart-2: oklch(0.7214 0.1337 49.9802);
-  --chart-3: oklch(0.8721 0.0864 68.5474);
-  --chart-4: oklch(0.6268 0 0);
-  --chart-5: oklch(0.6830 0 0);
-  --sidebar: oklch(0.1822 0 0);
-  --sidebar-foreground: oklch(0.8109 0 0);
-  --sidebar-primary: oklch(0.7214 0.1337 49.9802);
-  --sidebar-primary-foreground: oklch(0.1797 0.0043 308.1928);
-  --sidebar-accent: oklch(0.3211 0 0);
-  --sidebar-accent-foreground: oklch(0.8109 0 0);
-  --sidebar-border: oklch(0.2520 0 0);
-  --sidebar-ring: oklch(0.7214 0.1337 49.9802);
-  --destructive-foreground: oklch(0.1797 0.0043 308.1928);
+  /* Oxide palette: exact hex from github.com/cjber/oxide */
+  --background: #121113;
+  --foreground: #c1c1c1;
+  --card: #1a1a1c;
+  --card-foreground: #c1c1c1;
+  --popover: #121113;
+  --popover-foreground: #c1c1c1;
+  --primary: #e78a53;            /* rust orange */
+  --primary-foreground: #121113;
+  --secondary: #5f8787;          /* teal */
+  --secondary-foreground: #121113;
+  --muted: #222222;
+  --muted-foreground: #777777;
+  --accent: #fbcb97;             /* peach */
+  --accent-foreground: #121113;
+  --destructive: #c75a5a;
+  --border: #333333;
+  --input: #333333;
+  --ring: #e78a53;
+  --chart-1: #5f8787;
+  --chart-2: #e78a53;
+  --chart-3: #fbcb97;
+  --chart-4: #c1c1c1;
+  --chart-5: #777777;
+  --sidebar: #1a1a1c;
+  --sidebar-foreground: #c1c1c1;
+  --sidebar-primary: #e78a53;
+  --sidebar-primary-foreground: #121113;
+  --sidebar-accent: #fbcb97;
+  --sidebar-accent-foreground: #121113;
+  --sidebar-border: #333333;
+  --sidebar-ring: #e78a53;
+  --destructive-foreground: #121113;
   --radius: 0.75rem;
   --font-sans: Geist Mono, ui-monospace, monospace;
   --font-serif: serif;
