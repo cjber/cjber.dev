@@ -36,7 +36,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # No `cache: 'npm'` because this repo intentionally does not commit
+          # a lockfile. Install is a few seconds; not worth a lockfile for it.
 
       - run: npm install --no-audit --no-fund
 
