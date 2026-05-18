@@ -155,7 +155,7 @@ export default function CvPage() {
           </h2>
           <ul className="space-y-4">
             {ROLES.map((r) => (
-              <li key={r.org + r.period} className="bg-card rounded-lg border border-border p-4">
+              <li key={r.org + r.period} className="py-4 border-b border-border/40 last:border-0">
                 <div className="flex items-baseline justify-between gap-2 mb-1">
                   <h3 className="font-mono text-base">
                     <span className="text-foreground">{r.title}</span>{' '}
@@ -199,7 +199,7 @@ export default function CvPage() {
           </h2>
           <ul className="space-y-3">
             {EDUCATION.map((e) => (
-              <li key={e.qualification} className="bg-card rounded-lg border border-border p-4">
+              <li key={e.qualification} className="py-4 border-b border-border/40 last:border-0">
                 <div className="flex items-baseline justify-between gap-2 mb-1">
                   <h3 className="font-mono text-base">
                     <span className="text-foreground">{e.qualification}</span>{' '}
@@ -222,7 +222,7 @@ export default function CvPage() {
           </h2>
           <ul className="space-y-3">
             {PUBLICATIONS.map((p) => (
-              <li key={p.title} className="bg-card rounded-lg border border-border p-4">
+              <li key={p.title} className="py-4 border-b border-border/40 last:border-0">
                 <h3 className="font-mono text-sm text-foreground">{p.title}</h3>
                 <p className="font-mono text-xs text-muted-foreground mt-1">
                   <span className="text-secondary">{p.venue}</span> · {p.date}
@@ -252,7 +252,7 @@ export default function CvPage() {
             {SKILLS.map((s) => (
               <span
                 key={s}
-                className="font-mono text-xs px-2 py-1 rounded border border-border bg-card text-foreground"
+                className="font-mono text-xs px-2 py-1 rounded-sm border border-border/40 text-muted-foreground"
               >
                 {s}
               </span>
