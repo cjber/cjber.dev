@@ -1,31 +1,59 @@
-name: Refresh GitHub stats (rebuild Cloudflare Pages)
+name: Refresh GitHub snapshot
 
-# Triggers a Cloudflare Pages deploy hook on a schedule so the build re-runs
-# `pnpm prebuild` and the GitHub data snapshot is regenerated.
+# Fetches a fresh contributions and LoC snapshot from the GitHub API and
+# commits lib/github-data.json. The git push then triggers Cloudflare
+# Pages' git-integration auto-deploy, so the live site shows current
+# data without needing a CF deploy hook or CF-side GITHUB_TOKEN.
 #
-# Setup:
-#   1. In the Cloudflare Pages dashboard for this project: Settings →
-#      Builds & deployments → Deploy hooks → "Add deploy hook" (production).
-#   2. Copy the URL into a GitHub Actions secret named CLOUDFLARE_DEPLOY_HOOK.
-#   3. Ensure GITHUB_TOKEN (with `repo` scope, for contributor stats) is set
-#      under Cloudflare Pages → Settings → Environment variables (Production).
+# Setup once:
+#   gh secret set GH_PAT -R cjber/cjber.dev
+# (paste a PAT with `repo` scope so the fetcher can read commits in
+# private thirdweb-dev repos. Public-only repos work with the default
+# secrets.GITHUB_TOKEN but Nebula needs `repo`.)
 
 on:
   schedule:
-    # Daily at 06:30 UTC — pre-morning, off-peak.
-    - cron: '30 6 * * *'
-  workflow_dispatch:
+    - cron: '30 6 * * *'   # daily, 06:30 UTC
+  workflow_dispatch:       # manual trigger button
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fetch-github-data.ts'
+      - '.github/workflows/refresh-github-stats.yml'
+
+concurrency:
+  group: refresh-github-snapshot
+  cancel-in-progress: false
 
 jobs:
-  trigger-deploy:
+  refresh:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: POST to Cloudflare Pages deploy hook
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm install --no-audit --no-fund
+
+      - name: Fetch fresh snapshot
         env:
-          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_USERNAME: cjber
+        run: npx tsx scripts/fetch-github-data.ts
+
+      - name: Commit if changed
         run: |
-          if [ -z "$HOOK" ]; then
-            echo "::error::CLOUDFLARE_DEPLOY_HOOK secret is not set"
-            exit 1
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- lib/github-data.json; then
+            echo "no snapshot changes"
+            exit 0
           fi
-          curl --fail --show-error --silent -X POST "$HOOK" -o /dev/null -w "HTTP %{http_code}\n"
+          git add lib/github-data.json
+          git commit -m "data: refresh GitHub snapshot ($(date -u +%Y-%m-%d))"
+          git push
