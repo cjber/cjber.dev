@@ -306,8 +306,10 @@ function SegmentedControl<T extends string | number>({
 }
 
 function Legend({ repos }: { repos: string[] }) {
+  // Reserve space for up to three rows of repo chips so the page below
+  // does not nudge when the range switches and more repos light up.
   return (
-    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-[10px] font-mono text-muted-foreground">
+    <div className="mt-4 flex flex-wrap content-start gap-x-4 gap-y-1.5 text-[10px] font-mono text-muted-foreground min-h-[3.5rem]">
       {repos.map((r, i) => (
         <div key={r} className="flex items-center gap-1.5">
           <span
