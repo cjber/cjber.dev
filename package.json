@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "tsx scripts/fetch-github-data.ts",
+    "prebuild": "tsx scripts/fetch-github-data.ts || true",
     "predev": "tsx scripts/fetch-github-data.ts || true",
     "fetch-data": "tsx scripts/fetch-github-data.ts",
     "build": "next build",
