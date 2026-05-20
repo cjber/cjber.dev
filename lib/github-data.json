@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T07:51:43.455Z",
+  "generatedAt": "2026-05-20T07:51:08.537Z",
   "weeks": [
     {
       "date": "2025-05-25",
@@ -480,16 +480,16 @@
     {
       "date": "2026-05-17",
       "weekTimestamp": 1778976000,
-      "additions": 29169,
-      "deletions": 11566,
-      "net": 17603,
+      "additions": 41735,
+      "deletions": 135710,
+      "net": -93975,
       "cjber.dev": -2009,
-      "nebula-web": 1316,
-      "nebula": 10446,
+      "nebula-web": 2242,
+      "nebula": -102058,
       "hyprview": 558,
       "oxide": 1616,
-      "footprint-explorer": 5661,
-      "nebula-mobile": 15
+      "nebula-mobile": 15,
+      "footprint-explorer": 5661
     }
   ],
   "repoNames": [
@@ -498,10 +498,10 @@
     "nebula-web",
     "nebula",
     "hyprview",
-    "oxide",
     "nebula-desktop",
-    "footprint-explorer",
+    "oxide",
     "nebula-mobile",
+    "footprint-explorer",
     "tab-archive",
     "nebula-cli",
     "nebula-docs",
@@ -513,7 +513,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 6550,
+    "totalContributions": 6631,
     "weeks": [
       {
         "firstDay": "2025-05-18",
@@ -2610,7 +2610,12 @@
           },
           {
             "date": "2026-05-19",
-            "count": 9,
+            "count": 83,
+            "level": 4
+          },
+          {
+            "date": "2026-05-20",
+            "count": 7,
             "level": 1
           }
         ]
