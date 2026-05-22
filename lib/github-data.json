@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T07:51:39.498Z",
+  "generatedAt": "2026-05-22T07:50:18.587Z",
   "weeks": [
     {
       "date": "2025-05-25",
@@ -216,8 +216,8 @@
       "additions": 4515,
       "deletions": 1018,
       "net": 3497,
-      "dotfiles": 139,
       "nebula-mobile": 40,
+      "dotfiles": 139,
       "nebula-docs": 3318
     },
     {
@@ -290,37 +290,37 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
+      "nebula-mobile": 597,
       "dotfiles": 1153,
       "nebula": 46806,
-      "nebula-mobile": 597,
       "nebula-desktop": -63,
       "tab-archive": 5275
     },
     {
       "date": "2026-05-17",
       "weekTimestamp": 1778976000,
-      "additions": 54323,
-      "deletions": 143130,
-      "net": -88807,
-      "cjber.dev": -2009,
-      "nebula": -94648,
+      "additions": 63039,
+      "deletions": 144768,
+      "net": -81729,
       "nebula-mobile": 15,
-      "footprint-explorer": 5661,
+      "cjber.dev": -2009,
+      "nebula": -87570,
       "oxide": 1616,
-      "hyprview": 558
+      "hyprview": 558,
+      "footprint-explorer": 5661
     }
   ],
   "repoNames": [
+    "nebula-mobile",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
-    "nebula-mobile",
     "nebula-desktop",
-    "footprint-explorer",
     "nebula-docs",
     "oxide",
     "hyprview",
+    "footprint-explorer",
     "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
@@ -329,7 +329,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4564,
+    "totalContributions": 4586,
     "weeks": [
       {
         "firstDay": "2025-05-18",
@@ -2436,8 +2436,13 @@
           },
           {
             "date": "2026-05-21",
-            "count": 3,
+            "count": 25,
             "level": 1
+          },
+          {
+            "date": "2026-05-22",
+            "count": 0,
+            "level": 0
           }
         ]
       }
