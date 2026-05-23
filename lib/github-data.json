@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T07:50:18.587Z",
+  "generatedAt": "2026-05-23T07:24:41.325Z",
   "weeks": [
     {
       "date": "2025-05-25",
@@ -216,8 +216,8 @@
       "additions": 4515,
       "deletions": 1018,
       "net": 3497,
-      "nebula-mobile": 40,
       "dotfiles": 139,
+      "nebula-mobile": 40,
       "nebula-docs": 3318
     },
     {
@@ -243,8 +243,8 @@
       "additions": 183,
       "deletions": 54,
       "net": 129,
-      "nebula-mobile": 47,
       "nebula-desktop": 41,
+      "nebula-mobile": 47,
       "nebula-cli": 41
     },
     {
@@ -262,8 +262,8 @@
       "additions": 4173,
       "deletions": 637,
       "net": 3536,
-      "dotfiles": 16,
       "nebula-desktop": 1760,
+      "dotfiles": 16,
       "nebula-cli": 1760
     },
     {
@@ -290,37 +290,38 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
-      "nebula-mobile": 597,
+      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 46806,
-      "nebula-desktop": -63,
+      "nebula-mobile": 597,
       "tab-archive": 5275
     },
     {
       "date": "2026-05-17",
       "weekTimestamp": 1778976000,
-      "additions": 63039,
-      "deletions": 144768,
-      "net": -81729,
-      "nebula-mobile": 15,
+      "additions": 78883,
+      "deletions": 158976,
+      "net": -80093,
       "cjber.dev": -2009,
-      "nebula": -87570,
+      "nebula-web": 430,
+      "nebula": -86484,
+      "nebula-mobile": 135,
       "oxide": 1616,
       "hyprview": 558,
       "footprint-explorer": 5661
     }
   ],
   "repoNames": [
-    "nebula-mobile",
+    "nebula-desktop",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
-    "nebula-desktop",
-    "nebula-docs",
+    "nebula-mobile",
     "oxide",
     "hyprview",
     "footprint-explorer",
+    "nebula-docs",
     "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
@@ -329,7 +330,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4586,
+    "totalContributions": 4650,
     "weeks": [
       {
         "firstDay": "2025-05-18",
@@ -2441,8 +2442,13 @@
           },
           {
             "date": "2026-05-22",
-            "count": 0,
-            "level": 0
+            "count": 63,
+            "level": 3
+          },
+          {
+            "date": "2026-05-23",
+            "count": 1,
+            "level": 1
           }
         ]
       }
