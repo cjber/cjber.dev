@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T07:24:41.325Z",
+  "generatedAt": "2026-05-24T07:36:53.713Z",
   "weeks": [
     {
       "date": "2025-05-25",
@@ -262,8 +262,8 @@
       "additions": 4173,
       "deletions": 637,
       "net": 3536,
-      "nebula-desktop": 1760,
       "dotfiles": 16,
+      "nebula-desktop": 1760,
       "nebula-cli": 1760
     },
     {
@@ -290,38 +290,38 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
-      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 46806,
+      "nebula-desktop": -63,
       "nebula-mobile": 597,
       "tab-archive": 5275
     },
     {
       "date": "2026-05-17",
       "weekTimestamp": 1778976000,
-      "additions": 78883,
-      "deletions": 158976,
-      "net": -80093,
+      "additions": 86438,
+      "deletions": 162324,
+      "net": -75886,
       "cjber.dev": -2009,
-      "nebula-web": 430,
-      "nebula": -86484,
-      "nebula-mobile": 135,
+      "nebula-web": 920,
+      "nebula": -83508,
+      "nebula-mobile": 876,
       "oxide": 1616,
       "hyprview": 558,
       "footprint-explorer": 5661
     }
   ],
   "repoNames": [
-    "nebula-desktop",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
+    "nebula-desktop",
     "nebula-mobile",
+    "nebula-docs",
     "oxide",
     "hyprview",
     "footprint-explorer",
-    "nebula-docs",
     "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
@@ -330,48 +330,8 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4650,
+    "totalContributions": 4697,
     "weeks": [
-      {
-        "firstDay": "2025-05-18",
-        "days": [
-          {
-            "date": "2025-05-18",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-05-19",
-            "count": 6,
-            "level": 1
-          },
-          {
-            "date": "2025-05-20",
-            "count": 11,
-            "level": 1
-          },
-          {
-            "date": "2025-05-21",
-            "count": 15,
-            "level": 1
-          },
-          {
-            "date": "2025-05-22",
-            "count": 18,
-            "level": 1
-          },
-          {
-            "date": "2025-05-23",
-            "count": 12,
-            "level": 1
-          },
-          {
-            "date": "2025-05-24",
-            "count": 0,
-            "level": 0
-          }
-        ]
-      },
       {
         "firstDay": "2025-05-25",
         "days": [
@@ -2447,6 +2407,16 @@
           },
           {
             "date": "2026-05-23",
+            "count": 47,
+            "level": 2
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-05-24",
+        "days": [
+          {
+            "date": "2026-05-24",
             "count": 1,
             "level": 1
           }
