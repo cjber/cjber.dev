@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T08:06:08.263Z",
+  "generatedAt": "2026-05-26T07:51:14.851Z",
   "weeks": [
     {
       "date": "2025-06-01",
@@ -206,8 +206,8 @@
       "additions": 4515,
       "deletions": 1018,
       "net": 3497,
-      "dotfiles": 139,
       "nebula-mobile": 40,
+      "dotfiles": 139,
       "nebula-docs": 3318
     },
     {
@@ -233,8 +233,8 @@
       "additions": 183,
       "deletions": 54,
       "net": 129,
-      "nebula-desktop": 41,
       "nebula-mobile": 47,
+      "nebula-desktop": 41,
       "nebula-cli": 41
     },
     {
@@ -280,10 +280,10 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
+      "nebula-mobile": 597,
       "dotfiles": 1153,
       "nebula": 46806,
       "nebula-desktop": -63,
-      "nebula-mobile": 597,
       "tab-archive": 5275
     },
     {
@@ -292,10 +292,10 @@
       "additions": 86438,
       "deletions": 162324,
       "net": -75886,
+      "nebula-mobile": 876,
       "cjber.dev": -2009,
       "nebula-web": 920,
       "nebula": -83508,
-      "nebula-mobile": 876,
       "oxide": 1616,
       "hyprview": 558,
       "footprint-explorer": 5661
@@ -303,28 +303,28 @@
     {
       "date": "2026-05-24",
       "weekTimestamp": 1779580800,
-      "additions": 13058,
-      "deletions": 4115,
-      "net": 8943,
+      "additions": 14500,
+      "deletions": 5450,
+      "net": 9050,
+      "nebula-mobile": 62,
       "nebula-web": 62,
-      "nebula": 4318,
-      "nebula-metabase": 4501,
-      "nebula-mobile": 62
+      "nebula": 4352,
+      "nebula-metabase": 4574
     }
   ],
   "repoNames": [
+    "nebula-mobile",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
-    "nebula-desktop",
     "nebula-metabase",
-    "nebula-mobile",
+    "nebula-desktop",
     "nebula-docs",
     "oxide",
     "hyprview",
-    "footprint-explorer",
     "tab-archive",
+    "footprint-explorer",
     "nebula-cli",
     "berragan.co.uk",
     "nebula-api-v0",
@@ -332,7 +332,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4675,
+    "totalContributions": 4686,
     "weeks": [
       {
         "firstDay": "2025-05-25",
@@ -2424,6 +2424,11 @@
           },
           {
             "date": "2026-05-25",
+            "count": 11,
+            "level": 1
+          },
+          {
+            "date": "2026-05-26",
             "count": 0,
             "level": 0
           }
