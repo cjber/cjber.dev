@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T07:51:14.851Z",
+  "generatedAt": "2026-05-27T07:54:41.072Z",
   "weeks": [
     {
       "date": "2025-06-01",
@@ -206,8 +206,8 @@
       "additions": 4515,
       "deletions": 1018,
       "net": 3497,
-      "nebula-mobile": 40,
       "dotfiles": 139,
+      "nebula-mobile": 40,
       "nebula-docs": 3318
     },
     {
@@ -233,8 +233,8 @@
       "additions": 183,
       "deletions": 54,
       "net": 129,
-      "nebula-mobile": 47,
       "nebula-desktop": 41,
+      "nebula-mobile": 47,
       "nebula-cli": 41
     },
     {
@@ -252,8 +252,8 @@
       "additions": 4173,
       "deletions": 637,
       "net": 3536,
-      "dotfiles": 16,
       "nebula-desktop": 1760,
+      "dotfiles": 16,
       "nebula-cli": 1760
     },
     {
@@ -280,10 +280,10 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
-      "nebula-mobile": 597,
+      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 46806,
-      "nebula-desktop": -63,
+      "nebula-mobile": 597,
       "tab-archive": 5275
     },
     {
@@ -292,10 +292,10 @@
       "additions": 86438,
       "deletions": 162324,
       "net": -75886,
-      "nebula-mobile": 876,
       "cjber.dev": -2009,
       "nebula-web": 920,
       "nebula": -83508,
+      "nebula-mobile": 876,
       "oxide": 1616,
       "hyprview": 558,
       "footprint-explorer": 5661
@@ -303,28 +303,28 @@
     {
       "date": "2026-05-24",
       "weekTimestamp": 1779580800,
-      "additions": 14500,
-      "deletions": 5450,
-      "net": 9050,
-      "nebula-mobile": 62,
-      "nebula-web": 62,
-      "nebula": 4352,
+      "additions": 113407,
+      "deletions": 93768,
+      "net": 19639,
+      "nebula-web": 2608,
+      "nebula": 11560,
+      "nebula-mobile": 897,
       "nebula-metabase": 4574
     }
   ],
   "repoNames": [
-    "nebula-mobile",
+    "nebula-desktop",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
-    "nebula-metabase",
-    "nebula-desktop",
+    "nebula-mobile",
     "nebula-docs",
+    "nebula-metabase",
     "oxide",
     "hyprview",
-    "tab-archive",
     "footprint-explorer",
+    "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
     "nebula-api-v0",
@@ -332,7 +332,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4686,
+    "totalContributions": 4733,
     "weeks": [
       {
         "firstDay": "2025-05-25",
@@ -2429,8 +2429,13 @@
           },
           {
             "date": "2026-05-26",
-            "count": 0,
-            "level": 0
+            "count": 44,
+            "level": 2
+          },
+          {
+            "date": "2026-05-27",
+            "count": 3,
+            "level": 1
           }
         ]
       }
