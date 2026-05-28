@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T07:54:41.072Z",
+  "generatedAt": "2026-05-28T07:52:33.158Z",
   "weeks": [
     {
       "date": "2025-06-01",
@@ -252,8 +252,8 @@
       "additions": 4173,
       "deletions": 637,
       "net": 3536,
-      "nebula-desktop": 1760,
       "dotfiles": 16,
+      "nebula-desktop": 1760,
       "nebula-cli": 1760
     },
     {
@@ -280,9 +280,9 @@
       "additions": 93704,
       "deletions": 39936,
       "net": 53768,
-      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 46806,
+      "nebula-desktop": -63,
       "nebula-mobile": 597,
       "tab-archive": 5275
     },
@@ -297,33 +297,34 @@
       "nebula": -83508,
       "nebula-mobile": 876,
       "oxide": 1616,
-      "hyprview": 558,
-      "footprint-explorer": 5661
+      "footprint-explorer": 5661,
+      "hyprview": 558
     },
     {
       "date": "2026-05-24",
       "weekTimestamp": 1779580800,
-      "additions": 113407,
-      "deletions": 93768,
-      "net": 19639,
-      "nebula-web": 2608,
-      "nebula": 11560,
-      "nebula-mobile": 897,
-      "nebula-metabase": 4574
+      "additions": 158304,
+      "deletions": 108539,
+      "net": 49765,
+      "nebula-web": 2616,
+      "nebula": 41446,
+      "nebula-metabase": 4768,
+      "nebula-desktop": 38,
+      "nebula-mobile": 897
     }
   ],
   "repoNames": [
-    "nebula-desktop",
     "cjber.dev",
     "dotfiles",
     "nebula-web",
     "nebula",
+    "nebula-metabase",
+    "nebula-desktop",
     "nebula-mobile",
     "nebula-docs",
-    "nebula-metabase",
     "oxide",
-    "hyprview",
     "footprint-explorer",
+    "hyprview",
     "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
@@ -332,7 +333,7 @@
     "ai"
   ],
   "calendar": {
-    "totalContributions": 4733,
+    "totalContributions": 4781,
     "weeks": [
       {
         "firstDay": "2025-05-25",
@@ -2434,7 +2435,12 @@
           },
           {
             "date": "2026-05-27",
-            "count": 3,
+            "count": 46,
+            "level": 2
+          },
+          {
+            "date": "2026-05-28",
+            "count": 5,
             "level": 1
           }
         ]
