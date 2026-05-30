@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T07:51:59.352Z",
+  "generatedAt": "2026-05-30T07:31:21.490Z",
   "weeks": [
     {
       "date": "2025-06-01",
@@ -303,13 +303,13 @@
     {
       "date": "2026-05-24",
       "weekTimestamp": 1779580800,
-      "additions": 172742,
-      "deletions": 117836,
-      "net": 54906,
-      "nebula-web": 2518,
-      "nebula": 46852,
+      "additions": 197491,
+      "deletions": 128914,
+      "net": 68577,
+      "nebula-web": 4500,
+      "nebula": 57224,
       "nebula-desktop": 38,
-      "nebula-mobile": 695,
+      "nebula-mobile": 2012,
       "nebula-metabase": 4803
     }
   ],
@@ -332,7 +332,7 @@
     "fluid-dreams"
   ],
   "calendar": {
-    "totalContributions": 4852,
+    "totalContributions": 4933,
     "weeks": [
       {
         "firstDay": "2025-05-25",
@@ -2439,11 +2439,16 @@
           },
           {
             "date": "2026-05-28",
-            "count": 72,
+            "count": 71,
             "level": 3
           },
           {
             "date": "2026-05-29",
+            "count": 82,
+            "level": 3
+          },
+          {
+            "date": "2026-05-30",
             "count": 4,
             "level": 1
           }
