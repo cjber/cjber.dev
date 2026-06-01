@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-05-31T07:50:01.033Z",
+  "generatedAt": "2026-06-01T08:23:25.281Z",
   "weeks": [
-    {
-      "date": "2025-06-01",
-      "weekTimestamp": 1748736000,
-      "additions": 3349,
-      "deletions": 4928,
-      "net": -1579,
-      "dotfiles": 44,
-      "nebula": -1082,
-      "nebula-api-v0": -541
-    },
     {
       "date": "2025-06-08",
       "weekTimestamp": 1749340800,
@@ -297,8 +287,8 @@
       "nebula": -83508,
       "nebula-mobile": 876,
       "oxide": 1616,
-      "hyprview": 558,
-      "footprint-explorer": 5661
+      "footprint-explorer": 5661,
+      "hyprview": 558
     },
     {
       "date": "2026-05-24",
@@ -320,11 +310,11 @@
     "nebula",
     "nebula-desktop",
     "nebula-mobile",
-    "nebula-docs",
     "nebula-metabase",
+    "nebula-docs",
     "oxide",
-    "hyprview",
     "footprint-explorer",
+    "hyprview",
     "tab-archive",
     "nebula-cli",
     "berragan.co.uk",
@@ -332,7 +322,7 @@
     "fluid-dreams"
   ],
   "calendar": {
-    "totalContributions": 4933,
+    "totalContributions": 4899,
     "weeks": [
       {
         "firstDay": "2025-06-01",
@@ -2419,8 +2409,13 @@
         "days": [
           {
             "date": "2026-05-31",
-            "count": 0,
-            "level": 0
+            "count": 4,
+            "level": 1
+          },
+          {
+            "date": "2026-06-01",
+            "count": 1,
+            "level": 1
           }
         ]
       }
