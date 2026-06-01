@@ -1,176 +1,1955 @@
 {
-  "generatedAt": "2026-06-01T08:23:25.281Z",
+  "generatedAt": "2026-06-01T16:17:53.378Z",
   "weeks": [
+    {
+      "date": "2019-08-04",
+      "weekTimestamp": 1564876800,
+      "additions": 9289,
+      "deletions": 0,
+      "net": 9289,
+      "dissertation": 9289
+    },
+    {
+      "date": "2019-08-11",
+      "weekTimestamp": 1565481600,
+      "additions": 14448,
+      "deletions": 20088,
+      "net": -5640,
+      "dissertation": -5640
+    },
+    {
+      "date": "2019-08-18",
+      "weekTimestamp": 1566086400,
+      "additions": 1647,
+      "deletions": 1425,
+      "net": 222,
+      "dissertation": 222
+    },
+    {
+      "date": "2019-08-25",
+      "weekTimestamp": 1566691200,
+      "additions": 3427,
+      "deletions": 3340,
+      "net": 87,
+      "dissertation": 87
+    },
+    {
+      "date": "2019-09-01",
+      "weekTimestamp": 1567296000,
+      "additions": 2731,
+      "deletions": 848,
+      "net": 1883,
+      "dissertation": 1883
+    },
+    {
+      "date": "2019-09-08",
+      "weekTimestamp": 1567900800,
+      "additions": 4558,
+      "deletions": 4604,
+      "net": -46,
+      "dissertation": -46
+    },
+    {
+      "date": "2019-09-15",
+      "weekTimestamp": 1568505600,
+      "additions": 1,
+      "deletions": 1,
+      "net": 0,
+      "dissertation": 0
+    },
+    {
+      "date": "2019-09-22",
+      "weekTimestamp": 1569110400,
+      "additions": 52302,
+      "deletions": 58,
+      "net": 52244,
+      "gds": 52244
+    },
+    {
+      "date": "2019-10-20",
+      "weekTimestamp": 1571529600,
+      "additions": 13696,
+      "deletions": 10,
+      "net": 13686,
+      "uolrmarkdown": 13686
+    },
+    {
+      "date": "2019-11-03",
+      "weekTimestamp": 1572739200,
+      "additions": 7,
+      "deletions": 15,
+      "net": -8,
+      "uolrmarkdown": -8
+    },
+    {
+      "date": "2019-11-17",
+      "weekTimestamp": 1573948800,
+      "additions": 60344,
+      "deletions": 25593,
+      "net": 34751,
+      "abm_liv": 34751
+    },
+    {
+      "date": "2019-11-24",
+      "weekTimestamp": 1574553600,
+      "additions": 367,
+      "deletions": 142,
+      "net": 225,
+      "abm_liv": 225
+    },
+    {
+      "date": "2019-12-01",
+      "weekTimestamp": 1575158400,
+      "additions": 46433,
+      "deletions": 54651,
+      "net": -8218,
+      "abm_liv": -8218
+    },
+    {
+      "date": "2019-12-08",
+      "weekTimestamp": 1575763200,
+      "additions": 995,
+      "deletions": 580,
+      "net": 415,
+      "abm_liv": 415
+    },
+    {
+      "date": "2020-01-12",
+      "weekTimestamp": 1578787200,
+      "additions": 37,
+      "deletions": 717,
+      "net": -680,
+      "uolrmarkdown": -680
+    },
+    {
+      "date": "2020-03-08",
+      "weekTimestamp": 1583625600,
+      "additions": 8046,
+      "deletions": 3934,
+      "net": 4112,
+      "dotfiles": 4112
+    },
+    {
+      "date": "2020-03-15",
+      "weekTimestamp": 1584230400,
+      "additions": 1865,
+      "deletions": 1069,
+      "net": 796,
+      "dotfiles": 796
+    },
+    {
+      "date": "2020-03-22",
+      "weekTimestamp": 1584835200,
+      "additions": 3579,
+      "deletions": 105,
+      "net": 3474,
+      "dotfiles": 3474
+    },
+    {
+      "date": "2020-03-29",
+      "weekTimestamp": 1585440000,
+      "additions": 26614,
+      "deletions": 10862,
+      "net": 15752,
+      "dotfiles": -12,
+      "ward-lifetimes": 15764
+    },
+    {
+      "date": "2020-04-05",
+      "weekTimestamp": 1586044800,
+      "additions": 21292,
+      "deletions": 8711,
+      "net": 12581,
+      "dotfiles": 29,
+      "abm_liv": 12552
+    },
+    {
+      "date": "2020-04-12",
+      "weekTimestamp": 1586649600,
+      "additions": 4127,
+      "deletions": 69,
+      "net": 4058,
+      "dotfiles": -37,
+      "car_ml": 4095
+    },
+    {
+      "date": "2020-04-19",
+      "weekTimestamp": 1587254400,
+      "additions": 24,
+      "deletions": 14,
+      "net": 10,
+      "dotfiles": 10
+    },
+    {
+      "date": "2020-04-26",
+      "weekTimestamp": 1587859200,
+      "additions": 144,
+      "deletions": 79,
+      "net": 65,
+      "dotfiles": 65
+    },
+    {
+      "date": "2020-05-03",
+      "weekTimestamp": 1588464000,
+      "additions": 206,
+      "deletions": 524,
+      "net": -318,
+      "dotfiles": -318
+    },
+    {
+      "date": "2020-05-10",
+      "weekTimestamp": 1589068800,
+      "additions": 234,
+      "deletions": 246,
+      "net": -12,
+      "dotfiles": -12,
+      "abm_liv": 0
+    },
+    {
+      "date": "2020-05-17",
+      "weekTimestamp": 1589673600,
+      "additions": 270,
+      "deletions": 83,
+      "net": 187,
+      "dotfiles": 23,
+      "cjrmd": 164
+    },
+    {
+      "date": "2020-05-24",
+      "weekTimestamp": 1590278400,
+      "additions": 169,
+      "deletions": 204,
+      "net": -35,
+      "dotfiles": -38,
+      "cjrmd": 3
+    },
+    {
+      "date": "2020-05-31",
+      "weekTimestamp": 1590883200,
+      "additions": 539,
+      "deletions": 165,
+      "net": 374,
+      "dotfiles": 18,
+      "uolrmarkdown": 356
+    },
+    {
+      "date": "2020-06-07",
+      "weekTimestamp": 1591488000,
+      "additions": 548,
+      "deletions": 12,
+      "net": 536,
+      "dotfiles": 34,
+      "uolrmarkdown": 502
+    },
+    {
+      "date": "2020-06-14",
+      "weekTimestamp": 1592092800,
+      "additions": 63,
+      "deletions": 17,
+      "net": 46,
+      "dotfiles": 2,
+      "cjrmd": 44
+    },
+    {
+      "date": "2020-06-21",
+      "weekTimestamp": 1592697600,
+      "additions": 326,
+      "deletions": 243,
+      "net": 83,
+      "dotfiles": 83
+    },
+    {
+      "date": "2020-06-28",
+      "weekTimestamp": 1593302400,
+      "additions": 294,
+      "deletions": 141,
+      "net": 153,
+      "dotfiles": 46,
+      "uolrmarkdown": -16,
+      "cjrmd": 123
+    },
+    {
+      "date": "2020-07-05",
+      "weekTimestamp": 1593907200,
+      "additions": 25,
+      "deletions": 13,
+      "net": 12,
+      "dotfiles": 12
+    },
+    {
+      "date": "2020-07-12",
+      "weekTimestamp": 1594512000,
+      "additions": 61,
+      "deletions": 89,
+      "net": -28,
+      "dotfiles": -3,
+      "cjrmd": -25
+    },
+    {
+      "date": "2020-07-19",
+      "weekTimestamp": 1595116800,
+      "additions": 181,
+      "deletions": 169,
+      "net": 12,
+      "dotfiles": 12
+    },
+    {
+      "date": "2020-07-26",
+      "weekTimestamp": 1595721600,
+      "additions": 136,
+      "deletions": 102,
+      "net": 34,
+      "dotfiles": 34
+    },
+    {
+      "date": "2020-08-02",
+      "weekTimestamp": 1596326400,
+      "additions": 8,
+      "deletions": 8,
+      "net": 0,
+      "dotfiles": 0
+    },
+    {
+      "date": "2020-08-09",
+      "weekTimestamp": 1596931200,
+      "additions": 2,
+      "deletions": 0,
+      "net": 2,
+      "dotfiles": 2
+    },
+    {
+      "date": "2020-08-16",
+      "weekTimestamp": 1597536000,
+      "additions": 424,
+      "deletions": 4406,
+      "net": -3982,
+      "dotfiles": 6,
+      "uolrmarkdown": -4013,
+      "cjrmd": 25
+    },
+    {
+      "date": "2020-08-23",
+      "weekTimestamp": 1598140800,
+      "additions": 1,
+      "deletions": 0,
+      "net": 1,
+      "dotfiles": 1
+    },
+    {
+      "date": "2020-08-30",
+      "weekTimestamp": 1598745600,
+      "additions": 979,
+      "deletions": 60,
+      "net": 919,
+      "dotfiles": 919
+    },
+    {
+      "date": "2020-09-06",
+      "weekTimestamp": 1599350400,
+      "additions": 527,
+      "deletions": 435,
+      "net": 92,
+      "dotfiles": 92
+    },
+    {
+      "date": "2020-09-13",
+      "weekTimestamp": 1599955200,
+      "additions": 17,
+      "deletions": 12,
+      "net": 5,
+      "dotfiles": -1,
+      "cjrmd": 6
+    },
+    {
+      "date": "2020-09-20",
+      "weekTimestamp": 1600560000,
+      "additions": 1,
+      "deletions": 23,
+      "net": -22,
+      "dotfiles": -22
+    },
+    {
+      "date": "2020-09-27",
+      "weekTimestamp": 1601164800,
+      "additions": 35,
+      "deletions": 23,
+      "net": 12,
+      "dotfiles": 16,
+      "cjrmd": -4
+    },
+    {
+      "date": "2020-10-04",
+      "weekTimestamp": 1601769600,
+      "additions": 19,
+      "deletions": 7,
+      "net": 12,
+      "dotfiles": 12
+    },
+    {
+      "date": "2020-10-11",
+      "weekTimestamp": 1602374400,
+      "additions": 44,
+      "deletions": 14,
+      "net": 30,
+      "dotfiles": 30
+    },
+    {
+      "date": "2020-10-18",
+      "weekTimestamp": 1602979200,
+      "additions": 108,
+      "deletions": 140,
+      "net": -32,
+      "dotfiles": -32
+    },
+    {
+      "date": "2020-10-25",
+      "weekTimestamp": 1603584000,
+      "additions": 99,
+      "deletions": 49,
+      "net": 50,
+      "dotfiles": 50
+    },
+    {
+      "date": "2020-11-01",
+      "weekTimestamp": 1604188800,
+      "additions": 66,
+      "deletions": 87,
+      "net": -21,
+      "dotfiles": -21
+    },
+    {
+      "date": "2020-11-08",
+      "weekTimestamp": 1604793600,
+      "additions": 133,
+      "deletions": 102,
+      "net": 31,
+      "dotfiles": 31
+    },
+    {
+      "date": "2020-11-15",
+      "weekTimestamp": 1605398400,
+      "additions": 98,
+      "deletions": 253,
+      "net": -155,
+      "dotfiles": -155
+    },
+    {
+      "date": "2020-11-22",
+      "weekTimestamp": 1606003200,
+      "additions": 64,
+      "deletions": 16,
+      "net": 48,
+      "dotfiles": 48
+    },
+    {
+      "date": "2021-01-03",
+      "weekTimestamp": 1609632000,
+      "additions": 15,
+      "deletions": 5,
+      "net": 10,
+      "cjrmd": 10
+    },
+    {
+      "date": "2021-01-10",
+      "weekTimestamp": 1610236800,
+      "additions": 312,
+      "deletions": 2258,
+      "net": -1946,
+      "dotfiles": -1946
+    },
+    {
+      "date": "2021-01-17",
+      "weekTimestamp": 1610841600,
+      "additions": 216,
+      "deletions": 605,
+      "net": -389,
+      "dotfiles": -389
+    },
+    {
+      "date": "2021-01-31",
+      "weekTimestamp": 1612051200,
+      "additions": 44,
+      "deletions": 44,
+      "net": 0,
+      "dotfiles": 0
+    },
+    {
+      "date": "2021-02-07",
+      "weekTimestamp": 1612656000,
+      "additions": 75,
+      "deletions": 76,
+      "net": -1,
+      "dotfiles": -1
+    },
+    {
+      "date": "2021-02-14",
+      "weekTimestamp": 1613260800,
+      "additions": 4,
+      "deletions": 0,
+      "net": 4,
+      "dotfiles": 4
+    },
+    {
+      "date": "2021-02-21",
+      "weekTimestamp": 1613865600,
+      "additions": 33,
+      "deletions": 10,
+      "net": 23,
+      "dotfiles": 23
+    },
+    {
+      "date": "2021-02-28",
+      "weekTimestamp": 1614470400,
+      "additions": 11,
+      "deletions": 9,
+      "net": 2,
+      "dotfiles": 2
+    },
+    {
+      "date": "2021-03-07",
+      "weekTimestamp": 1615075200,
+      "additions": 8581,
+      "deletions": 8647,
+      "net": -66,
+      "dotfiles": -66
+    },
+    {
+      "date": "2021-03-14",
+      "weekTimestamp": 1615680000,
+      "additions": 1252,
+      "deletions": 854,
+      "net": 398,
+      "dotfiles": 398
+    },
+    {
+      "date": "2021-03-21",
+      "weekTimestamp": 1616284800,
+      "additions": 590,
+      "deletions": 384,
+      "net": 206,
+      "dotfiles": 206
+    },
+    {
+      "date": "2021-03-28",
+      "weekTimestamp": 1616889600,
+      "additions": 902,
+      "deletions": 542,
+      "net": 360,
+      "dotfiles": 360
+    },
+    {
+      "date": "2021-04-11",
+      "weekTimestamp": 1618099200,
+      "additions": 100,
+      "deletions": 75,
+      "net": 25,
+      "dotfiles": 25
+    },
+    {
+      "date": "2021-04-18",
+      "weekTimestamp": 1618704000,
+      "additions": 75,
+      "deletions": 72,
+      "net": 3,
+      "dotfiles": 3
+    },
+    {
+      "date": "2021-04-25",
+      "weekTimestamp": 1619308800,
+      "additions": 7108,
+      "deletions": 758,
+      "net": 6350,
+      "dotfiles": -315,
+      "uolrmarkdown": 9,
+      "georelations": 6656
+    },
+    {
+      "date": "2021-05-02",
+      "weekTimestamp": 1619913600,
+      "additions": 125,
+      "deletions": 49,
+      "net": 76,
+      "dotfiles": 76
+    },
+    {
+      "date": "2021-05-09",
+      "weekTimestamp": 1620518400,
+      "additions": 9195,
+      "deletions": 5713,
+      "net": 3482,
+      "georelations": 3482
+    },
+    {
+      "date": "2021-05-23",
+      "weekTimestamp": 1621728000,
+      "additions": 34504,
+      "deletions": 1876,
+      "net": 32628,
+      "georelations": 32628
+    },
+    {
+      "date": "2021-05-30",
+      "weekTimestamp": 1622332800,
+      "additions": 75,
+      "deletions": 28,
+      "net": 47,
+      "georelations": 47
+    },
+    {
+      "date": "2021-06-06",
+      "weekTimestamp": 1622937600,
+      "additions": 221,
+      "deletions": 117,
+      "net": 104,
+      "dotfiles": 104
+    },
+    {
+      "date": "2021-07-18",
+      "weekTimestamp": 1626566400,
+      "additions": 130,
+      "deletions": 122,
+      "net": 8,
+      "dotfiles": 8
+    },
+    {
+      "date": "2021-07-25",
+      "weekTimestamp": 1627171200,
+      "additions": 145,
+      "deletions": 98,
+      "net": 47,
+      "dotfiles": 7,
+      "georelations": 40
+    },
+    {
+      "date": "2021-08-01",
+      "weekTimestamp": 1627776000,
+      "additions": 67,
+      "deletions": 57,
+      "net": 10,
+      "dotfiles": 10
+    },
+    {
+      "date": "2021-08-08",
+      "weekTimestamp": 1628380800,
+      "additions": 4,
+      "deletions": 4,
+      "net": 0,
+      "cjrmd": 0
+    },
+    {
+      "date": "2021-08-15",
+      "weekTimestamp": 1628985600,
+      "additions": 112,
+      "deletions": 54,
+      "net": 58,
+      "dotfiles": 58
+    },
+    {
+      "date": "2021-08-29",
+      "weekTimestamp": 1630195200,
+      "additions": 485,
+      "deletions": 268,
+      "net": 217,
+      "dotfiles": 217
+    },
+    {
+      "date": "2021-09-05",
+      "weekTimestamp": 1630800000,
+      "additions": 338,
+      "deletions": 147,
+      "net": 191,
+      "dotfiles": 191
+    },
+    {
+      "date": "2021-09-12",
+      "weekTimestamp": 1631404800,
+      "additions": 2099,
+      "deletions": 3653,
+      "net": -1554,
+      "dotfiles": 11,
+      "georelations": -1565
+    },
+    {
+      "date": "2021-09-19",
+      "weekTimestamp": 1632009600,
+      "additions": 1247,
+      "deletions": 814,
+      "net": 433,
+      "dotfiles": 310,
+      "georelations": 123
+    },
+    {
+      "date": "2021-09-26",
+      "weekTimestamp": 1632614400,
+      "additions": 309,
+      "deletions": 138,
+      "net": 171,
+      "georelations": 171
+    },
+    {
+      "date": "2021-10-03",
+      "weekTimestamp": 1633219200,
+      "additions": 157,
+      "deletions": 473,
+      "net": -316,
+      "georelations": -316
+    },
+    {
+      "date": "2021-10-31",
+      "weekTimestamp": 1635638400,
+      "additions": 12961,
+      "deletions": 14163,
+      "net": -1202,
+      "tweet-classification": 5167,
+      "georelations": -6369
+    },
+    {
+      "date": "2021-11-14",
+      "weekTimestamp": 1636848000,
+      "additions": 832,
+      "deletions": 565,
+      "net": 267,
+      "dotfiles": 159,
+      "tweet-classification": 7,
+      "georelations": 89,
+      "cjrmd": 12
+    },
+    {
+      "date": "2021-11-28",
+      "weekTimestamp": 1638057600,
+      "additions": 357,
+      "deletions": 309,
+      "net": 48,
+      "georelations": 48
+    },
+    {
+      "date": "2021-12-05",
+      "weekTimestamp": 1638662400,
+      "additions": 173317,
+      "deletions": 1734,
+      "net": 171583,
+      "dotfiles": 58,
+      "dapr_modules": 164517,
+      "tweet-classification": 5594,
+      "georelations": 1414
+    },
+    {
+      "date": "2022-01-09",
+      "weekTimestamp": 1641686400,
+      "additions": 13022,
+      "deletions": 6145,
+      "net": 6877,
+      "tweet-classification": 6877
+    },
+    {
+      "date": "2022-01-16",
+      "weekTimestamp": 1642291200,
+      "additions": 60176,
+      "deletions": 1465,
+      "net": 58711,
+      "dapr_modules": -558,
+      "gds_modules": 59960,
+      "georelations": -691
+    },
+    {
+      "date": "2022-01-23",
+      "weekTimestamp": 1642896000,
+      "additions": 815,
+      "deletions": 647,
+      "net": 168,
+      "dotfiles": 168
+    },
+    {
+      "date": "2022-02-13",
+      "weekTimestamp": 1644710400,
+      "additions": 922,
+      "deletions": 587,
+      "net": 335,
+      "dotfiles": 335
+    },
+    {
+      "date": "2022-02-20",
+      "weekTimestamp": 1645315200,
+      "additions": 775,
+      "deletions": 1104,
+      "net": -329,
+      "dotfiles": -329
+    },
+    {
+      "date": "2022-03-06",
+      "weekTimestamp": 1646524800,
+      "additions": 33,
+      "deletions": 132,
+      "net": -99,
+      "dotfiles": -99
+    },
+    {
+      "date": "2022-03-13",
+      "weekTimestamp": 1647129600,
+      "additions": 102,
+      "deletions": 136,
+      "net": -34,
+      "dotfiles": -34
+    },
+    {
+      "date": "2022-03-20",
+      "weekTimestamp": 1647734400,
+      "additions": 1292,
+      "deletions": 1230,
+      "net": 62,
+      "dotfiles": 0,
+      "tweet-classification": 62
+    },
+    {
+      "date": "2022-03-27",
+      "weekTimestamp": 1648339200,
+      "additions": 162,
+      "deletions": 87,
+      "net": 75,
+      "dotfiles": 75
+    },
+    {
+      "date": "2022-04-03",
+      "weekTimestamp": 1648944000,
+      "additions": 155,
+      "deletions": 12877,
+      "net": -12722,
+      "dotfiles": -684,
+      "tweet-classification": -12038
+    },
+    {
+      "date": "2022-04-10",
+      "weekTimestamp": 1649548800,
+      "additions": 107,
+      "deletions": 128,
+      "net": -21,
+      "dotfiles": -21
+    },
+    {
+      "date": "2022-04-17",
+      "weekTimestamp": 1650153600,
+      "additions": 61,
+      "deletions": 567,
+      "net": -506,
+      "dotfiles": -506
+    },
+    {
+      "date": "2022-05-08",
+      "weekTimestamp": 1651968000,
+      "additions": 56,
+      "deletions": 41,
+      "net": 15,
+      "dotfiles": 15
+    },
+    {
+      "date": "2022-05-15",
+      "weekTimestamp": 1652572800,
+      "additions": 7,
+      "deletions": 26,
+      "net": -19,
+      "dotfiles": -19
+    },
+    {
+      "date": "2022-06-05",
+      "weekTimestamp": 1654387200,
+      "additions": 242,
+      "deletions": 229,
+      "net": 13,
+      "dotfiles": 13
+    },
+    {
+      "date": "2022-06-19",
+      "weekTimestamp": 1655596800,
+      "additions": 417,
+      "deletions": 149,
+      "net": 268,
+      "dotfiles": 268
+    },
+    {
+      "date": "2022-06-26",
+      "weekTimestamp": 1656201600,
+      "additions": 5,
+      "deletions": 1,
+      "net": 4,
+      "dotfiles": 4
+    },
+    {
+      "date": "2022-07-24",
+      "weekTimestamp": 1658620800,
+      "additions": 815,
+      "deletions": 936,
+      "net": -121,
+      "dotfiles": -121
+    },
+    {
+      "date": "2022-07-31",
+      "weekTimestamp": 1659225600,
+      "additions": 0,
+      "deletions": 117,
+      "net": -117,
+      "dotfiles": -117
+    },
+    {
+      "date": "2022-08-14",
+      "weekTimestamp": 1660435200,
+      "additions": 114,
+      "deletions": 111,
+      "net": 3,
+      "dotfiles": 3
+    },
+    {
+      "date": "2022-08-21",
+      "weekTimestamp": 1661040000,
+      "additions": 23,
+      "deletions": 29,
+      "net": -6,
+      "dotfiles": -6
+    },
+    {
+      "date": "2022-09-18",
+      "weekTimestamp": 1663459200,
+      "additions": 267,
+      "deletions": 189,
+      "net": 78,
+      "dotfiles": 78
+    },
+    {
+      "date": "2022-12-04",
+      "weekTimestamp": 1670112000,
+      "additions": 352,
+      "deletions": 441,
+      "net": -89,
+      "dotfiles": -89
+    },
+    {
+      "date": "2022-12-11",
+      "weekTimestamp": 1670716800,
+      "additions": 92,
+      "deletions": 3,
+      "net": 89,
+      "dotfiles": 89
+    },
+    {
+      "date": "2023-01-08",
+      "weekTimestamp": 1673136000,
+      "additions": 496,
+      "deletions": 0,
+      "net": 496,
+      "nvim-config": 496
+    },
+    {
+      "date": "2023-01-15",
+      "weekTimestamp": 1673740800,
+      "additions": 596,
+      "deletions": 652,
+      "net": -56,
+      "dotfiles": -56
+    },
+    {
+      "date": "2023-01-29",
+      "weekTimestamp": 1674950400,
+      "additions": 7887,
+      "deletions": 172,
+      "net": 7715,
+      "dotfiles": 413,
+      "reddit-geoext": 7302
+    },
+    {
+      "date": "2023-02-05",
+      "weekTimestamp": 1675555200,
+      "additions": 583,
+      "deletions": 207,
+      "net": 376,
+      "dotfiles": 376
+    },
+    {
+      "date": "2023-02-12",
+      "weekTimestamp": 1676160000,
+      "additions": 41112,
+      "deletions": 370,
+      "net": 40742,
+      "dotfiles": 40742
+    },
+    {
+      "date": "2023-03-05",
+      "weekTimestamp": 1677974400,
+      "additions": 880,
+      "deletions": 978,
+      "net": -98,
+      "dotfiles": -98
+    },
+    {
+      "date": "2023-03-12",
+      "weekTimestamp": 1678579200,
+      "additions": 12793,
+      "deletions": 1860,
+      "net": 10933,
+      "dotfiles": -330,
+      "reddit-connectivity": 11263
+    },
+    {
+      "date": "2023-03-19",
+      "weekTimestamp": 1679184000,
+      "additions": 252,
+      "deletions": 312,
+      "net": -60,
+      "dotfiles": 16,
+      "reddit-connectivity": -76
+    },
+    {
+      "date": "2023-03-26",
+      "weekTimestamp": 1679788800,
+      "additions": 20,
+      "deletions": 13,
+      "net": 7,
+      "dotfiles": 7
+    },
+    {
+      "date": "2023-04-09",
+      "weekTimestamp": 1680998400,
+      "additions": 85,
+      "deletions": 26,
+      "net": 59,
+      "dotfiles": 59
+    },
+    {
+      "date": "2023-05-14",
+      "weekTimestamp": 1684022400,
+      "additions": 98,
+      "deletions": 3747,
+      "net": -3649,
+      "dotfiles": -3649
+    },
+    {
+      "date": "2023-05-21",
+      "weekTimestamp": 1684627200,
+      "additions": 11760,
+      "deletions": 1532,
+      "net": 10228,
+      "dotfiles": 58,
+      "reddit-footprint": 10170
+    },
+    {
+      "date": "2023-05-28",
+      "weekTimestamp": 1685232000,
+      "additions": 1512,
+      "deletions": 3357,
+      "net": -1845,
+      "dotfiles": 1086,
+      "reddit-footprint": -2931
+    },
+    {
+      "date": "2023-07-02",
+      "weekTimestamp": 1688256000,
+      "additions": 5,
+      "deletions": 47,
+      "net": -42,
+      "dotfiles": -42
+    },
+    {
+      "date": "2023-07-09",
+      "weekTimestamp": 1688860800,
+      "additions": 17676,
+      "deletions": 46,
+      "net": 17630,
+      "reddit-connectivity": 17630
+    },
+    {
+      "date": "2023-08-13",
+      "weekTimestamp": 1691884800,
+      "additions": 907,
+      "deletions": 482,
+      "net": 425,
+      "dotfiles": 425
+    },
+    {
+      "date": "2023-08-27",
+      "weekTimestamp": 1693094400,
+      "additions": 2406,
+      "deletions": 2909,
+      "net": -503,
+      "dotfiles": -503
+    },
+    {
+      "date": "2023-09-03",
+      "weekTimestamp": 1693699200,
+      "additions": 6399,
+      "deletions": 49,
+      "net": 6350,
+      "dotfiles": 2,
+      "nvim": 504,
+      "hypr": 5844
+    },
+    {
+      "date": "2023-09-10",
+      "weekTimestamp": 1694304000,
+      "additions": 5725,
+      "deletions": 3358,
+      "net": 2367,
+      "reddit-footprint": 2331,
+      "nvim": 36
+    },
+    {
+      "date": "2023-09-24",
+      "weekTimestamp": 1695513600,
+      "additions": 1410,
+      "deletions": 2199,
+      "net": -789,
+      "reddit-footprint": -1319,
+      "nvim": 530
+    },
+    {
+      "date": "2023-10-01",
+      "weekTimestamp": 1696118400,
+      "additions": 1336,
+      "deletions": 470,
+      "net": 866,
+      "overture-uk": 866
+    },
+    {
+      "date": "2023-10-08",
+      "weekTimestamp": 1696723200,
+      "additions": 1664,
+      "deletions": 26,
+      "net": 1638,
+      "overture-uk": 1638
+    },
+    {
+      "date": "2023-10-15",
+      "weekTimestamp": 1697328000,
+      "additions": 2546,
+      "deletions": 570,
+      "net": 1976,
+      "overture-uk": 1976
+    },
+    {
+      "date": "2023-10-29",
+      "weekTimestamp": 1698537600,
+      "additions": 10836,
+      "deletions": 15550,
+      "net": -4714,
+      "reddit-connectivity": -10007,
+      "reddit-model": 5293
+    },
+    {
+      "date": "2023-11-12",
+      "weekTimestamp": 1699747200,
+      "additions": 109532,
+      "deletions": 454,
+      "net": 109078,
+      "reddit-footprint": 45,
+      "nvim": 167,
+      "ger-wiki": 108838,
+      "hypr": 28
+    },
+    {
+      "date": "2023-11-19",
+      "weekTimestamp": 1700352000,
+      "additions": 238,
+      "deletions": 120,
+      "net": 118,
+      "reddit-footprint": 118
+    },
+    {
+      "date": "2023-11-26",
+      "weekTimestamp": 1700956800,
+      "additions": 2952,
+      "deletions": 2615,
+      "net": 337,
+      "dotfiles": -1962,
+      "nvim": 13,
+      "cdrc-semantic-search": 2286,
+      "hypr": 0
+    },
+    {
+      "date": "2023-12-03",
+      "weekTimestamp": 1701561600,
+      "additions": 5820,
+      "deletions": 45176,
+      "net": -39356,
+      "dotfiles": -42117,
+      "nvim": 0,
+      "cdrc-semantic-search": 2761
+    },
+    {
+      "date": "2023-12-10",
+      "weekTimestamp": 1702166400,
+      "additions": 4688,
+      "deletions": 6373,
+      "net": -1685,
+      "cdrc-semantic-search": -1685
+    },
+    {
+      "date": "2023-12-17",
+      "weekTimestamp": 1702771200,
+      "additions": 5812,
+      "deletions": 4747,
+      "net": 1065,
+      "cdrc-semantic-search": 1065
+    },
+    {
+      "date": "2023-12-31",
+      "weekTimestamp": 1703980800,
+      "additions": 383,
+      "deletions": 270,
+      "net": 113,
+      "cdrc-semantic-search": 113
+    },
+    {
+      "date": "2024-01-07",
+      "weekTimestamp": 1704585600,
+      "additions": 1433,
+      "deletions": 1773,
+      "net": -340,
+      "cdrc-semantic-search": -340
+    },
+    {
+      "date": "2024-01-14",
+      "weekTimestamp": 1705190400,
+      "additions": 10219,
+      "deletions": 1349,
+      "net": 8870,
+      "dotfiles": 14,
+      "overture-uk": 9485,
+      "nvim": 42,
+      "cdrc-semantic-search": -671
+    },
+    {
+      "date": "2024-01-21",
+      "weekTimestamp": 1705795200,
+      "additions": 7355,
+      "deletions": 2038,
+      "net": 5317,
+      "dotfiles": -16,
+      "ingestion-checks": 4213,
+      "overture-uk": 236,
+      "cdrc-semantic-search": 884
+    },
+    {
+      "date": "2024-02-04",
+      "weekTimestamp": 1707004800,
+      "additions": 35139,
+      "deletions": 2476,
+      "net": 32663,
+      "dotfiles": 1,
+      "overture-uk": 675,
+      "cdrc-semantic-search": -448,
+      "reddit-connectivity": 2,
+      "cjber.github.io": 32433
+    },
+    {
+      "date": "2024-02-11",
+      "weekTimestamp": 1707609600,
+      "additions": 12527,
+      "deletions": 4040,
+      "net": 8487,
+      "reddit-footprint": 3348,
+      "nvim": 103,
+      "cdrc-semantic-search": 974,
+      "cjber.github.io": 3715,
+      "reddit-model": 347
+    },
+    {
+      "date": "2024-02-18",
+      "weekTimestamp": 1708214400,
+      "additions": 280,
+      "deletions": 144,
+      "net": 136,
+      "dotfiles": 14,
+      "nvim": 135,
+      "cjber.github.io": -13
+    },
+    {
+      "date": "2024-02-25",
+      "weekTimestamp": 1708819200,
+      "additions": 1230,
+      "deletions": 649,
+      "net": 581,
+      "dotfiles": 12,
+      "nvim": -140,
+      "cdrc-semantic-search": 685,
+      "cjber.github.io": 24
+    },
+    {
+      "date": "2024-03-03",
+      "weekTimestamp": 1709424000,
+      "additions": 35443,
+      "deletions": 37,
+      "net": 35406,
+      "nvim": 17,
+      "thesis": 35389
+    },
+    {
+      "date": "2024-03-10",
+      "weekTimestamp": 1710028800,
+      "additions": 19,
+      "deletions": 3,
+      "net": 16,
+      "dotfiles": 5,
+      "nvim": 11
+    },
+    {
+      "date": "2024-03-17",
+      "weekTimestamp": 1710633600,
+      "additions": 994,
+      "deletions": 3705,
+      "net": -2711,
+      "dotfiles": 252,
+      "ingestion-checks": -2993,
+      "nvim": 27,
+      "cjber.github.io": 3
+    },
+    {
+      "date": "2024-03-24",
+      "weekTimestamp": 1711238400,
+      "additions": 617,
+      "deletions": 491,
+      "net": 126,
+      "ingestion-checks": 131,
+      "nvim": -5
+    },
+    {
+      "date": "2024-03-31",
+      "weekTimestamp": 1711843200,
+      "additions": 2797,
+      "deletions": 1934,
+      "net": 863,
+      "ingestion-checks": 863
+    },
+    {
+      "date": "2024-04-07",
+      "weekTimestamp": 1712448000,
+      "additions": 212,
+      "deletions": 122,
+      "net": 90,
+      "dotfiles": 15,
+      "ingestion-checks": 60,
+      "nvim": 15
+    },
+    {
+      "date": "2024-04-14",
+      "weekTimestamp": 1713052800,
+      "additions": 64,
+      "deletions": 31,
+      "net": 33,
+      "reddit-footprint": 33,
+      "nvim": 0
+    },
+    {
+      "date": "2024-04-21",
+      "weekTimestamp": 1713657600,
+      "additions": 4596,
+      "deletions": 1743,
+      "net": 2853,
+      "ukcrawl": 2202,
+      "ingestion-checks": 517,
+      "cjber.github.io": 134
+    },
+    {
+      "date": "2024-04-28",
+      "weekTimestamp": 1714262400,
+      "additions": 6529,
+      "deletions": 12035,
+      "net": -5506,
+      "dotfiles": 53,
+      "ukcrawl": 676,
+      "ingestion-checks": -9,
+      "nvim": 11,
+      "thesis": -6237
+    },
+    {
+      "date": "2024-05-05",
+      "weekTimestamp": 1714867200,
+      "additions": 2028,
+      "deletions": 277,
+      "net": 1751,
+      "dotfiles": 37,
+      "ukcrawl": 71,
+      "ingestion-checks": 23,
+      "ukroutes": 1576,
+      "overture-uk": 43,
+      "cjber.github.io": 1
+    },
+    {
+      "date": "2024-05-12",
+      "weekTimestamp": 1715472000,
+      "additions": 923,
+      "deletions": 2515,
+      "net": -1592,
+      "nvim": -6,
+      "cdrc-semantic-search": -1586
+    },
+    {
+      "date": "2024-05-19",
+      "weekTimestamp": 1716076800,
+      "additions": 27,
+      "deletions": 8,
+      "net": 19,
+      "dotfiles": 17,
+      "nvim": 2,
+      "reddit-connectivity": -2,
+      "cjber.github.io": 2
+    },
+    {
+      "date": "2024-05-26",
+      "weekTimestamp": 1716681600,
+      "additions": 12,
+      "deletions": 1,
+      "net": 11,
+      "nvim": 11
+    },
+    {
+      "date": "2024-06-02",
+      "weekTimestamp": 1717286400,
+      "additions": 2872,
+      "deletions": 610,
+      "net": 2262,
+      "ukroutes": 322,
+      "ukpoi": 1940
+    },
+    {
+      "date": "2024-06-09",
+      "weekTimestamp": 1717891200,
+      "additions": 2890,
+      "deletions": 4898,
+      "net": -2008,
+      "dotfiles": 141,
+      "ukroutes": 143,
+      "nvim": -16,
+      "cdrc-semantic-search": -2276
+    },
+    {
+      "date": "2024-06-16",
+      "weekTimestamp": 1718496000,
+      "additions": 6376,
+      "deletions": 453,
+      "net": 5923,
+      "dotfiles": -13,
+      "semantic-catalogue": 866,
+      "ukroutes": -99,
+      "ukpoi": 25,
+      "thesis": 61,
+      "semantic-catalogue-demo": 5083
+    },
+    {
+      "date": "2024-06-23",
+      "weekTimestamp": 1719100800,
+      "additions": 81,
+      "deletions": 58,
+      "net": 23,
+      "ukroutes": 23
+    },
+    {
+      "date": "2024-07-07",
+      "weekTimestamp": 1720310400,
+      "additions": 2213,
+      "deletions": 511,
+      "net": 1702,
+      "ukroutes": 107,
+      "access-to-everything": 1595
+    },
+    {
+      "date": "2024-07-14",
+      "weekTimestamp": 1720915200,
+      "additions": 874,
+      "deletions": 695,
+      "net": 179,
+      "access-to-everything": 179
+    },
+    {
+      "date": "2024-07-21",
+      "weekTimestamp": 1721520000,
+      "additions": 531,
+      "deletions": 1441,
+      "net": -910,
+      "ukroutes": 4,
+      "overture-uk": 1,
+      "nvim": -25,
+      "ukpoi": -592,
+      "access-to-everything": -298
+    },
+    {
+      "date": "2024-07-28",
+      "weekTimestamp": 1722124800,
+      "additions": 235,
+      "deletions": 196,
+      "net": 39,
+      "ukroutes": -14,
+      "nvim": 0,
+      "ukpoi": -6,
+      "access-to-everything": 59
+    },
+    {
+      "date": "2024-08-04",
+      "weekTimestamp": 1722729600,
+      "additions": 8022,
+      "deletions": 6570,
+      "net": 1452,
+      "semantic-catalogue": 1438,
+      "ukroutes": 10,
+      "ukpoi": 4
+    },
+    {
+      "date": "2024-08-11",
+      "weekTimestamp": 1723334400,
+      "additions": 1379,
+      "deletions": 1618,
+      "net": -239,
+      "ukroutes": -805,
+      "overture-uk": 0,
+      "access-to-everything": 566
+    },
+    {
+      "date": "2024-08-18",
+      "weekTimestamp": 1723939200,
+      "additions": 431,
+      "deletions": 416,
+      "net": 15,
+      "dotfiles": -2,
+      "ukroutes": 15,
+      "nvim": 2
+    },
+    {
+      "date": "2024-08-25",
+      "weekTimestamp": 1724544000,
+      "additions": 30911,
+      "deletions": 6767,
+      "net": 24144,
+      "dotfiles": 2,
+      "semantic-catalogue": 24100,
+      "ukroutes": 12,
+      "nvim": 31,
+      "ukpoi": -1
+    },
+    {
+      "date": "2024-09-01",
+      "weekTimestamp": 1725148800,
+      "additions": 8506,
+      "deletions": 19813,
+      "net": -11307,
+      "dotfiles": 1386,
+      "planning-ai": 2333,
+      "semantic-catalogue": -15153,
+      "ukroutes": 102,
+      "nvim": 11,
+      "ukpoi": 14
+    },
+    {
+      "date": "2024-09-08",
+      "weekTimestamp": 1725753600,
+      "additions": 5696,
+      "deletions": 3740,
+      "net": 1956,
+      "dotfiles": -834,
+      "planning-ai": 3776,
+      "semantic-catalogue": -986
+    },
+    {
+      "date": "2024-09-15",
+      "weekTimestamp": 1726358400,
+      "additions": 61979,
+      "deletions": 38019,
+      "net": 23960,
+      "dotfiles": 3,
+      "planning-ai": 23957,
+      "semantic-catalogue": 0
+    },
+    {
+      "date": "2024-10-20",
+      "weekTimestamp": 1729382400,
+      "additions": 1,
+      "deletions": 1,
+      "net": 0,
+      "overture-uk": 0
+    },
+    {
+      "date": "2024-12-01",
+      "weekTimestamp": 1733011200,
+      "additions": 1198,
+      "deletions": 636,
+      "net": 562,
+      "dotfiles": 127,
+      "planning-ai": 435
+    },
+    {
+      "date": "2024-12-15",
+      "weekTimestamp": 1734220800,
+      "additions": 21,
+      "deletions": 19,
+      "net": 2,
+      "dotfiles": 2
+    },
+    {
+      "date": "2024-12-29",
+      "weekTimestamp": 1735430400,
+      "additions": 138,
+      "deletions": 49,
+      "net": 89,
+      "dotfiles": 89
+    },
+    {
+      "date": "2025-01-05",
+      "weekTimestamp": 1736035200,
+      "additions": 4646,
+      "deletions": 2999,
+      "net": 1647,
+      "planning-ai": 127,
+      "ndvi": 1520
+    },
+    {
+      "date": "2025-01-12",
+      "weekTimestamp": 1736640000,
+      "additions": 6001,
+      "deletions": 35026,
+      "net": -29025,
+      "planning-ai": -25352,
+      "semantic-catalogue": -3849,
+      "ndvi": 165,
+      "ingestion-checks": 0,
+      "ukroutes": 11
+    },
+    {
+      "date": "2025-01-19",
+      "weekTimestamp": 1737244800,
+      "additions": 1519,
+      "deletions": 1421,
+      "net": 98,
+      "dotfiles": -202,
+      "planning-ai": 333,
+      "semantic-catalogue": -33
+    },
+    {
+      "date": "2025-01-26",
+      "weekTimestamp": 1737849600,
+      "additions": 1070,
+      "deletions": 266,
+      "net": 804,
+      "planning-ai": 804
+    },
+    {
+      "date": "2025-02-02",
+      "weekTimestamp": 1738454400,
+      "additions": 23483,
+      "deletions": 717,
+      "net": 22766,
+      "planning-ai": 125,
+      "semantic-catalogue": 22641
+    },
+    {
+      "date": "2025-02-09",
+      "weekTimestamp": 1739059200,
+      "additions": 423899,
+      "deletions": 244,
+      "net": 423655,
+      "planning-ai": 423581,
+      "semantic-catalogue": 74
+    },
+    {
+      "date": "2025-02-16",
+      "weekTimestamp": 1739664000,
+      "additions": 2190,
+      "deletions": 4169,
+      "net": -1979,
+      "planning-ai": -2019,
+      "semantic-catalogue": 40
+    },
+    {
+      "date": "2025-02-23",
+      "weekTimestamp": 1740268800,
+      "additions": 429841,
+      "deletions": 844329,
+      "net": -414488,
+      "planning-ai": -419472,
+      "ukcrawl": 4990,
+      "reddit-footprint": -6
+    },
+    {
+      "date": "2025-03-02",
+      "weekTimestamp": 1740873600,
+      "additions": 2144,
+      "deletions": 1780,
+      "net": 364,
+      "dotfiles": 155,
+      "planning-ai": 209
+    },
+    {
+      "date": "2025-03-16",
+      "weekTimestamp": 1742083200,
+      "additions": 6974,
+      "deletions": 2006,
+      "net": 4968,
+      "nebula": 734,
+      "dotfiles": 226,
+      "thirdweb-ai-langgraph": 4008
+    },
+    {
+      "date": "2025-03-23",
+      "weekTimestamp": 1742688000,
+      "additions": 21730,
+      "deletions": 13826,
+      "net": 7904,
+      "nebula": -1977,
+      "ai": 9881
+    },
+    {
+      "date": "2025-03-30",
+      "weekTimestamp": 1743292800,
+      "additions": 11307,
+      "deletions": 1887,
+      "net": 9420,
+      "nebula": 8458,
+      "ai": 962
+    },
+    {
+      "date": "2025-04-06",
+      "weekTimestamp": 1743897600,
+      "additions": 622,
+      "deletions": 600,
+      "net": 22,
+      "nebula": -7,
+      "dotfiles": 4,
+      "ai": 18,
+      "planning-ai": 7
+    },
+    {
+      "date": "2025-04-13",
+      "weekTimestamp": 1744502400,
+      "additions": 22021,
+      "deletions": 21759,
+      "net": 262,
+      "nebula": 262
+    },
+    {
+      "date": "2025-04-20",
+      "weekTimestamp": 1745107200,
+      "additions": 4364,
+      "deletions": 2988,
+      "net": 1376,
+      "nebula": 1376
+    },
+    {
+      "date": "2025-04-27",
+      "weekTimestamp": 1745712000,
+      "additions": 6150,
+      "deletions": 2484,
+      "net": 3666,
+      "nebula": 3541,
+      "dotfiles": 125
+    },
+    {
+      "date": "2025-05-04",
+      "weekTimestamp": 1746316800,
+      "additions": 451,
+      "deletions": 342,
+      "net": 109,
+      "nebula": 105,
+      "dotfiles": 4
+    },
+    {
+      "date": "2025-05-11",
+      "weekTimestamp": 1746921600,
+      "additions": 8311,
+      "deletions": 7662,
+      "net": 649,
+      "nebula": 647,
+      "dotfiles": 2
+    },
+    {
+      "date": "2025-05-18",
+      "weekTimestamp": 1747526400,
+      "additions": 7431,
+      "deletions": 6994,
+      "net": 437,
+      "nebula": 2123,
+      "dotfiles": 0,
+      "ai": -1686
+    },
+    {
+      "date": "2025-05-25",
+      "weekTimestamp": 1748131200,
+      "additions": 12461,
+      "deletions": 5124,
+      "net": 7337,
+      "nebula": -2480,
+      "ai": 9817
+    },
+    {
+      "date": "2025-06-01",
+      "weekTimestamp": 1748736000,
+      "additions": 1149,
+      "deletions": 1646,
+      "net": -497,
+      "nebula": -541,
+      "dotfiles": 44
+    },
     {
       "date": "2025-06-08",
       "weekTimestamp": 1749340800,
-      "additions": 25026,
-      "deletions": 10551,
-      "net": 14475,
-      "nebula": 9650,
-      "nebula-api-v0": 4825
+      "additions": 8342,
+      "deletions": 3517,
+      "net": 4825,
+      "nebula": 4825
     },
     {
       "date": "2025-06-15",
       "weekTimestamp": 1749945600,
-      "additions": 834,
-      "deletions": 624,
-      "net": 210,
-      "nebula": 140,
-      "nebula-api-v0": 70
+      "additions": 278,
+      "deletions": 208,
+      "net": 70,
+      "nebula": 70
     },
     {
       "date": "2025-06-22",
       "weekTimestamp": 1750550400,
-      "additions": 462,
-      "deletions": 6,
-      "net": 456,
-      "nebula": 456
+      "additions": 231,
+      "deletions": 3,
+      "net": 228,
+      "nebula": 228
     },
     {
       "date": "2025-07-13",
       "weekTimestamp": 1752364800,
-      "additions": 14306,
-      "deletions": 12868,
-      "net": 1438,
-      "nebula-web": 1438
+      "additions": 7153,
+      "deletions": 6434,
+      "net": 719,
+      "nebula-web": 719
     },
     {
       "date": "2025-07-27",
       "weekTimestamp": 1753574400,
-      "additions": 2,
-      "deletions": 2,
+      "additions": 1,
+      "deletions": 1,
       "net": 0,
       "nebula-web": 0
     },
     {
       "date": "2025-08-03",
       "weekTimestamp": 1754179200,
-      "additions": 10714,
-      "deletions": 11014,
-      "net": -300,
-      "nebula-web": -300
+      "additions": 5357,
+      "deletions": 5507,
+      "net": -150,
+      "nebula-web": -150
     },
     {
       "date": "2025-08-10",
       "weekTimestamp": 1754784000,
-      "additions": 1656,
-      "deletions": 892,
-      "net": 764,
-      "nebula-web": 764
+      "additions": 828,
+      "deletions": 446,
+      "net": 382,
+      "nebula-web": 382
     },
     {
       "date": "2025-08-17",
       "weekTimestamp": 1755388800,
-      "additions": 2886,
-      "deletions": 1564,
-      "net": 1322,
-      "nebula-web": 1322
+      "additions": 1443,
+      "deletions": 782,
+      "net": 661,
+      "nebula-web": 661
     },
     {
       "date": "2025-08-24",
       "weekTimestamp": 1755993600,
-      "additions": 3074,
-      "deletions": 2330,
-      "net": 744,
-      "nebula-web": 744
+      "additions": 1537,
+      "deletions": 1165,
+      "net": 372,
+      "nebula-web": 372
     },
     {
       "date": "2025-08-31",
       "weekTimestamp": 1756598400,
-      "additions": 7830,
-      "deletions": 3930,
-      "net": 3900,
-      "nebula-web": 3900
+      "additions": 3915,
+      "deletions": 1965,
+      "net": 1950,
+      "nebula-web": 1950
     },
     {
       "date": "2025-09-07",
       "weekTimestamp": 1757203200,
-      "additions": 7763,
-      "deletions": 1752,
-      "net": 6011,
+      "additions": 5933,
+      "deletions": 876,
+      "net": 5057,
       "cjber.dev": 4103,
-      "nebula-web": 1908
+      "nebula-web": 954
     },
     {
       "date": "2025-09-14",
       "weekTimestamp": 1757808000,
-      "additions": 4370,
-      "deletions": 1104,
-      "net": 3266,
-      "nebula-web": 3266
+      "additions": 2185,
+      "deletions": 552,
+      "net": 1633,
+      "nebula-web": 1633
     },
     {
       "date": "2025-09-21",
       "weekTimestamp": 1758412800,
-      "additions": 29808,
-      "deletions": 18762,
-      "net": 11046,
-      "nebula-web": 11046
+      "additions": 14904,
+      "deletions": 9381,
+      "net": 5523,
+      "nebula-web": 5523
     },
     {
       "date": "2025-09-28",
       "weekTimestamp": 1759017600,
-      "additions": 16568,
-      "deletions": 11032,
-      "net": 5536,
-      "nebula-web": 5536
+      "additions": 8284,
+      "deletions": 5516,
+      "net": 2768,
+      "nebula-web": 2768
     },
     {
       "date": "2025-10-05",
       "weekTimestamp": 1759622400,
-      "additions": 11324,
-      "deletions": 10426,
-      "net": 898,
-      "nebula-web": 898
+      "additions": 5662,
+      "deletions": 5213,
+      "net": 449,
+      "nebula-web": 449
     },
     {
       "date": "2025-10-12",
       "weekTimestamp": 1760227200,
-      "additions": 15170,
-      "deletions": 7288,
-      "net": 7882,
-      "nebula-web": 7882
+      "additions": 7585,
+      "deletions": 3644,
+      "net": 3941,
+      "nebula-web": 3941
     },
     {
       "date": "2025-10-19",
       "weekTimestamp": 1760832000,
-      "additions": 92,
-      "deletions": 126,
-      "net": -34,
-      "nebula-web": -34
+      "additions": 46,
+      "deletions": 63,
+      "net": -17,
+      "nebula-web": -17
     },
     {
       "date": "2025-10-26",
       "weekTimestamp": 1761436800,
-      "additions": 666,
-      "deletions": 862,
-      "net": -196,
-      "nebula-web": -196
+      "additions": 333,
+      "deletions": 431,
+      "net": -98,
+      "nebula-web": -98
     },
     {
       "date": "2025-11-02",
       "weekTimestamp": 1762041600,
-      "additions": 20316,
-      "deletions": 73284,
-      "net": -52968,
-      "nebula-web": -52968
+      "additions": 10158,
+      "deletions": 36642,
+      "net": -26484,
+      "nebula-web": -26484
     },
     {
       "date": "2025-11-09",
       "weekTimestamp": 1762646400,
-      "additions": 266,
-      "deletions": 48,
-      "net": 218,
-      "nebula-web": 218
+      "additions": 133,
+      "deletions": 24,
+      "net": 109,
+      "nebula-web": 109
     },
     {
       "date": "2025-12-21",
       "weekTimestamp": 1766275200,
-      "additions": 654,
-      "deletions": 202,
-      "net": 452,
-      "nebula-web": 452
+      "additions": 327,
+      "deletions": 101,
+      "net": 226,
+      "nebula-web": 226
     },
     {
       "date": "2026-02-22",
@@ -220,12 +1999,11 @@
     {
       "date": "2026-03-29",
       "weekTimestamp": 1774742400,
-      "additions": 183,
-      "deletions": 54,
-      "net": 129,
+      "additions": 115,
+      "deletions": 27,
+      "net": 88,
       "nebula-desktop": 41,
-      "nebula-mobile": 47,
-      "nebula-cli": 41
+      "nebula-mobile": 47
     },
     {
       "date": "2026-04-05",
@@ -239,39 +2017,38 @@
     {
       "date": "2026-04-12",
       "weekTimestamp": 1775952000,
-      "additions": 4173,
-      "deletions": 637,
-      "net": 3536,
+      "additions": 2095,
+      "deletions": 319,
+      "net": 1776,
       "dotfiles": 16,
-      "nebula-desktop": 1760,
-      "nebula-cli": 1760
+      "nebula-desktop": 1760
     },
     {
       "date": "2026-04-26",
       "weekTimestamp": 1777161600,
-      "additions": 76610,
-      "deletions": 28881,
-      "net": 47729,
+      "additions": 38877,
+      "deletions": 14789,
+      "net": 24088,
       "cjber.dev": 447,
-      "nebula": 47282
+      "nebula": 23641
     },
     {
       "date": "2026-05-03",
       "weekTimestamp": 1777766400,
-      "additions": 73387,
-      "deletions": 40102,
-      "net": 33285,
-      "dotfiles": 505,
-      "nebula": 32780
+      "additions": 37001,
+      "deletions": 20106,
+      "net": 16895,
+      "nebula": 16390,
+      "dotfiles": 505
     },
     {
       "date": "2026-05-10",
       "weekTimestamp": 1778371200,
-      "additions": 93704,
-      "deletions": 39936,
-      "net": 53768,
+      "additions": 50886,
+      "deletions": 20521,
+      "net": 30365,
+      "nebula": 23403,
       "dotfiles": 1153,
-      "nebula": 46806,
       "nebula-desktop": -63,
       "nebula-mobile": 597,
       "tab-archive": 5275
@@ -279,50 +2056,93 @@
     {
       "date": "2026-05-17",
       "weekTimestamp": 1778976000,
-      "additions": 86438,
-      "deletions": 162324,
-      "net": -75886,
+      "additions": 48459,
+      "deletions": 83051,
+      "net": -34592,
       "cjber.dev": -2009,
-      "nebula-web": 920,
-      "nebula": -83508,
+      "nebula-web": 460,
+      "nebula": -41754,
       "nebula-mobile": 876,
-      "oxide": 1616,
       "footprint-explorer": 5661,
+      "oxide": 1616,
       "hyprview": 558
     },
     {
       "date": "2026-05-24",
       "weekTimestamp": 1779580800,
-      "additions": 197491,
-      "deletions": 128914,
-      "net": 68577,
-      "nebula-web": 4500,
-      "nebula": 57224,
+      "additions": 104368,
+      "deletions": 66653,
+      "net": 37715,
+      "nebula-web": 2250,
+      "nebula": 28612,
       "nebula-desktop": 38,
       "nebula-mobile": 2012,
       "nebula-metabase": 4803
+    },
+    {
+      "date": "2026-05-31",
+      "weekTimestamp": 1780185600,
+      "additions": 5336,
+      "deletions": 1533,
+      "net": 3803,
+      "nebula": 3803
     }
   ],
   "repoNames": [
     "cjber.dev",
-    "dotfiles",
     "nebula-web",
     "nebula",
+    "dotfiles",
     "nebula-desktop",
     "nebula-mobile",
     "nebula-metabase",
     "nebula-docs",
-    "oxide",
     "footprint-explorer",
-    "hyprview",
+    "oxide",
     "tab-archive",
-    "nebula-cli",
+    "hyprview",
     "berragan.co.uk",
-    "nebula-api-v0",
-    "fluid-dreams"
+    "fluid-dreams",
+    "abm_liv",
+    "ai",
+    "planning-ai",
+    "thirdweb-ai-langgraph",
+    "ukcrawl",
+    "reddit-footprint",
+    "semantic-catalogue",
+    "ndvi",
+    "ingestion-checks",
+    "ukroutes",
+    "overture-uk",
+    "nvim",
+    "ukpoi",
+    "access-to-everything",
+    "thesis",
+    "semantic-catalogue-demo",
+    "cdrc-semantic-search",
+    "reddit-connectivity",
+    "cjber.github.io",
+    "reddit-model",
+    "ger-wiki",
+    "dapr_modules",
+    "tweet-classification",
+    "hypr",
+    "gds_modules",
+    "gds",
+    "uolrmarkdown",
+    "dissertation",
+    "georelations",
+    "reddit-geoext",
+    "nvim-config",
+    "cjrmd",
+    "car_ml",
+    "ward-lifetimes"
   ],
+  "totalAdditions": 2572161,
+  "totalDeletions": 1694419,
+  "totalNet": 877742,
   "calendar": {
-    "totalContributions": 4899,
+    "totalContributions": 4938,
     "weeks": [
       {
         "firstDay": "2025-06-01",
@@ -2414,8 +4234,8 @@
           },
           {
             "date": "2026-06-01",
-            "count": 1,
-            "level": 1
+            "count": 40,
+            "level": 2
           }
         ]
       }
