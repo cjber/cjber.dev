@@ -24,6 +24,9 @@ if (!TOKEN) {
     generatedAt: new Date().toISOString(),
     weeks: [],
     repoNames: [],
+    totalAdditions: 0,
+    totalDeletions: 0,
+    totalNet: 0,
     calendar: { weeks: [], totalContributions: 0 },
   })
   process.exit(0)
@@ -44,6 +47,9 @@ type Snapshot = {
   generatedAt: string
   weeks: WeekStats[]
   repoNames: string[]
+  totalAdditions: number
+  totalDeletions: number
+  totalNet: number
   calendar: { weeks: CalendarWeek[]; totalContributions: number }
 }
 
@@ -113,7 +119,7 @@ const HISTORY_QUERY = `
           ... on Commit {
             history(first: 100, author: {id: $userId}, since: $since, after: $cursor) {
               pageInfo { hasNextPage endCursor }
-              nodes { committedDate additions deletions }
+              nodes { oid committedDate additions deletions }
             }
           }
         }
@@ -122,7 +128,7 @@ const HISTORY_QUERY = `
   }
 `
 
-type Commit = { committedDate: string; additions: number; deletions: number }
+type Commit = { oid: string; committedDate: string; additions: number; deletions: number }
 
 async function fetchAuthoredCommits(
   owner: string,
@@ -204,17 +210,27 @@ async function fetchLocStats() {
     { login: USERNAME },
   )
   const userId = userIdData.user.id
-  const sinceIso = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString()
+  // All-time: GitHub launched in 2008, so this covers every authored commit.
+  const sinceIso = '2008-01-01T00:00:00Z'
 
   const totals = new Map<number, { additions: number; deletions: number }>()
   const perRepo = new Map<string, Map<number, { additions: number; deletions: number }>>()
+  const seenOids = new Set<string>()
   let withData = 0
+  let grandAdditions = 0
+  let grandDeletions = 0
 
   const ingest = (repoName: string, commits: Commit[]) => {
     let touched = false
     for (const c of commits) {
       if (c.additions === 0 && c.deletions === 0) continue
+      // The same commit can appear in both a repo and a fork of it (shared
+      // history). Count each unique commit once, no matter how many repos surface it.
+      if (seenOids.has(c.oid)) continue
+      seenOids.add(c.oid)
       touched = true
+      grandAdditions += c.additions
+      grandDeletions += c.deletions
       const w = mondayUtc(new Date(c.committedDate))
       const t = totals.get(w) ?? { additions: 0, deletions: 0 }
       totals.set(w, { additions: t.additions + c.additions, deletions: t.deletions + c.deletions })
@@ -245,10 +261,7 @@ async function fetchLocStats() {
     )
   }
 
-  const cutoff = Math.floor((Date.now() - 365 * 24 * 60 * 60 * 1000) / 1000)
-  const sorted = Array.from(totals.entries())
-    .filter(([w]) => w >= cutoff)
-    .sort(([a], [b]) => a - b)
+  const sorted = Array.from(totals.entries()).sort(([a], [b]) => a - b)
 
   const repoNames = Array.from(perRepo.keys())
   const weeks: WeekStats[] = sorted.map(([w, agg]) => {
@@ -266,7 +279,14 @@ async function fetchLocStats() {
     return row
   })
 
-  return { weeks, repoNames, repoCount: withData }
+  return {
+    weeks,
+    repoNames,
+    repoCount: withData,
+    totalAdditions: grandAdditions,
+    totalDeletions: grandDeletions,
+    totalNet: grandAdditions - grandDeletions,
+  }
 }
 
 type GraphQLCalendar = {
@@ -336,10 +356,16 @@ async function fetchCalendar() {
 
 async function main() {
   const [loc, calendar] = await Promise.all([fetchLocStats(), fetchCalendar()])
+  console.log(
+    `[stats] all-time totals — added ${loc.totalAdditions}, removed ${loc.totalDeletions}, net ${loc.totalNet}`,
+  )
   writeSnapshot({
     generatedAt: new Date().toISOString(),
     weeks: loc.weeks,
     repoNames: loc.repoNames,
+    totalAdditions: loc.totalAdditions,
+    totalDeletions: loc.totalDeletions,
+    totalNet: loc.totalNet,
     calendar,
   })
 }
@@ -351,6 +377,9 @@ main().catch((err) => {
       generatedAt: new Date().toISOString(),
       weeks: [],
       repoNames: [],
+      totalAdditions: 0,
+      totalDeletions: 0,
+      totalNet: 0,
       calendar: { weeks: [], totalContributions: 0 },
     })
   }

@@ -50,6 +50,9 @@ const DELETION_COLOR = 'oklch(0.62 0.13 25)'  // muted brick
 interface Props {
   weeks: WeekStats[]
   repoNames: string[]
+  totalAdditions: number
+  totalDeletions: number
+  totalNet: number
 }
 
 const formatNumber = (n: number) => {
@@ -62,7 +65,7 @@ const formatNumber = (n: number) => {
 const formatDate = (d: string) =>
   new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 
-export function LocChart({ weeks, repoNames }: Props) {
+export function LocChart({ weeks, repoNames, totalAdditions, totalDeletions, totalNet }: Props) {
   const [days, setDays] = useState<Range>(90)
   const [mode, setMode] = useState<ChartMode>('net')
 
@@ -109,7 +112,10 @@ export function LocChart({ weeks, repoNames }: Props) {
       </CardHeader>
 
       <CardContent className="px-0 pt-3">
-        <StatStrip summary={summary} />
+        <AllTimeTotal net={totalNet} additions={totalAdditions} deletions={totalDeletions} />
+        <div className="mt-4 pt-4 border-t border-border/40">
+          <StatStrip summary={summary} />
+        </div>
 
         <div className="mt-4 mb-6">
           <SegmentedControl
@@ -216,6 +222,34 @@ export function LocChart({ weeks, repoNames }: Props) {
         )}
       </CardContent>
     </Card>
+  )
+}
+
+function AllTimeTotal({
+  net,
+  additions,
+  deletions,
+}: {
+  net: number
+  additions: number
+  deletions: number
+}) {
+  return (
+    <div className="flex items-baseline gap-3 flex-wrap">
+      <span className="text-[10px] uppercase tracking-wider text-muted-foreground/70 font-mono">
+        All-time net
+      </span>
+      <span className="font-mono text-2xl font-bold tabular-nums text-primary">
+        {net >= 0 ? '+' : ''}
+        {formatNumber(net)}
+      </span>
+      <span className="font-mono text-xs tabular-nums" style={{ color: 'oklch(0.68 0.10 150)' }}>
+        +{formatNumber(additions)}
+      </span>
+      <span className="font-mono text-xs tabular-nums" style={{ color: 'oklch(0.62 0.13 25)' }}>
+        −{formatNumber(deletions)}
+      </span>
+    </div>
   )
 }
 

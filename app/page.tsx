@@ -60,6 +60,9 @@ export default function Home() {
           <LocChart
             weeks={githubSnapshot.weeks}
             repoNames={githubSnapshot.repoNames}
+            totalAdditions={githubSnapshot.totalAdditions}
+            totalDeletions={githubSnapshot.totalDeletions}
+            totalNet={githubSnapshot.totalNet}
           />
         </div>
 

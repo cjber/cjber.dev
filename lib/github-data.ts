@@ -16,6 +16,9 @@ export type GitHubSnapshot = {
   generatedAt: string
   weeks: WeekStats[]
   repoNames: string[]
+  totalAdditions: number
+  totalDeletions: number
+  totalNet: number
   calendar: { weeks: CalendarWeek[]; totalContributions: number }
 }
 
