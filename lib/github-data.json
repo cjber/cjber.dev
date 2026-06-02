@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T16:20:41.391Z",
+  "generatedAt": "2026-06-02T08:12:54.604Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2064,8 +2064,8 @@
       "nebula": -41754,
       "nebula-mobile": 876,
       "footprint-explorer": 5661,
-      "hyprview": 558,
-      "oxide": 1616
+      "oxide": 1616,
+      "hyprview": 558
     },
     {
       "date": "2026-05-24",
@@ -2082,11 +2082,11 @@
     {
       "date": "2026-05-31",
       "weekTimestamp": 1780185600,
-      "additions": 7363,
-      "deletions": 1671,
-      "net": 5692,
+      "additions": 9352,
+      "deletions": 2501,
+      "net": 6851,
       "cjber.dev": 1889,
-      "nebula": 3803
+      "nebula": 4962
     }
   ],
   "repoNames": [
@@ -2096,11 +2096,11 @@
     "nebula",
     "nebula-desktop",
     "nebula-mobile",
-    "nebula-metabase",
     "nebula-docs",
     "footprint-explorer",
-    "hyprview",
+    "nebula-metabase",
     "oxide",
+    "hyprview",
     "tab-archive",
     "berragan.co.uk",
     "fluid-dreams",
@@ -2129,8 +2129,8 @@
     "tweet-classification",
     "hypr",
     "gds_modules",
-    "uolrmarkdown",
     "gds",
+    "uolrmarkdown",
     "georelations",
     "dissertation",
     "reddit-geoext",
@@ -2139,11 +2139,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2574188,
-  "totalDeletions": 1694557,
-  "totalNet": 879631,
+  "totalAdditions": 2576177,
+  "totalDeletions": 1695387,
+  "totalNet": 880790,
   "calendar": {
-    "totalContributions": 4938,
+    "totalContributions": 4957,
     "weeks": [
       {
         "firstDay": "2025-06-01",
@@ -4235,8 +4235,13 @@
           },
           {
             "date": "2026-06-01",
-            "count": 40,
+            "count": 50,
             "level": 2
+          },
+          {
+            "date": "2026-06-02",
+            "count": 9,
+            "level": 1
           }
         ]
       }
