@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T08:12:54.604Z",
+  "generatedAt": "2026-06-03T08:22:11.915Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2063,9 +2063,9 @@
       "nebula-web": 460,
       "nebula": -41754,
       "nebula-mobile": 876,
-      "footprint-explorer": 5661,
+      "hyprview": 558,
       "oxide": 1616,
-      "hyprview": 558
+      "footprint-explorer": 5661
     },
     {
       "date": "2026-05-24",
@@ -2082,11 +2082,13 @@
     {
       "date": "2026-05-31",
       "weekTimestamp": 1780185600,
-      "additions": 9352,
-      "deletions": 2501,
-      "net": 6851,
+      "additions": 37638,
+      "deletions": 9116,
+      "net": 28522,
       "cjber.dev": 1889,
-      "nebula": 4962
+      "nebula-web": 22553,
+      "nebula": 3773,
+      "nebula-mobile": 307
     }
   ],
   "repoNames": [
@@ -2097,11 +2099,11 @@
     "nebula-desktop",
     "nebula-mobile",
     "nebula-docs",
-    "footprint-explorer",
     "nebula-metabase",
-    "oxide",
     "hyprview",
+    "oxide",
     "tab-archive",
+    "footprint-explorer",
     "berragan.co.uk",
     "fluid-dreams",
     "abm_liv",
@@ -2128,8 +2130,8 @@
     "dapr_modules",
     "tweet-classification",
     "hypr",
-    "gds_modules",
     "gds",
+    "gds_modules",
     "uolrmarkdown",
     "georelations",
     "dissertation",
@@ -2139,11 +2141,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2576177,
-  "totalDeletions": 1695387,
-  "totalNet": 880790,
+  "totalAdditions": 2604463,
+  "totalDeletions": 1702002,
+  "totalNet": 902461,
   "calendar": {
-    "totalContributions": 4957,
+    "totalContributions": 5018,
     "weeks": [
       {
         "firstDay": "2025-06-01",
@@ -4215,7 +4217,7 @@
           },
           {
             "date": "2026-05-29",
-            "count": 82,
+            "count": 81,
             "level": 3
           },
           {
@@ -4240,6 +4242,11 @@
           },
           {
             "date": "2026-06-02",
+            "count": 62,
+            "level": 3
+          },
+          {
+            "date": "2026-06-03",
             "count": 9,
             "level": 1
           }
