@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T07:58:23.407Z",
+  "generatedAt": "2026-06-06T07:34:55.166Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2064,8 +2064,8 @@
       "nebula": -41754,
       "nebula-mobile": 876,
       "oxide": 1616,
-      "footprint-explorer": 5661,
-      "hyprview": 558
+      "hyprview": 558,
+      "footprint-explorer": 5661
     },
     {
       "date": "2026-05-24",
@@ -2082,14 +2082,14 @@
     {
       "date": "2026-05-31",
       "weekTimestamp": 1780185600,
-      "additions": 54732,
-      "deletions": 15593,
-      "net": 39139,
+      "additions": 71499,
+      "deletions": 18520,
+      "net": 52979,
       "cjber.dev": 1889,
-      "nebula-web": 22727,
-      "nebula": 13280,
+      "nebula-web": 27310,
+      "nebula": 19112,
       "nebula-metabase": 233,
-      "nebula-mobile": 1010
+      "nebula-mobile": 4435
     }
   ],
   "repoNames": [
@@ -2103,8 +2103,8 @@
     "nebula-docs",
     "oxide",
     "tab-archive",
-    "footprint-explorer",
     "hyprview",
+    "footprint-explorer",
     "berragan.co.uk",
     "fluid-dreams",
     "abm_liv",
@@ -2131,8 +2131,8 @@
     "dapr_modules",
     "tweet-classification",
     "hypr",
-    "gds",
     "gds_modules",
+    "gds",
     "uolrmarkdown",
     "georelations",
     "dissertation",
@@ -2142,11 +2142,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2621557,
-  "totalDeletions": 1708479,
-  "totalNet": 913078,
+  "totalAdditions": 2638324,
+  "totalDeletions": 1711406,
+  "totalNet": 926918,
   "calendar": {
-    "totalContributions": 5129,
+    "totalContributions": 5196,
     "weeks": [
       {
         "firstDay": "2025-06-01",
@@ -4253,13 +4253,18 @@
           },
           {
             "date": "2026-06-04",
-            "count": 53,
+            "count": 50,
             "level": 2
           },
           {
             "date": "2026-06-05",
-            "count": 2,
-            "level": 1
+            "count": 72,
+            "level": 3
+          },
+          {
+            "date": "2026-06-06",
+            "count": 0,
+            "level": 0
           }
         ]
       }
