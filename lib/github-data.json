@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T07:51:01.705Z",
+  "generatedAt": "2026-06-14T08:04:57.738Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2094,14 +2094,15 @@
     {
       "date": "2026-06-07",
       "weekTimestamp": 1780790400,
-      "additions": 102697,
-      "deletions": 30071,
-      "net": 72626,
-      "nebula-web": 565,
-      "nebula": 45550,
-      "nebula-mobile": 4839,
-      "offer-radar": 21633,
-      "nebula-metabase": 39
+      "additions": 113857,
+      "deletions": 35135,
+      "net": 78722,
+      "nebula-web": 1157,
+      "dotfiles": 838,
+      "nebula": 49866,
+      "nebula-mobile": 5189,
+      "nebula-metabase": 39,
+      "offer-radar": 21633
     }
   ],
   "repoNames": [
@@ -2111,8 +2112,8 @@
     "nebula",
     "nebula-desktop",
     "nebula-mobile",
-    "offer-radar",
     "nebula-metabase",
+    "offer-radar",
     "nebula-docs",
     "oxide",
     "hyprview",
@@ -2143,8 +2144,8 @@
     "ger-wiki",
     "dapr_modules",
     "hypr",
-    "gds",
     "gds_modules",
+    "gds",
     "uolrmarkdown",
     "tweet-classification",
     "georelations",
@@ -2155,52 +2156,12 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2741021,
-  "totalDeletions": 1741477,
-  "totalNet": 999544,
+  "totalAdditions": 2752181,
+  "totalDeletions": 1746541,
+  "totalNet": 1005640,
   "calendar": {
-    "totalContributions": 5411,
+    "totalContributions": 5463,
     "weeks": [
-      {
-        "firstDay": "2025-06-08",
-        "days": [
-          {
-            "date": "2025-06-08",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-06-09",
-            "count": 3,
-            "level": 1
-          },
-          {
-            "date": "2025-06-10",
-            "count": 3,
-            "level": 1
-          },
-          {
-            "date": "2025-06-11",
-            "count": 6,
-            "level": 1
-          },
-          {
-            "date": "2025-06-12",
-            "count": 5,
-            "level": 1
-          },
-          {
-            "date": "2025-06-13",
-            "count": 30,
-            "level": 2
-          },
-          {
-            "date": "2025-06-14",
-            "count": 11,
-            "level": 1
-          }
-        ]
-      },
       {
         "firstDay": "2025-06-15",
         "days": [
@@ -4276,8 +4237,18 @@
           },
           {
             "date": "2026-06-13",
-            "count": 0,
-            "level": 0
+            "count": 48,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-06-14",
+        "days": [
+          {
+            "date": "2026-06-14",
+            "count": 4,
+            "level": 1
           }
         ]
       }
