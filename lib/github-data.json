@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T08:34:46.716Z",
+  "generatedAt": "2026-06-17T08:23:46.302Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2020,8 +2020,8 @@
       "additions": 2095,
       "deletions": 319,
       "net": 1776,
-      "dotfiles": 16,
-      "nebula-desktop": 1760
+      "nebula-desktop": 1760,
+      "dotfiles": 16
     },
     {
       "date": "2026-04-26",
@@ -2047,9 +2047,9 @@
       "additions": 50886,
       "deletions": 20521,
       "net": 30365,
+      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 23403,
-      "nebula-desktop": -63,
       "nebula-mobile": 597,
       "tab-archive": 5275
     },
@@ -2064,8 +2064,8 @@
       "nebula": -41754,
       "nebula-mobile": 876,
       "oxide": 1616,
-      "hyprview": 558,
-      "footprint-explorer": 5661
+      "footprint-explorer": 5661,
+      "hyprview": 558
     },
     {
       "date": "2026-05-24",
@@ -2073,9 +2073,9 @@
       "additions": 104368,
       "deletions": 66653,
       "net": 37715,
+      "nebula-desktop": 38,
       "nebula-web": 2250,
       "nebula": 28612,
-      "nebula-desktop": 38,
       "nebula-mobile": 2012,
       "nebula-metabase": 4803
     },
@@ -2107,28 +2107,29 @@
     {
       "date": "2026-06-14",
       "weekTimestamp": 1781395200,
-      "additions": 10315,
-      "deletions": 10172,
-      "net": 143,
-      "nebula-web": -26,
-      "nebula": 302,
-      "nebula-mobile": -133
+      "additions": 20202,
+      "deletions": 13665,
+      "net": 6537,
+      "nebula-desktop": -81,
+      "nebula-web": 1293,
+      "nebula": 3834,
+      "nebula-mobile": 1491
     }
   ],
   "repoNames": [
+    "nebula-desktop",
     "cjber.dev",
     "nebula-web",
     "dotfiles",
     "nebula",
-    "nebula-desktop",
     "nebula-mobile",
     "nebula-docs",
     "offer-radar",
     "nebula-metabase",
     "oxide",
-    "hyprview",
     "footprint-explorer",
     "tab-archive",
+    "hyprview",
     "berragan.co.uk",
     "fluid-dreams",
     "abm_liv",
@@ -2154,23 +2155,23 @@
     "ger-wiki",
     "dapr_modules",
     "hypr",
-    "gds_modules",
     "gds",
+    "gds_modules",
     "uolrmarkdown",
     "tweet-classification",
-    "dissertation",
     "georelations",
+    "dissertation",
     "reddit-geoext",
     "nvim-config",
     "cjrmd",
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2762496,
-  "totalDeletions": 1756713,
-  "totalNet": 1005783,
+  "totalAdditions": 2772383,
+  "totalDeletions": 1760206,
+  "totalNet": 1012177,
   "calendar": {
-    "totalContributions": 5480,
+    "totalContributions": 5579,
     "weeks": [
       {
         "firstDay": "2025-06-15",
@@ -3388,7 +3389,7 @@
           {
             "date": "2026-01-13",
             "count": 22,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-01-14",
@@ -3518,7 +3519,7 @@
           {
             "date": "2026-02-05",
             "count": 22,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-02-06",
@@ -3603,7 +3604,7 @@
           {
             "date": "2026-02-20",
             "count": 22,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-02-21",
@@ -3828,12 +3829,12 @@
           {
             "date": "2026-03-31",
             "count": 22,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-04-01",
             "count": 45,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-04-02",
@@ -4003,7 +4004,7 @@
           {
             "date": "2026-05-01",
             "count": 43,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-05-02",
@@ -4018,7 +4019,7 @@
           {
             "date": "2026-05-03",
             "count": 22,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-04",
@@ -4063,7 +4064,7 @@
           {
             "date": "2026-05-11",
             "count": 66,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-05-12",
@@ -4078,7 +4079,7 @@
           {
             "date": "2026-05-14",
             "count": 44,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-05-15",
@@ -4148,7 +4149,7 @@
           {
             "date": "2026-05-26",
             "count": 44,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-05-27",
@@ -4193,7 +4194,7 @@
           {
             "date": "2026-06-03",
             "count": 66,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-06-04",
@@ -4227,7 +4228,7 @@
           },
           {
             "date": "2026-06-09",
-            "count": 78,
+            "count": 77,
             "level": 4
           },
           {
@@ -4238,7 +4239,7 @@
           {
             "date": "2026-06-11",
             "count": 44,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-06-12",
@@ -4267,7 +4268,12 @@
           },
           {
             "date": "2026-06-16",
-            "count": 19,
+            "count": 117,
+            "level": 4
+          },
+          {
+            "date": "2026-06-17",
+            "count": 2,
             "level": 1
           }
         ]
