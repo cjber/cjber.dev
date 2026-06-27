@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T07:52:29.455Z",
+  "generatedAt": "2026-06-27T07:37:06.824Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -729,8 +729,8 @@
       "deletions": 1734,
       "net": 171583,
       "dotfiles": 58,
-      "tweet-classification": 5594,
       "dapr_modules": 164517,
+      "tweet-classification": 5594,
       "georelations": 1414
     },
     {
@@ -1975,9 +1975,9 @@
       "additions": 4515,
       "deletions": 1018,
       "net": 3497,
-      "nebula-mobile": 40,
       "dotfiles": 139,
-      "nebula-docs": 3318
+      "nebula-docs": 3318,
+      "nebula-mobile": 40
     },
     {
       "date": "2026-03-15",
@@ -2020,8 +2020,8 @@
       "additions": 2095,
       "deletions": 319,
       "net": 1776,
-      "nebula-desktop": 1760,
-      "dotfiles": 16
+      "dotfiles": 16,
+      "nebula-desktop": 1760
     },
     {
       "date": "2026-04-26",
@@ -2047,10 +2047,10 @@
       "additions": 50886,
       "deletions": 20521,
       "net": 30365,
-      "nebula-desktop": -63,
-      "nebula-mobile": 597,
       "dotfiles": 1153,
       "nebula": 23403,
+      "nebula-desktop": -63,
+      "nebula-mobile": 597,
       "tab-archive": 5275
     },
     {
@@ -2060,9 +2060,9 @@
       "deletions": 83051,
       "net": -34592,
       "cjber.dev": -2009,
-      "nebula-mobile": 876,
       "nebula-web": 460,
       "nebula": -41754,
+      "nebula-mobile": 876,
       "oxide": 1616,
       "hyprview": 558,
       "footprint-explorer": 5661
@@ -2073,10 +2073,10 @@
       "additions": 104368,
       "deletions": 66653,
       "net": 37715,
-      "nebula-desktop": 38,
-      "nebula-mobile": 2012,
       "nebula-web": 2250,
       "nebula": 28612,
+      "nebula-desktop": 38,
+      "nebula-mobile": 2012,
       "nebula-metabase": 4803
     },
     {
@@ -2086,9 +2086,9 @@
       "deletions": 18520,
       "net": 52979,
       "cjber.dev": 1889,
-      "nebula-mobile": 4435,
       "nebula-web": 27310,
       "nebula": 19112,
+      "nebula-mobile": 4435,
       "nebula-metabase": 233
     },
     {
@@ -2097,12 +2097,12 @@
       "additions": 113857,
       "deletions": 35135,
       "net": 78722,
-      "nebula-mobile": 5189,
       "nebula-web": 1157,
       "dotfiles": 838,
       "nebula": 49866,
-      "offer-radar": 21633,
-      "nebula-metabase": 39
+      "nebula-mobile": 5189,
+      "nebula-metabase": 39,
+      "offer-radar": 21633
     },
     {
       "date": "2026-06-14",
@@ -2110,50 +2110,50 @@
       "additions": 115933,
       "deletions": 60054,
       "net": 55879,
-      "nebula-desktop": 4002,
-      "nebula-mobile": 6216,
       "nebula-web": 5124,
       "nebula": -1575,
+      "nebula-desktop": 4002,
+      "nebula-mobile": 6216,
       "parallax": 41911,
       "nebula-metabase": 201
     },
     {
       "date": "2026-06-21",
       "weekTimestamp": 1782000000,
-      "additions": 74805,
-      "deletions": 31272,
-      "net": 43533,
-      "nebula-desktop": 23453,
-      "nebula-mobile": 6750,
-      "nebula-web": 6526,
+      "additions": 92354,
+      "deletions": 36314,
+      "net": 56040,
+      "nebula-web": 8033,
       "dotfiles": -258,
-      "nebula": 4368,
-      "clay-saturday": 893,
+      "nebula": 10684,
+      "nebula-desktop": 27122,
+      "nebula-mobile": 7765,
       "Spoon-Knife": 2,
-      "rolling-bowl": 449,
       "parallax": 1098,
+      "rolling-bowl": 449,
+      "clay-saturday": 893,
       "wowaddon": 252
     }
   ],
   "repoNames": [
     "cjber.dev",
-    "nebula-desktop",
-    "nebula-mobile",
     "nebula-web",
     "dotfiles",
     "nebula",
     "nebula-docs",
-    "clay-saturday",
+    "nebula-desktop",
+    "nebula-mobile",
     "Spoon-Knife",
-    "rolling-bowl",
     "parallax",
+    "rolling-bowl",
+    "clay-saturday",
     "wowaddon",
     "ai",
-    "offer-radar",
     "nebula-metabase",
+    "offer-radar",
     "oxide",
-    "tab-archive",
     "hyprview",
+    "tab-archive",
     "footprint-explorer",
     "berragan.co.uk",
     "fluid-dreams",
@@ -2177,11 +2177,11 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
-    "tweet-classification",
     "dapr_modules",
+    "tweet-classification",
     "hypr",
-    "gds_modules",
     "gds",
+    "gds_modules",
     "uolrmarkdown",
     "georelations",
     "dissertation",
@@ -2191,11 +2191,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 2942919,
-  "totalDeletions": 1837867,
-  "totalNet": 1105052,
+  "totalAdditions": 2960468,
+  "totalDeletions": 1842909,
+  "totalNet": 1117559,
   "calendar": {
-    "totalContributions": 6463,
+    "totalContributions": 6562,
     "weeks": [
       {
         "firstDay": "2025-06-22",
@@ -4307,8 +4307,13 @@
           },
           {
             "date": "2026-06-26",
-            "count": 19,
-            "level": 1
+            "count": 118,
+            "level": 4
+          },
+          {
+            "date": "2026-06-27",
+            "count": 0,
+            "level": 0
           }
         ]
       }
