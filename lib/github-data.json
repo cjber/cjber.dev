@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T07:42:27.445Z",
+  "generatedAt": "2026-07-04T07:30:48.391Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2063,8 +2063,8 @@
       "nebula-web": 460,
       "nebula": -41754,
       "nebula-mobile": 876,
-      "oxide": 1616,
       "hyprview": 558,
+      "oxide": 1616,
       "footprint-explorer": 5661
     },
     {
@@ -2137,14 +2137,14 @@
     {
       "date": "2026-06-28",
       "weekTimestamp": 1782604800,
-      "additions": 50971,
-      "deletions": 14933,
-      "net": 36038,
-      "nebula-web": 1783,
-      "nebula": 7444,
-      "parallax": 24790,
-      "nebula-desktop": 1386,
-      "nebula-mobile": 635
+      "additions": 93986,
+      "deletions": 53962,
+      "net": 40024,
+      "nebula-web": 1615,
+      "nebula": 10172,
+      "parallax": 25033,
+      "nebula-desktop": 1705,
+      "nebula-mobile": 1499
     }
   ],
   "repoNames": [
@@ -2163,8 +2163,8 @@
     "nebula-metabase",
     "ai",
     "offer-radar",
-    "oxide",
     "hyprview",
+    "oxide",
     "tab-archive",
     "footprint-explorer",
     "berragan.co.uk",
@@ -2192,8 +2192,8 @@
     "dapr_modules",
     "tweet-classification",
     "hypr",
-    "gds_modules",
     "gds",
+    "gds_modules",
     "uolrmarkdown",
     "georelations",
     "dissertation",
@@ -2203,11 +2203,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 3011701,
-  "totalDeletions": 1857901,
-  "totalNet": 1153800,
+  "totalAdditions": 3054716,
+  "totalDeletions": 1896930,
+  "totalNet": 1157786,
   "calendar": {
-    "totalContributions": 6690,
+    "totalContributions": 6769,
     "weeks": [
       {
         "firstDay": "2025-06-29",
@@ -3595,7 +3595,7 @@
           {
             "date": "2026-02-26",
             "count": 33,
-            "level": 1
+            "level": 2
           },
           {
             "date": "2026-02-27",
@@ -3620,7 +3620,7 @@
           {
             "date": "2026-03-02",
             "count": 34,
-            "level": 1
+            "level": 2
           },
           {
             "date": "2026-03-03",
@@ -3630,7 +3630,7 @@
           {
             "date": "2026-03-04",
             "count": 32,
-            "level": 1
+            "level": 2
           },
           {
             "date": "2026-03-05",
@@ -3720,7 +3720,7 @@
           {
             "date": "2026-03-20",
             "count": 35,
-            "level": 1
+            "level": 2
           },
           {
             "date": "2026-03-21",
@@ -4020,7 +4020,7 @@
           {
             "date": "2026-05-11",
             "count": 66,
-            "level": 2
+            "level": 3
           },
           {
             "date": "2026-05-12",
@@ -4115,7 +4115,7 @@
           {
             "date": "2026-05-28",
             "count": 70,
-            "level": 2
+            "level": 3
           },
           {
             "date": "2026-05-29",
@@ -4150,7 +4150,7 @@
           {
             "date": "2026-06-03",
             "count": 66,
-            "level": 2
+            "level": 3
           },
           {
             "date": "2026-06-04",
@@ -4160,7 +4160,7 @@
           {
             "date": "2026-06-05",
             "count": 70,
-            "level": 2
+            "level": 3
           },
           {
             "date": "2026-06-06",
@@ -4230,7 +4230,7 @@
           {
             "date": "2026-06-17",
             "count": 99,
-            "level": 3
+            "level": 4
           },
           {
             "date": "2026-06-18",
@@ -4275,7 +4275,7 @@
           {
             "date": "2026-06-25",
             "count": 97,
-            "level": 3
+            "level": 4
           },
           {
             "date": "2026-06-26",
@@ -4319,8 +4319,13 @@
           },
           {
             "date": "2026-07-03",
-            "count": 19,
-            "level": 1
+            "count": 98,
+            "level": 4
+          },
+          {
+            "date": "2026-07-04",
+            "count": 0,
+            "level": 0
           }
         ]
       }
