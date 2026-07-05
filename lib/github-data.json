@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T07:30:48.391Z",
+  "generatedAt": "2026-07-05T07:42:19.135Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2063,8 +2063,8 @@
       "nebula-web": 460,
       "nebula": -41754,
       "nebula-mobile": 876,
-      "hyprview": 558,
       "oxide": 1616,
+      "hyprview": 558,
       "footprint-explorer": 5661
     },
     {
@@ -2130,8 +2130,8 @@
       "nebula-desktop": 27325,
       "nebula-mobile": 7765,
       "rolling-bowl": 449,
-      "clay-saturday": 893,
       "Spoon-Knife": 2,
+      "clay-saturday": 893,
       "wowaddon": 252
     },
     {
@@ -2157,14 +2157,14 @@
     "nebula-mobile",
     "nebula-docs",
     "rolling-bowl",
-    "clay-saturday",
     "Spoon-Knife",
+    "clay-saturday",
     "wowaddon",
     "nebula-metabase",
     "ai",
     "offer-radar",
-    "hyprview",
     "oxide",
+    "hyprview",
     "tab-archive",
     "footprint-explorer",
     "berragan.co.uk",
@@ -2209,46 +2209,6 @@
   "calendar": {
     "totalContributions": 6769,
     "weeks": [
-      {
-        "firstDay": "2025-06-29",
-        "days": [
-          {
-            "date": "2025-06-29",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-06-30",
-            "count": 5,
-            "level": 1
-          },
-          {
-            "date": "2025-07-01",
-            "count": 6,
-            "level": 1
-          },
-          {
-            "date": "2025-07-02",
-            "count": 2,
-            "level": 1
-          },
-          {
-            "date": "2025-07-03",
-            "count": 11,
-            "level": 1
-          },
-          {
-            "date": "2025-07-04",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-05",
-            "count": 0,
-            "level": 0
-          }
-        ]
-      },
       {
         "firstDay": "2025-07-06",
         "days": [
@@ -4324,6 +4284,16 @@
           },
           {
             "date": "2026-07-04",
+            "count": 0,
+            "level": 0
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-07-05",
+        "days": [
+          {
+            "date": "2026-07-05",
             "count": 0,
             "level": 0
           }
