@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T07:42:51.501Z",
+  "generatedAt": "2026-07-14T07:19:22.003Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -1976,8 +1976,8 @@
       "deletions": 1018,
       "net": 3497,
       "dotfiles": 139,
-      "nebula-mobile": 40,
-      "nebula-docs": 3318
+      "nebula-docs": 3318,
+      "nebula-mobile": 40
     },
     {
       "date": "2026-03-15",
@@ -2020,8 +2020,8 @@
       "additions": 2095,
       "deletions": 319,
       "net": 1776,
-      "nebula-desktop": 1760,
-      "dotfiles": 16
+      "dotfiles": 16,
+      "nebula-desktop": 1760
     },
     {
       "date": "2026-04-26",
@@ -2047,9 +2047,9 @@
       "additions": 50886,
       "deletions": 20521,
       "net": 30365,
-      "nebula-desktop": -63,
       "dotfiles": 1153,
       "nebula": 23403,
+      "nebula-desktop": -63,
       "nebula-mobile": 597,
       "tab-archive": 5275
     },
@@ -2073,9 +2073,9 @@
       "additions": 104368,
       "deletions": 66653,
       "net": 37715,
-      "nebula-desktop": 38,
       "nebula-web": 2250,
       "nebula": 28612,
+      "nebula-desktop": 38,
       "nebula-mobile": 2012,
       "nebula-metabase": 4803
     },
@@ -2110,11 +2110,11 @@
       "additions": 115933,
       "deletions": 60054,
       "net": 55879,
-      "nebula-desktop": 4002,
       "nebula-web": 5124,
       "nebula": -1575,
-      "parallax": 41911,
+      "nebula-desktop": 4002,
       "nebula-mobile": 6216,
+      "parallax": 41911,
       "nebula-metabase": 201
     },
     {
@@ -2123,15 +2123,15 @@
       "additions": 92616,
       "deletions": 36373,
       "net": 56243,
-      "nebula-desktop": 27325,
       "nebula-web": 8033,
       "dotfiles": -258,
       "nebula": 10684,
-      "parallax": 1098,
+      "nebula-desktop": 27325,
       "nebula-mobile": 7765,
+      "parallax": 1098,
       "Spoon-Knife": 2,
-      "rolling-bowl": 449,
       "clay-saturday": 893,
+      "rolling-bowl": 449,
       "wowaddon": 252
     },
     {
@@ -2140,11 +2140,11 @@
       "additions": 93986,
       "deletions": 53962,
       "net": 40024,
-      "nebula-desktop": 1705,
       "nebula-web": 1615,
       "nebula": 10172,
-      "parallax": 25033,
-      "nebula-mobile": 1499
+      "nebula-desktop": 1705,
+      "nebula-mobile": 1499,
+      "parallax": 25033
     },
     {
       "date": "2026-07-05",
@@ -2152,38 +2152,43 @@
       "additions": 56333,
       "deletions": 37958,
       "net": 18375,
-      "nebula-desktop": -327,
       "nebula-web": 14,
       "dotfiles": 1371,
       "nebula": -5594,
-      "parallax": 22925,
+      "nebula-desktop": -327,
       "nebula-mobile": -14,
+      "parallax": 22925,
       "oxide": 0
     },
     {
       "date": "2026-07-12",
       "weekTimestamp": 1783814400,
-      "additions": 3336,
-      "deletions": 597,
-      "net": 2739,
-      "nebula-web": 2251,
-      "nebula": 421,
-      "parallax": 67
+      "additions": 55607,
+      "deletions": 905165,
+      "net": -849558,
+      "nebula-web": 5045,
+      "dotfiles": 1215,
+      "nebula": 8276,
+      "nebula-desktop": 6631,
+      "kiln": -875260,
+      "nebula-mobile": 4061,
+      "parallax": 474
     }
   ],
   "repoNames": [
     "cjber.dev",
-    "nebula-desktop",
     "nebula-web",
     "dotfiles",
     "nebula",
-    "parallax",
+    "nebula-docs",
+    "nebula-desktop",
+    "kiln",
     "nebula-mobile",
+    "parallax",
     "oxide",
     "Spoon-Knife",
-    "nebula-docs",
-    "rolling-bowl",
     "clay-saturday",
+    "rolling-bowl",
     "wowaddon",
     "ai",
     "offer-radar",
@@ -2214,11 +2219,11 @@
     "reddit-model",
     "ger-wiki",
     "dapr_modules",
-    "tweet-classification",
     "hypr",
     "gds",
     "gds_modules",
     "uolrmarkdown",
+    "tweet-classification",
     "georelations",
     "dissertation",
     "reddit-geoext",
@@ -2227,11 +2232,11 @@
     "car_ml",
     "ward-lifetimes"
   ],
-  "totalAdditions": 3114385,
-  "totalDeletions": 1935485,
-  "totalNet": 1178900,
+  "totalAdditions": 3166656,
+  "totalDeletions": 2840053,
+  "totalNet": 326603,
   "calendar": {
-    "totalContributions": 6928,
+    "totalContributions": 7025,
     "weeks": [
       {
         "firstDay": "2025-07-13",
@@ -4323,6 +4328,11 @@
           },
           {
             "date": "2026-07-13",
+            "count": 97,
+            "level": 4
+          },
+          {
+            "date": "2026-07-14",
             "count": 1,
             "level": 1
           }
