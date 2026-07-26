@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T07:20:56.859Z",
+  "generatedAt": "2026-07-26T07:27:30.407Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -747,8 +747,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "gds_modules": 59960,
       "dapr_modules": -558,
+      "gds_modules": 59960,
       "georelations": -691
     },
     {
@@ -2129,9 +2129,9 @@
       "parallax": 1098,
       "nebula-desktop": 27325,
       "nebula-mobile": 7765,
+      "rolling-bowl": 449,
       "Spoon-Knife": 2,
       "clay-saturday": 893,
-      "rolling-bowl": 449,
       "wowaddon": 252
     },
     {
@@ -2177,12 +2177,12 @@
     {
       "date": "2026-07-19",
       "weekTimestamp": 1784419200,
-      "additions": 71969,
-      "deletions": 100708,
-      "net": -28739,
+      "additions": 74105,
+      "deletions": 102918,
+      "net": -28813,
       "nebula-web": -32490,
-      "dotfiles": 511,
-      "nebula": -8555,
+      "dotfiles": 912,
+      "nebula": -9030,
       "parallax": 7038,
       "nebula-desktop": 1997,
       "nebula-mobile": 1274,
@@ -2203,9 +2203,9 @@
     "nebula-metabase",
     "kiln",
     "oxide",
+    "rolling-bowl",
     "Spoon-Knife",
     "clay-saturday",
-    "rolling-bowl",
     "wowaddon",
     "ai",
     "offer-radar",
@@ -2234,9 +2234,9 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
-    "gds_modules",
     "gds",
     "dapr_modules",
+    "gds_modules",
     "uolrmarkdown",
     "tweet-classification",
     "georelations",
@@ -2248,52 +2248,12 @@
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3292908,
-  "totalDeletions": 2964122,
-  "totalNet": 328786,
+  "totalAdditions": 3295044,
+  "totalDeletions": 2966332,
+  "totalNet": 328712,
   "calendar": {
-    "totalContributions": 7693,
+    "totalContributions": 7703,
     "weeks": [
-      {
-        "firstDay": "2025-07-20",
-        "days": [
-          {
-            "date": "2025-07-20",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-21",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-22",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-23",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-24",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-25",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-07-26",
-            "count": 0,
-            "level": 0
-          }
-        ]
-      },
       {
         "firstDay": "2025-07-27",
         "days": [
@@ -4369,6 +4329,16 @@
           },
           {
             "date": "2026-07-25",
+            "count": 10,
+            "level": 1
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-07-26",
+        "days": [
+          {
+            "date": "2026-07-26",
             "count": 0,
             "level": 0
           }
