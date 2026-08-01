@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T07:32:00.730Z",
+  "generatedAt": "2026-08-01T07:23:16.040Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -747,8 +747,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "dapr_modules": -558,
       "gds_modules": 59960,
+      "dapr_modules": -558,
       "georelations": -691
     },
     {
@@ -2124,9 +2124,9 @@
       "nebula-desktop": 27325,
       "parallax": 1098,
       "nebula-mobile": 7765,
-      "rolling-bowl": 449,
-      "Spoon-Knife": 2,
       "clay-saturday": 893,
+      "Spoon-Knife": 2,
+      "rolling-bowl": 449,
       "wowaddon": 252
     },
     {
@@ -2187,16 +2187,16 @@
     {
       "date": "2026-07-26",
       "weekTimestamp": 1785024000,
-      "additions": 96452,
-      "deletions": 45259,
-      "net": 51193,
-      "nebula-web": 994,
-      "dotfiles": -114,
-      "nebula": 6617,
-      "nebula-desktop": 1178,
-      "parallax": 21523,
+      "additions": 161884,
+      "deletions": 111943,
+      "net": 49941,
+      "nebula-web": 1304,
+      "dotfiles": -37,
+      "nebula": 25103,
+      "nebula-desktop": 6103,
+      "parallax": -7073,
       "kiln": 17241,
-      "nebula-mobile": 3754
+      "nebula-mobile": 7300
     }
   ],
   "repoNames": [
@@ -2211,12 +2211,12 @@
     "parallax",
     "kiln",
     "nebula-mobile",
-    "rolling-bowl",
-    "Spoon-Knife",
     "clay-saturday",
+    "Spoon-Knife",
+    "rolling-bowl",
+    "oxide",
     "offer-radar",
     "wowaddon",
-    "oxide",
     "tab-archive",
     "hyprview",
     "footprint-explorer",
@@ -2224,8 +2224,8 @@
     "fluid-dreams",
     "abm_liv",
     "planning-ai",
-    "thirdweb-ai-langgraph",
     "ukcrawl",
+    "thirdweb-ai-langgraph",
     "reddit-footprint",
     "semantic-catalogue",
     "ndvi",
@@ -2243,10 +2243,10 @@
     "reddit-model",
     "ger-wiki",
     "gds",
-    "dapr_modules",
     "gds_modules",
-    "tweet-classification",
+    "dapr_modules",
     "uolrmarkdown",
+    "tweet-classification",
     "georelations",
     "hypr",
     "dissertation",
@@ -2256,11 +2256,11 @@
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3360948,
-  "totalDeletions": 3000035,
-  "totalNet": 360913,
+  "totalAdditions": 3426380,
+  "totalDeletions": 3066719,
+  "totalNet": 359661,
   "calendar": {
-    "totalContributions": 8164,
+    "totalContributions": 8265,
     "weeks": [
       {
         "firstDay": "2025-07-27",
@@ -4372,8 +4372,13 @@
           },
           {
             "date": "2026-07-31",
-            "count": 0,
-            "level": 0
+            "count": 100,
+            "level": 3
+          },
+          {
+            "date": "2026-08-01",
+            "count": 1,
+            "level": 1
           }
         ]
       }
