@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T07:27:48.773Z",
+  "generatedAt": "2026-08-05T07:28:05.878Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -2187,30 +2187,31 @@
     {
       "date": "2026-07-26",
       "weekTimestamp": 1785024000,
-      "additions": 170228,
+      "additions": 170229,
       "deletions": 116750,
-      "net": 53478,
+      "net": 53479,
       "nebula-mobile": 7552,
       "nebula-web": 1640,
       "dotfiles": -74,
       "nebula": 26927,
       "parallax": -7073,
       "nebula-desktop": 7265,
-      "kiln": 17241
+      "kiln": 17242
     },
     {
       "date": "2026-08-02",
       "weekTimestamp": 1785628800,
-      "additions": 68948,
-      "deletions": 8980,
-      "net": 59968,
-      "nebula-mobile": 19501,
-      "nebula-web": 2458,
-      "dotfiles": 48,
-      "nebula": 33296,
+      "additions": 89203,
+      "deletions": 18428,
+      "net": 70775,
+      "nebula-mobile": 21323,
+      "nebula-web": 5277,
+      "dotfiles": 52,
+      "nebula": 38058,
       "nebula-metabase": 758,
-      "parallax": 871,
-      "nebula-desktop": 3036
+      "parallax": 1324,
+      "nebula-desktop": 3918,
+      "kiln": 65
     }
   ],
   "repoNames": [
@@ -2226,11 +2227,11 @@
     "kiln",
     "rolling-bowl",
     "Spoon-Knife",
-    "clay-saturday",
-    "offer-radar",
-    "oxide",
-    "wowaddon",
     "nebula-ai-skill",
+    "oxide",
+    "clay-saturday",
+    "wowaddon",
+    "offer-radar",
     "hyprview",
     "tab-archive",
     "footprint-explorer",
@@ -2256,9 +2257,9 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
+    "gds",
     "dapr_modules",
     "gds_modules",
-    "gds",
     "uolrmarkdown",
     "tweet-classification",
     "georelations",
@@ -2270,11 +2271,11 @@
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3503672,
-  "totalDeletions": 3080506,
-  "totalNet": 423166,
+  "totalAdditions": 3523928,
+  "totalDeletions": 3089954,
+  "totalNet": 433974,
   "calendar": {
-    "totalContributions": 8470,
+    "totalContributions": 8571,
     "weeks": [
       {
         "firstDay": "2025-08-03",
@@ -4341,7 +4342,7 @@
           },
           {
             "date": "2026-07-30",
-            "count": 78,
+            "count": 79,
             "level": 3
           },
           {
@@ -4371,7 +4372,12 @@
           },
           {
             "date": "2026-08-04",
-            "count": 3,
+            "count": 101,
+            "level": 3
+          },
+          {
+            "date": "2026-08-05",
+            "count": 2,
             "level": 1
           }
         ]
