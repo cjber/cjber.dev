@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T06:56:22.497Z",
+  "generatedAt": "2026-08-08T06:51:09.598Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -747,8 +747,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "dapr_modules": -558,
       "gds_modules": 59960,
+      "dapr_modules": -558,
       "georelations": -691
     },
     {
@@ -1465,8 +1465,8 @@
       "ukroutes": 4,
       "overture-uk": 1,
       "nvim": -25,
-      "access-to-everything": -298,
-      "ukpoi": -592
+      "ukpoi": -592,
+      "access-to-everything": -298
     },
     {
       "date": "2024-07-28",
@@ -1476,8 +1476,8 @@
       "net": 39,
       "ukroutes": -14,
       "nvim": 0,
-      "access-to-everything": 59,
-      "ukpoi": -6
+      "ukpoi": -6,
+      "access-to-everything": 59
     },
     {
       "date": "2024-08-04",
@@ -2125,8 +2125,8 @@
       "nebula-desktop": 27325,
       "nebula-mobile": 7765,
       "Spoon-Knife": 2,
-      "clay-saturday": 893,
       "rolling-bowl": 449,
+      "clay-saturday": 893,
       "wowaddon": 252
     },
     {
@@ -2201,14 +2201,14 @@
     {
       "date": "2026-08-02",
       "weekTimestamp": 1785628800,
-      "additions": 103289,
-      "deletions": 28580,
-      "net": 74709,
-      "nebula-web": 5277,
-      "dotfiles": 52,
-      "nebula": 40151,
+      "additions": 112775,
+      "deletions": 32911,
+      "net": 79864,
+      "nebula-web": 5133,
+      "dotfiles": 55,
+      "nebula": 41742,
       "nebula-metabase": 821,
-      "parallax": 2395,
+      "parallax": 6100,
       "nebula-desktop": 4625,
       "kiln": 65,
       "nebula-mobile": 21323
@@ -2226,14 +2226,14 @@
     "kiln",
     "nebula-mobile",
     "Spoon-Knife",
-    "clay-saturday",
     "rolling-bowl",
+    "clay-saturday",
     "nebula-ai-skill",
-    "oxide",
     "wowaddon",
+    "oxide",
     "offer-radar",
-    "tab-archive",
     "hyprview",
+    "tab-archive",
     "footprint-explorer",
     "berragan.co.uk",
     "fluid-dreams",
@@ -2248,8 +2248,8 @@
     "ingestion-checks",
     "overture-uk",
     "nvim",
-    "access-to-everything",
     "ukpoi",
+    "access-to-everything",
     "semantic-catalogue-demo",
     "thesis",
     "cdrc-semantic-search",
@@ -2257,9 +2257,9 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
+    "gds_modules",
     "gds",
     "dapr_modules",
-    "gds_modules",
     "uolrmarkdown",
     "tweet-classification",
     "georelations",
@@ -2271,11 +2271,11 @@
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3538014,
-  "totalDeletions": 3100106,
-  "totalNet": 437908,
+  "totalAdditions": 3547500,
+  "totalDeletions": 3104437,
+  "totalNet": 443063,
   "calendar": {
-    "totalContributions": 8683,
+    "totalContributions": 8741,
     "weeks": [
       {
         "firstDay": "2025-08-03",
@@ -4387,6 +4387,11 @@
           },
           {
             "date": "2026-08-07",
+            "count": 58,
+            "level": 2
+          },
+          {
+            "date": "2026-08-08",
             "count": 1,
             "level": 1
           }
