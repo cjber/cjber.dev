@@ -13,11 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cillian.dev"),
   title: "Cillian Berragan",
   description: "Founding Engineer at Nebula. Previously thirdweb.",
   keywords: "Cillian Berragan, Software Engineer, Nebula, AI, ML",
   authors: [{ name: "Cillian Berragan" }],
   creator: "Cillian Berragan",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
