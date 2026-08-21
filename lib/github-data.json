@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T06:50:49.516Z",
+  "generatedAt": "2026-08-21T06:51:40.698Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -747,8 +747,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "gds_modules": 59960,
       "dapr_modules": -558,
+      "gds_modules": 59960,
       "georelations": -691
     },
     {
@@ -2125,9 +2125,9 @@
       "parallax": 1098,
       "nebula-mobile": 7765,
       "Spoon-Knife": 2,
+      "clay-saturday": 893,
       "rolling-bowl": 449,
-      "wowaddon": 252,
-      "clay-saturday": 893
+      "wowaddon": 252
     },
     {
       "date": "2026-06-28",
@@ -2229,15 +2229,15 @@
     {
       "date": "2026-08-16",
       "weekTimestamp": 1786838400,
-      "additions": 66739,
-      "deletions": 28059,
-      "net": 38680,
+      "additions": 87611,
+      "deletions": 37276,
+      "net": 50335,
       "nebula-desktop": 14000,
-      "nebula-web": 1146,
-      "dotfiles": 160,
-      "nebula": 18161,
-      "parallax": 4529,
-      "nebula-mobile": 684
+      "nebula-web": 1416,
+      "dotfiles": 172,
+      "nebula": 28393,
+      "parallax": 5454,
+      "nebula-mobile": 900
     }
   ],
   "repoNames": [
@@ -2252,21 +2252,21 @@
     "kiln",
     "nebula-mobile",
     "Spoon-Knife",
+    "clay-saturday",
     "rolling-bowl",
+    "oxide",
     "wowaddon",
     "offer-radar",
-    "clay-saturday",
     "nebula-ai-skill",
-    "oxide",
-    "tab-archive",
     "hyprview",
+    "tab-archive",
     "footprint-explorer",
     "berragan.co.uk",
     "fluid-dreams",
     "abm_liv",
     "planning-ai",
-    "thirdweb-ai-langgraph",
     "ukcrawl",
+    "thirdweb-ai-langgraph",
     "reddit-footprint",
     "semantic-catalogue",
     "ndvi",
@@ -2283,9 +2283,9 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
-    "gds_modules",
-    "gds",
     "dapr_modules",
+    "gds",
+    "gds_modules",
     "tweet-classification",
     "uolrmarkdown",
     "georelations",
@@ -2293,15 +2293,15 @@
     "dissertation",
     "reddit-geoext",
     "nvim-config",
-    "car_ml",
     "ward-lifetimes",
+    "car_ml",
     "cjrmd"
   ],
-  "totalAdditions": 3701985,
-  "totalDeletions": 3178074,
-  "totalNet": 523911,
+  "totalAdditions": 3722857,
+  "totalDeletions": 3187291,
+  "totalNet": 535566,
   "calendar": {
-    "totalContributions": 9460,
+    "totalContributions": 9603,
     "weeks": [
       {
         "firstDay": "2025-08-17",
@@ -4403,12 +4403,17 @@
           },
           {
             "date": "2026-08-19",
-            "count": 89,
+            "count": 85,
             "level": 3
           },
           {
             "date": "2026-08-20",
-            "count": 5,
+            "count": 149,
+            "level": 4
+          },
+          {
+            "date": "2026-08-21",
+            "count": 3,
             "level": 1
           }
         ]
