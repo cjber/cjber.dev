@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:51:40.698Z",
+  "generatedAt": "2026-08-22T06:49:56.783Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -1465,8 +1465,8 @@
       "ukroutes": 4,
       "overture-uk": 1,
       "nvim": -25,
-      "access-to-everything": -298,
-      "ukpoi": -592
+      "ukpoi": -592,
+      "access-to-everything": -298
     },
     {
       "date": "2024-07-28",
@@ -1476,8 +1476,8 @@
       "net": 39,
       "ukroutes": -14,
       "nvim": 0,
-      "access-to-everything": 59,
-      "ukpoi": -6
+      "ukpoi": -6,
+      "access-to-everything": 59
     },
     {
       "date": "2024-08-04",
@@ -2229,15 +2229,15 @@
     {
       "date": "2026-08-16",
       "weekTimestamp": 1786838400,
-      "additions": 87611,
-      "deletions": 37276,
-      "net": 50335,
-      "nebula-desktop": 14000,
-      "nebula-web": 1416,
-      "dotfiles": 172,
-      "nebula": 28393,
-      "parallax": 5454,
-      "nebula-mobile": 900
+      "additions": 98514,
+      "deletions": 42685,
+      "net": 55829,
+      "nebula-desktop": 14183,
+      "nebula-web": 1419,
+      "dotfiles": 189,
+      "nebula": 33256,
+      "parallax": 5690,
+      "nebula-mobile": 1092
     }
   ],
   "repoNames": [
@@ -2253,11 +2253,11 @@
     "nebula-mobile",
     "Spoon-Knife",
     "clay-saturday",
-    "rolling-bowl",
     "oxide",
+    "rolling-bowl",
+    "nebula-ai-skill",
     "wowaddon",
     "offer-radar",
-    "nebula-ai-skill",
     "hyprview",
     "tab-archive",
     "footprint-explorer",
@@ -2265,8 +2265,8 @@
     "fluid-dreams",
     "abm_liv",
     "planning-ai",
-    "ukcrawl",
     "thirdweb-ai-langgraph",
+    "ukcrawl",
     "reddit-footprint",
     "semantic-catalogue",
     "ndvi",
@@ -2274,8 +2274,8 @@
     "ingestion-checks",
     "overture-uk",
     "nvim",
-    "access-to-everything",
     "ukpoi",
+    "access-to-everything",
     "semantic-catalogue-demo",
     "thesis",
     "cdrc-semantic-search",
@@ -2286,22 +2286,22 @@
     "dapr_modules",
     "gds",
     "gds_modules",
-    "tweet-classification",
     "uolrmarkdown",
+    "tweet-classification",
     "georelations",
     "hypr",
     "dissertation",
     "reddit-geoext",
     "nvim-config",
-    "ward-lifetimes",
     "car_ml",
+    "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3722857,
-  "totalDeletions": 3187291,
-  "totalNet": 535566,
+  "totalAdditions": 3733760,
+  "totalDeletions": 3192700,
+  "totalNet": 541060,
   "calendar": {
-    "totalContributions": 9603,
+    "totalContributions": 9712,
     "weeks": [
       {
         "firstDay": "2025-08-17",
@@ -4413,8 +4413,13 @@
           },
           {
             "date": "2026-08-21",
-            "count": 3,
-            "level": 1
+            "count": 112,
+            "level": 3
+          },
+          {
+            "date": "2026-08-22",
+            "count": 0,
+            "level": 0
           }
         ]
       }
