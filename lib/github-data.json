@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T06:49:56.783Z",
+  "generatedAt": "2026-08-23T06:49:59.748Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -747,8 +747,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "dapr_modules": -558,
       "gds_modules": 59960,
+      "dapr_modules": -558,
       "georelations": -691
     },
     {
@@ -2124,9 +2124,9 @@
       "nebula": 10684,
       "parallax": 1098,
       "nebula-mobile": 7765,
-      "Spoon-Knife": 2,
       "clay-saturday": 893,
       "rolling-bowl": 449,
+      "Spoon-Knife": 2,
       "wowaddon": 252
     },
     {
@@ -2166,8 +2166,8 @@
       "dotfiles": 1362,
       "nebula": 23487,
       "parallax": 2187,
-      "kiln": -875260,
-      "nebula-mobile": 7413
+      "nebula-mobile": 7413,
+      "kiln": -875260
     },
     {
       "date": "2026-07-19",
@@ -2195,8 +2195,8 @@
       "dotfiles": -74,
       "nebula": 26927,
       "parallax": -7073,
-      "kiln": 17242,
-      "nebula-mobile": 7552
+      "nebula-mobile": 7552,
+      "kiln": 17242
     },
     {
       "date": "2026-08-02",
@@ -2210,8 +2210,8 @@
       "nebula": 41742,
       "nebula-metabase": 821,
       "parallax": 6100,
-      "kiln": 65,
-      "nebula-mobile": 21323
+      "nebula-mobile": 21323,
+      "kiln": 65
     },
     {
       "date": "2026-08-09",
@@ -2229,14 +2229,14 @@
     {
       "date": "2026-08-16",
       "weekTimestamp": 1786838400,
-      "additions": 98514,
-      "deletions": 42685,
-      "net": 55829,
+      "additions": 101974,
+      "deletions": 43521,
+      "net": 58453,
       "nebula-desktop": 14183,
-      "nebula-web": 1419,
+      "nebula-web": 1445,
       "dotfiles": 189,
-      "nebula": 33256,
-      "parallax": 5690,
+      "nebula": 35880,
+      "parallax": 5664,
       "nebula-mobile": 1092
     }
   ],
@@ -2249,15 +2249,15 @@
     "nebula-metabase",
     "nebula-docs",
     "parallax",
-    "kiln",
     "nebula-mobile",
-    "Spoon-Knife",
+    "kiln",
     "clay-saturday",
-    "oxide",
     "rolling-bowl",
-    "nebula-ai-skill",
-    "wowaddon",
     "offer-radar",
+    "nebula-ai-skill",
+    "oxide",
+    "Spoon-Knife",
+    "wowaddon",
     "hyprview",
     "tab-archive",
     "footprint-explorer",
@@ -2283,10 +2283,10 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
-    "dapr_modules",
-    "gds",
     "gds_modules",
+    "dapr_modules",
     "uolrmarkdown",
+    "gds",
     "tweet-classification",
     "georelations",
     "hypr",
@@ -2297,52 +2297,12 @@
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 3733760,
-  "totalDeletions": 3192700,
-  "totalNet": 541060,
+  "totalAdditions": 3737220,
+  "totalDeletions": 3193536,
+  "totalNet": 543684,
   "calendar": {
-    "totalContributions": 9712,
+    "totalContributions": 9742,
     "weeks": [
-      {
-        "firstDay": "2025-08-17",
-        "days": [
-          {
-            "date": "2025-08-17",
-            "count": 1,
-            "level": 1
-          },
-          {
-            "date": "2025-08-18",
-            "count": 11,
-            "level": 1
-          },
-          {
-            "date": "2025-08-19",
-            "count": 6,
-            "level": 1
-          },
-          {
-            "date": "2025-08-20",
-            "count": 7,
-            "level": 1
-          },
-          {
-            "date": "2025-08-21",
-            "count": 8,
-            "level": 1
-          },
-          {
-            "date": "2025-08-22",
-            "count": 3,
-            "level": 1
-          },
-          {
-            "date": "2025-08-23",
-            "count": 0,
-            "level": 0
-          }
-        ]
-      },
       {
         "firstDay": "2025-08-24",
         "days": [
@@ -4413,13 +4373,23 @@
           },
           {
             "date": "2026-08-21",
-            "count": 112,
+            "count": 111,
             "level": 3
           },
           {
             "date": "2026-08-22",
-            "count": 0,
-            "level": 0
+            "count": 28,
+            "level": 1
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-08-23",
+        "days": [
+          {
+            "date": "2026-08-23",
+            "count": 3,
+            "level": 1
           }
         ]
       }
