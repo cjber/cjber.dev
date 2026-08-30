@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T06:45:59.289Z",
+  "generatedAt": "2026-08-30T06:47:35.892Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -1465,8 +1465,8 @@
       "ukroutes": 4,
       "overture-uk": 1,
       "nvim": -25,
-      "access-to-everything": -298,
-      "ukpoi": -592
+      "ukpoi": -592,
+      "access-to-everything": -298
     },
     {
       "date": "2024-07-28",
@@ -1476,8 +1476,8 @@
       "net": 39,
       "ukroutes": -14,
       "nvim": 0,
-      "access-to-everything": 59,
-      "ukpoi": -6
+      "ukpoi": -6,
+      "access-to-everything": 59
     },
     {
       "date": "2024-08-04",
@@ -1604,8 +1604,8 @@
       "net": -29025,
       "planning-ai": -25352,
       "semantic-catalogue": -3849,
-      "ukroutes": 11,
       "ndvi": 165,
+      "ukroutes": 11,
       "ingestion-checks": 0
     },
     {
@@ -2125,8 +2125,8 @@
       "parallax": 1098,
       "nebula-mobile": 7765,
       "Spoon-Knife": 2,
-      "clay-saturday": 893,
       "rolling-bowl": 449,
+      "clay-saturday": 893,
       "wowaddon": 252
     },
     {
@@ -2262,16 +2262,16 @@
     "kiln",
     "nebula-mobile",
     "Spoon-Knife",
-    "clay-saturday",
+    "nebula-ai-skill",
+    "oxide",
     "rolling-bowl",
     "offer-radar",
+    "clay-saturday",
     "wowaddon",
-    "oxide",
-    "nebula-ai-skill",
     "hyprview",
+    "footprint-explorer",
     "tab-archive",
     "berragan.co.uk",
-    "footprint-explorer",
     "fluid-dreams",
     "abm_liv",
     "planning-ai",
@@ -2279,13 +2279,13 @@
     "ukcrawl",
     "reddit-footprint",
     "semantic-catalogue",
-    "ukroutes",
     "ndvi",
+    "ukroutes",
     "ingestion-checks",
     "overture-uk",
     "nvim",
-    "access-to-everything",
     "ukpoi",
+    "access-to-everything",
     "semantic-catalogue-demo",
     "thesis",
     "cdrc-semantic-search",
@@ -2293,11 +2293,11 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
-    "gds",
     "gds_modules",
     "dapr_modules",
-    "uolrmarkdown",
+    "gds",
     "tweet-classification",
+    "uolrmarkdown",
     "georelations",
     "hypr",
     "dissertation",
@@ -2313,46 +2313,6 @@
   "calendar": {
     "totalContributions": 10011,
     "weeks": [
-      {
-        "firstDay": "2025-08-24",
-        "days": [
-          {
-            "date": "2025-08-24",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-08-25",
-            "count": 2,
-            "level": 1
-          },
-          {
-            "date": "2025-08-26",
-            "count": 7,
-            "level": 1
-          },
-          {
-            "date": "2025-08-27",
-            "count": 12,
-            "level": 1
-          },
-          {
-            "date": "2025-08-28",
-            "count": 8,
-            "level": 1
-          },
-          {
-            "date": "2025-08-29",
-            "count": 7,
-            "level": 1
-          },
-          {
-            "date": "2025-08-30",
-            "count": 0,
-            "level": 0
-          }
-        ]
-      },
       {
         "firstDay": "2025-08-31",
         "days": [
@@ -4428,6 +4388,16 @@
           },
           {
             "date": "2026-08-29",
+            "count": 0,
+            "level": 0
+          }
+        ]
+      },
+      {
+        "firstDay": "2026-08-30",
+        "days": [
+          {
+            "date": "2026-08-30",
             "count": 0,
             "level": 0
           }
