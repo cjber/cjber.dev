@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T06:54:39.274Z",
+  "generatedAt": "2026-09-02T06:57:17.535Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -1465,8 +1465,8 @@
       "ukroutes": 4,
       "overture-uk": 1,
       "nvim": -25,
-      "ukpoi": -592,
-      "access-to-everything": -298
+      "access-to-everything": -298,
+      "ukpoi": -592
     },
     {
       "date": "2024-07-28",
@@ -1476,8 +1476,8 @@
       "net": 39,
       "ukroutes": -14,
       "nvim": 0,
-      "ukpoi": -6,
-      "access-to-everything": 59
+      "access-to-everything": 59,
+      "ukpoi": -6
     },
     {
       "date": "2024-08-04",
@@ -2124,10 +2124,10 @@
       "nebula": 10684,
       "parallax": 1098,
       "nebula-mobile": 7765,
+      "Spoon-Knife": 2,
       "clay-saturday": 893,
       "rolling-bowl": 449,
-      "wowaddon": 252,
-      "Spoon-Knife": 2
+      "wowaddon": 252
     },
     {
       "date": "2026-06-28",
@@ -2248,6 +2248,16 @@
       "dotfiles": 220,
       "nebula": 17447,
       "parallax": 19973
+    },
+    {
+      "date": "2026-08-30",
+      "weekTimestamp": 1788048000,
+      "additions": 7125,
+      "deletions": 3148,
+      "net": 3977,
+      "dotfiles": 0,
+      "nebula": 3931,
+      "parallax": 46
     }
   ],
   "repoNames": [
@@ -2261,13 +2271,13 @@
     "parallax",
     "kiln",
     "nebula-mobile",
+    "Spoon-Knife",
     "clay-saturday",
     "rolling-bowl",
-    "offer-radar",
-    "wowaddon",
     "oxide",
     "nebula-ai-skill",
-    "Spoon-Knife",
+    "wowaddon",
+    "offer-radar",
     "hyprview",
     "tab-archive",
     "footprint-explorer",
@@ -2275,8 +2285,8 @@
     "fluid-dreams",
     "abm_liv",
     "planning-ai",
-    "ukcrawl",
     "thirdweb-ai-langgraph",
+    "ukcrawl",
     "reddit-footprint",
     "semantic-catalogue",
     "ndvi",
@@ -2284,8 +2294,8 @@
     "ingestion-checks",
     "overture-uk",
     "nvim",
-    "ukpoi",
     "access-to-everything",
+    "ukpoi",
     "semantic-catalogue-demo",
     "thesis",
     "cdrc-semantic-search",
@@ -2293,9 +2303,9 @@
     "cjber.github.io",
     "reddit-model",
     "ger-wiki",
+    "gds",
     "dapr_modules",
     "gds_modules",
-    "gds",
     "uolrmarkdown",
     "tweet-classification",
     "georelations",
@@ -2307,11 +2317,11 @@
     "car_ml",
     "cjrmd"
   ],
-  "totalAdditions": 3806947,
-  "totalDeletions": 3225623,
-  "totalNet": 581324,
+  "totalAdditions": 3814072,
+  "totalDeletions": 3228771,
+  "totalNet": 585301,
   "calendar": {
-    "totalContributions": 9977,
+    "totalContributions": 10009,
     "weeks": [
       {
         "firstDay": "2025-08-31",
@@ -4383,7 +4393,7 @@
           },
           {
             "date": "2026-08-28",
-            "count": 30,
+            "count": 27,
             "level": 1
           },
           {
@@ -4403,13 +4413,18 @@
           },
           {
             "date": "2026-08-31",
-            "count": 2,
+            "count": 1,
             "level": 1
           },
           {
             "date": "2026-09-01",
-            "count": 0,
-            "level": 0
+            "count": 35,
+            "level": 1
+          },
+          {
+            "date": "2026-09-02",
+            "count": 1,
+            "level": 1
           }
         ]
       }
