@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { config as loadEnv } from 'dotenv'
@@ -19,17 +18,9 @@ const PINNED_REPOS: Array<{ owner: string; name: string }> = [
 ]
 
 if (!TOKEN) {
-  console.error('[fetch-github-data] GITHUB_TOKEN not set — writing empty snapshot')
-  writeSnapshot({
-    generatedAt: new Date().toISOString(),
-    weeks: [],
-    repoNames: [],
-    totalAdditions: 0,
-    totalDeletions: 0,
-    totalNet: 0,
-    calendar: { weeks: [], totalContributions: 0 },
-  })
-  process.exit(0)
+  // Never overwrite the committed snapshot with an empty one: fail loudly instead.
+  console.error('[fetch-github-data] GITHUB_TOKEN not set')
+  process.exit(1)
 }
 
 type WeekStats = {
@@ -64,17 +55,6 @@ const baseHeaders = {
   Accept: 'application/vnd.github+json',
   'X-GitHub-Api-Version': '2022-11-28',
   'User-Agent': 'cillian.dev-build',
-}
-
-async function gh<T>(url: string): Promise<{ status: number; data: T | null }> {
-  const res = await fetch(url, { headers: baseHeaders })
-  if (res.status === 202) return { status: 202, data: null }
-  if (res.status === 204) return { status: 204, data: null }
-  if (!res.ok) {
-    const text = await res.text().catch(() => '')
-    throw new Error(`GitHub ${res.status} ${url}: ${text.slice(0, 200)}`)
-  }
-  return { status: res.status, data: (await res.json()) as T }
 }
 
 async function ghPaginate<T>(url: string): Promise<T[]> {
@@ -181,8 +161,6 @@ function mondayUtc(date: Date): number {
   d.setUTCDate(d.getUTCDate() - dow)
   return Math.floor(d.getTime() / 1000)
 }
-
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
 type ListRepo = { owner: { login: string }; name: string; pushed_at: string | null; fork: boolean }
 
@@ -371,17 +349,7 @@ async function main() {
 }
 
 main().catch((err) => {
+  // Leave the committed snapshot untouched and fail the refresh job visibly.
   console.error('[fetch-github-data] failed:', err)
-  if (!existsSync(OUT_PATH)) {
-    writeSnapshot({
-      generatedAt: new Date().toISOString(),
-      weeks: [],
-      repoNames: [],
-      totalAdditions: 0,
-      totalDeletions: 0,
-      totalNet: 0,
-      calendar: { weeks: [], totalContributions: 0 },
-    })
-  }
-  process.exit(0)
+  process.exit(1)
 })

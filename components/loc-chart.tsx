@@ -48,6 +48,7 @@ const ADDITION_COLOR = 'oklch(0.68 0.10 150)' // sage green
 const DELETION_COLOR = 'oklch(0.62 0.13 25)'  // muted brick
 
 interface Props {
+  generatedAt: string
   weeks: WeekStats[]
   repoNames: string[]
   totalAdditions: number
@@ -65,14 +66,16 @@ const formatNumber = (n: number) => {
 const formatDate = (d: string) =>
   new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 
-export function LocChart({ weeks, repoNames, totalAdditions, totalDeletions, totalNet }: Props) {
+export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalDeletions, totalNet }: Props) {
   const [days, setDays] = useState<Range>(90)
   const [mode, setMode] = useState<ChartMode>('net')
 
   const data = useMemo(() => {
-    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000
+    // Anchor to the snapshot, not Date.now(): the page is prerendered, so a
+    // wall-clock cutoff makes the server and client render different weeks.
+    const cutoff = new Date(generatedAt).getTime() - days * 24 * 60 * 60 * 1000
     return weeks.filter((w) => new Date(w.date + 'T00:00:00Z').getTime() >= cutoff)
-  }, [weeks, days])
+  }, [generatedAt, weeks, days])
 
   const summary = useMemo(() => {
     const totalAdditions = data.reduce((s, w) => s + w.additions, 0)
