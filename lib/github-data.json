@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T12:52:16.640Z",
+  "generatedAt": "2026-09-21T12:58:50.238Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -264,8 +264,8 @@
       "deletions": 141,
       "net": 153,
       "dotfiles": 46,
-      "cjrmd": 123,
-      "uolrmarkdown": -16
+      "uolrmarkdown": -16,
+      "cjrmd": 123
     },
     {
       "date": "2020-07-05",
@@ -323,8 +323,8 @@
       "deletions": 4406,
       "net": -3982,
       "dotfiles": 6,
-      "cjrmd": 25,
-      "uolrmarkdown": -4013
+      "uolrmarkdown": -4013,
+      "cjrmd": 25
     },
     {
       "date": "2020-08-23",
@@ -745,8 +745,8 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "gds_modules": 59960,
       "dapr_modules": -558,
+      "gds_modules": 59960,
       "georelations": -691
     },
     {
@@ -1126,8 +1126,8 @@
       "additions": 10836,
       "deletions": 15550,
       "net": -4714,
-      "reddit-model": 5293,
-      "reddit-connectivity": -10007
+      "reddit-connectivity": -10007,
+      "reddit-model": 5293
     },
     {
       "date": "2023-11-12",
@@ -1207,8 +1207,8 @@
       "deletions": 1349,
       "net": 8870,
       "dotfiles": 14,
-      "nvim": 42,
       "overture-uk": 9485,
+      "nvim": 42,
       "cdrc-semantic-search": -671
     },
     {
@@ -1361,8 +1361,8 @@
       "deletions": 277,
       "net": 1742,
       "dotfiles": 37,
-      "ukroutes": 1576,
       "ukcrawl": 62,
+      "ukroutes": 1576,
       "ingestion-checks": 23,
       "overture-uk": 43,
       "cjber.github.io": 1
@@ -1424,8 +1424,8 @@
       "dotfiles": -13,
       "ukroutes": -99,
       "semantic-catalogue": 866,
-      "ukpoi": 25,
       "semantic-catalogue-demo": 5083,
+      "ukpoi": 25,
       "thesis": 61
     },
     {
@@ -1462,8 +1462,8 @@
       "ukroutes": 4,
       "ukpoi": -592,
       "access-to-everything": -298,
-      "nvim": -25,
-      "overture-uk": 1
+      "overture-uk": 1,
+      "nvim": -25
     },
     {
       "date": "2024-07-28",
@@ -1526,8 +1526,8 @@
       "net": -11309,
       "dotfiles": 1386,
       "ukroutes": 102,
-      "planning-ai": 2331,
       "semantic-catalogue": -15153,
+      "planning-ai": 2331,
       "ukpoi": 14,
       "nvim": 11
     },
@@ -1538,8 +1538,8 @@
       "deletions": 3740,
       "net": 1956,
       "dotfiles": -834,
-      "planning-ai": 3776,
-      "semantic-catalogue": -986
+      "semantic-catalogue": -986,
+      "planning-ai": 3776
     },
     {
       "date": "2024-09-15",
@@ -1548,8 +1548,8 @@
       "deletions": 38019,
       "net": 23960,
       "dotfiles": 3,
-      "planning-ai": 23957,
-      "semantic-catalogue": 0
+      "semantic-catalogue": 0,
+      "planning-ai": 23957
     },
     {
       "date": "2024-10-20",
@@ -1601,8 +1601,8 @@
       "net": -29025,
       "ukroutes": 11,
       "ingestion-checks": 0,
-      "planning-ai": -25352,
       "semantic-catalogue": -3849,
+      "planning-ai": -25352,
       "ndvi": 165
     },
     {
@@ -1612,8 +1612,8 @@
       "deletions": 1421,
       "net": 98,
       "dotfiles": -202,
-      "planning-ai": 333,
-      "semantic-catalogue": -33
+      "semantic-catalogue": -33,
+      "planning-ai": 333
     },
     {
       "date": "2025-01-26",
@@ -1629,8 +1629,8 @@
       "additions": 23483,
       "deletions": 717,
       "net": 22766,
-      "planning-ai": 125,
-      "semantic-catalogue": 22641
+      "semantic-catalogue": 22641,
+      "planning-ai": 125
     },
     {
       "date": "2025-02-09",
@@ -1638,8 +1638,8 @@
       "additions": 555,
       "deletions": 244,
       "net": 311,
-      "planning-ai": 237,
-      "semantic-catalogue": 74
+      "semantic-catalogue": 74,
+      "planning-ai": 237
     },
     {
       "date": "2025-02-16",
@@ -1647,8 +1647,8 @@
       "additions": 2190,
       "deletions": 4169,
       "net": -1979,
-      "planning-ai": -2019,
-      "semantic-catalogue": 40
+      "semantic-catalogue": 40,
+      "planning-ai": -2019
     },
     {
       "date": "2025-02-23",
@@ -2102,8 +2102,8 @@
       "net": 55879,
       "nebula-web": 5124,
       "nebula": -1575,
-      "nebula-desktop": 4002,
       "parallax": 41911,
+      "nebula-desktop": 4002,
       "nebula-mobile": 6216,
       "nebula-metabase": 201
     },
@@ -2116,13 +2116,13 @@
       "nebula-web": 8033,
       "dotfiles": -258,
       "nebula": 10684,
-      "nebula-desktop": 27325,
       "parallax": 1098,
+      "nebula-desktop": 27325,
       "nebula-mobile": 7765,
-      "clay-saturday": 893,
-      "wowaddon": 252,
+      "Spoon-Knife": 2,
       "rolling-bowl": 449,
-      "Spoon-Knife": 2
+      "wowaddon": 252,
+      "clay-saturday": 893
     },
     {
       "date": "2026-06-28",
@@ -2132,8 +2132,8 @@
       "net": 40024,
       "nebula-web": 1615,
       "nebula": 10172,
-      "nebula-desktop": 1705,
       "parallax": 25033,
+      "nebula-desktop": 1705,
       "nebula-mobile": 1499
     },
     {
@@ -2145,8 +2145,8 @@
       "nebula-web": 14,
       "dotfiles": 1371,
       "nebula": -5594,
-      "nebula-desktop": -327,
       "parallax": 22925,
+      "nebula-desktop": -327,
       "nebula-mobile": -14,
       "oxide": 0
     },
@@ -2159,8 +2159,8 @@
       "nebula-web": 9545,
       "dotfiles": 1362,
       "nebula": 23487,
-      "nebula-desktop": 12630,
       "parallax": 2187,
+      "nebula-desktop": 12630,
       "nebula-mobile": 7413,
       "kiln": 2523
     },
@@ -2173,11 +2173,11 @@
       "nebula-web": -32490,
       "dotfiles": 912,
       "nebula": -9030,
-      "nebula-desktop": 1997,
       "parallax": 7038,
+      "nebula-desktop": 1997,
       "nebula-mobile": 1274,
-      "nebula-ai-skill": 383,
-      "nebula-metabase": 241
+      "nebula-metabase": 241,
+      "nebula-ai-skill": 383
     },
     {
       "date": "2026-07-26",
@@ -2188,8 +2188,8 @@
       "nebula-web": 1640,
       "dotfiles": 368,
       "nebula": 26927,
-      "nebula-desktop": 7265,
       "parallax": -7073,
+      "nebula-desktop": 7265,
       "nebula-mobile": 7552,
       "kiln": 13261
     },
@@ -2202,8 +2202,8 @@
       "nebula-web": 5133,
       "dotfiles": 55,
       "nebula": 41742,
-      "nebula-desktop": 4625,
       "parallax": 6100,
+      "nebula-desktop": 4625,
       "nebula-mobile": 21323,
       "nebula-metabase": 821,
       "kiln": 65
@@ -2217,8 +2217,8 @@
       "nebula-web": -441,
       "dotfiles": 403,
       "nebula": 50371,
-      "nebula-desktop": 66,
       "parallax": -7725,
+      "nebula-desktop": 66,
       "nebula-mobile": -506
     },
     {
@@ -2230,8 +2230,8 @@
       "nebula-web": 1445,
       "dotfiles": 189,
       "nebula": 35880,
-      "nebula-desktop": 14183,
       "parallax": 5664,
+      "nebula-desktop": 14183,
       "nebula-mobile": 1092
     },
     {
@@ -2253,8 +2253,8 @@
       "nebula-web": -1718,
       "dotfiles": 5,
       "nebula": 7703,
-      "nebula-desktop": 140,
       "parallax": 928,
+      "nebula-desktop": 140,
       "nebula-mobile": -10
     },
     {
@@ -2266,11 +2266,11 @@
       "nebula-web": 7909,
       "dotfiles": 399,
       "nebula": 30616,
-      "nebula-desktop": 9577,
       "parallax": 846,
+      "nebula-desktop": 9577,
       "nebula-mobile": 9838,
-      "wow-raid-spectacle": 60036,
-      "skills": 2630
+      "skills": 2630,
+      "wow-raid-spectacle": 60036
     },
     {
       "date": "2026-09-13",
@@ -2284,21 +2284,21 @@
       "nebula": 33877,
       "fastbrowse-site": 888,
       "fastbrowse": 19815,
-      "nebula-desktop": 4777,
       "parallax": 7082,
+      "nebula-desktop": 4777,
       "nebula-mobile": 1065,
-      "jev-ultrafast": 373,
       "nebula-metabase": 1172,
+      "jev-ultrafast": 373,
       "kiln": -1178
     },
     {
       "date": "2026-09-20",
       "weekTimestamp": 1789862400,
-      "additions": 17406,
-      "deletions": 6065,
-      "net": 11341,
-      "cjber.dev": -4488,
+      "additions": 17678,
+      "deletions": 6275,
+      "net": 11403,
       "skillup-forever": 4459,
+      "cjber.dev": -4426,
       "dotfiles": 16,
       "nebula": 1563,
       "legacy-here": 3625,
@@ -2307,8 +2307,8 @@
     }
   ],
   "repoNames": [
-    "cjber.dev",
     "skillup-forever",
+    "cjber.dev",
     "nebula-web",
     "dotfiles",
     "nebula",
@@ -2316,63 +2316,63 @@
     "fastbrowse-site",
     "nebula-docs",
     "fastbrowse",
-    "nebula-desktop",
     "parallax",
+    "nebula-desktop",
     "nebula-mobile",
+    "skills",
+    "nebula-metabase",
     "nebula-ai-skill",
     "jev-ultrafast",
     "wow-raid-spectacle",
-    "nebula-metabase",
-    "skills",
     "kiln",
-    "clay-saturday",
-    "offer-radar",
-    "wowaddon",
-    "oxide",
-    "rolling-bowl",
     "Spoon-Knife",
+    "rolling-bowl",
+    "wowaddon",
+    "clay-saturday",
+    "oxide",
     "footprint-explorer",
+    "offer-radar",
     "hyprview",
     "fluid-dreams",
-    "berragan.co.uk",
     "tab-archive",
-    "ukroutes",
+    "berragan.co.uk",
     "ukcrawl",
-    "abm_liv",
+    "ukroutes",
     "reddit-footprint",
+    "abm_liv",
     "ingestion-checks",
-    "planning-ai",
     "semantic-catalogue",
-    "ukpoi",
+    "planning-ai",
     "semantic-catalogue-demo",
-    "thesis",
+    "ukpoi",
     "access-to-everything",
-    "nvim",
-    "overture-uk",
+    "thesis",
     "ndvi",
+    "overture-uk",
+    "nvim",
     "cdrc-semantic-search",
-    "reddit-model",
+    "dapr_modules",
     "gds_modules",
     "reddit-connectivity",
-    "tweet-classification",
-    "dapr_modules",
+    "reddit-model",
     "cjber.github.io",
+    "tweet-classification",
     "georelations",
     "nvim-config",
+    "hypr",
     "reddit-geoext",
+    "uolrmarkdown",
     "gds",
     "cjrmd",
-    "hypr",
-    "uolrmarkdown",
     "dissertation",
-    "ward-lifetimes",
-    "car_ml"
+    "car_ml",
+    "ward-lifetimes"
   ],
-  "totalAdditions": 2998958,
-  "totalDeletions": 1721162,
-  "totalNet": 1277796,
+  "totalAdditions": 2999230,
+  "totalDeletions": 1721372,
+  "totalNet": 1277858,
   "calendar": {
-    "totalContributions": 11320,
+    "totalContributions": 11322,
     "weeks": [
       {
         "firstDay": "2025-09-21",
@@ -4464,7 +4464,7 @@
           },
           {
             "date": "2026-09-21",
-            "count": 49,
+            "count": 51,
             "level": 2
           }
         ]
