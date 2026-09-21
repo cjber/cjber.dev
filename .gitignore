@@ -46,3 +46,6 @@ next-env.d.ts
 .env.local
 
 # Build-time GitHub snapshot (regenerated each build)
+
+# cloudflare
+/.wrangler/

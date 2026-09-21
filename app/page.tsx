@@ -58,6 +58,7 @@ export default function Home() {
           </section>
 
           <LocChart
+            generatedAt={githubSnapshot.generatedAt}
             weeks={githubSnapshot.weeks}
             repoNames={githubSnapshot.repoNames}
             totalAdditions={githubSnapshot.totalAdditions}

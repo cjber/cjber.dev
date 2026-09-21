@@ -35,11 +35,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          # No `cache: 'npm'` because this repo intentionally does not commit
-          # a lockfile. Install is a few seconds; not worth a lockfile for it.
+          node-version: '22'
+          cache: 'npm'
 
-      - run: npm install --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
 
       - name: Fetch fresh snapshot
         env:
