@@ -56,6 +56,27 @@ interface Props {
   totalNet: number
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000
+const OTHER = 'other'
+const OTHER_COLOR = 'oklch(0.55 0.01 250)'
+
+const repoColor = (repo: string, i: number) => (repo === OTHER ? OTHER_COLOR : REPO_PALETTE[i])
+
+// Weeks in the snapshot start on a fixed weekday; step from the first one so
+// the filled-in weeks line up with the real ones.
+function firstWeekOnOrAfter(cutoff: number, weeks: WeekStats[]) {
+  const anchor = weeks.length ? weeks[weeks.length - 1].weekTimestamp * 1000 : cutoff
+  return anchor - Math.floor((anchor - cutoff) / (7 * DAY_MS)) * 7 * DAY_MS
+}
+
+// Axis ticks: no decimal once the value has three digits, so "-300k" fits.
+const formatTick = (n: number) => {
+  const abs = Math.abs(n)
+  if (abs >= 1_000_000) return `${+(n / 1_000_000).toFixed(1)}M`
+  if (abs >= 1_000) return `${+(n / 1_000).toFixed(abs >= 100_000 ? 0 : 1)}k`
+  return n.toString()
+}
+
 const formatNumber = (n: number) => {
   const abs = Math.abs(n)
   if (abs >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
@@ -73,8 +94,17 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
   const data = useMemo(() => {
     // Anchor to the snapshot, not Date.now(): the page is prerendered, so a
     // wall-clock cutoff makes the server and client render different weeks.
-    const cutoff = new Date(generatedAt).getTime() - days * 24 * 60 * 60 * 1000
-    return weeks.filter((w) => new Date(w.date + 'T00:00:00Z').getTime() >= cutoff)
+    const cutoff = new Date(generatedAt).getTime() - days * DAY_MS
+    const byDate = new Map(weeks.map((w) => [w.date, w]))
+    // The snapshot only lists weeks with commits; emit every week in the window
+    // so quiet stretches take up real width instead of collapsing the axis.
+    const out: WeekStats[] = []
+    const end = new Date(generatedAt).getTime()
+    for (let t = firstWeekOnOrAfter(cutoff, weeks); t <= end; t += 7 * DAY_MS) {
+      const date = new Date(t).toISOString().slice(0, 10)
+      out.push(byDate.get(date) ?? { date, weekTimestamp: t / 1000, additions: 0, deletions: 0, net: 0 })
+    }
+    return out
   }, [generatedAt, weeks, days])
 
   const summary = useMemo(() => {
@@ -93,11 +123,28 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
     }
   }, [data, repoNames])
 
-  const activeRepos = useMemo(() => {
-    return repoNames.filter((r) => data.some((d) => typeof d[r] === 'number' && d[r] !== 0))
+  // One colour per repo only works for as many repos as the palette has
+  // colours; rank by the net lines drawn in the window and fold the tail into "other".
+  const { activeRepos, chartData } = useMemo(() => {
+    const weight = new Map<string, number>()
+    for (const w of data)
+      for (const r of repoNames) {
+        const v = w[r]
+        if (typeof v === 'number' && v !== 0) weight.set(r, (weight.get(r) ?? 0) + Math.abs(v))
+      }
+    const ranked = [...weight.keys()].sort((a, b) => weight.get(b)! - weight.get(a)!)
+    const top = ranked.length > REPO_PALETTE.length ? ranked.slice(0, REPO_PALETTE.length - 1) : ranked
+    const rest = ranked.slice(top.length)
+    if (!rest.length) return { activeRepos: top, chartData: data }
+    const chartData = data.map((w) => ({
+      ...w,
+      [OTHER]: rest.reduce((sum, r) => sum + (typeof w[r] === 'number' ? (w[r] as number) : 0), 0),
+    }))
+    return { activeRepos: [...top, OTHER], chartData }
   }, [repoNames, data])
 
-  const isEmpty = data.length === 0
+  // data always holds the filled-in weeks, so check for activity, not rows.
+  const isEmpty = !data.some((w) => w.additions > 0 || w.deletions > 0)
 
   return (
     <Card className="w-full border-0 bg-transparent shadow-none">
@@ -136,7 +183,7 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
         ) : (
           <ResponsiveContainer width="100%" height={260} className="[&_.recharts-bar-rectangle_path]:[shape-rendering:crispEdges]">
             <BarChart
-              data={data}
+              data={chartData}
               margin={{ top: 4, right: 8, left: 4, bottom: 0 }}
               barCategoryGap={3}
             >
@@ -154,8 +201,8 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: 'var(--muted-foreground)', fontSize: 10, fontFamily: 'var(--font-mono)' }}
-                tickFormatter={formatNumber}
-                width={42}
+                tickFormatter={formatTick}
+                width={48}
               />
               <Tooltip
                 cursor={{ fill: 'var(--muted-foreground)', opacity: 0.06 }}
@@ -199,7 +246,7 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
                     key={repo}
                     dataKey={repo}
                     stackId="net"
-                    fill={REPO_PALETTE[i % REPO_PALETTE.length]}
+                    fill={repoColor(repo, i)}
                     name={repo}
                     radius={0}
                     isAnimationActive={false}
@@ -351,7 +398,7 @@ function Legend({ repos }: { repos: string[] }) {
         <div key={r} className="flex items-center gap-1.5">
           <span
             className="inline-block h-2 w-2 rounded-sm"
-            style={{ backgroundColor: REPO_PALETTE[i % REPO_PALETTE.length] }}
+            style={{ backgroundColor: repoColor(r, i) }}
           />
           <span>{r}</span>
         </div>

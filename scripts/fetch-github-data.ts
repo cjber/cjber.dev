@@ -7,6 +7,7 @@ loadEnv()
 
 const USERNAME = process.env.GITHUB_USERNAME ?? 'cjber'
 const TOKEN = process.env.GITHUB_TOKEN
+const BULK_COMMIT_LINES = 100_000
 const OUT_PATH = resolve(process.cwd(), 'lib/github-data.json')
 const PINNED_REPOS: Array<{ owner: string; name: string }> = [
   { owner: 'thirdweb-dev', name: 'nebula' },
@@ -99,7 +100,7 @@ const HISTORY_QUERY = `
           ... on Commit {
             history(first: 100, author: {id: $userId}, since: $since, after: $cursor) {
               pageInfo { hasNextPage endCursor }
-              nodes { oid committedDate additions deletions }
+              nodes { oid committedDate additions deletions messageHeadline parents { totalCount } }
             }
           }
         }
@@ -108,7 +109,14 @@ const HISTORY_QUERY = `
   }
 `
 
-type Commit = { oid: string; committedDate: string; additions: number; deletions: number }
+type Commit = {
+  oid: string
+  committedDate: string
+  additions: number
+  deletions: number
+  messageHeadline: string
+  parents: { totalCount: number }
+}
 
 async function fetchAuthoredCommits(
   owner: string,
@@ -158,7 +166,7 @@ async function fetchAuthoredCommits(
   }
 }
 
-function mondayUtc(date: Date): number {
+function weekStartUtc(date: Date): number {
   const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()))
   const dow = d.getUTCDay() // 0 Sun .. 6 Sat
   // GitHub stats endpoint used Sundays as week start; match that for parity.
@@ -206,14 +214,26 @@ async function fetchLocStats() {
     let touched = false
     for (const c of commits) {
       if (c.additions === 0 && c.deletions === 0) continue
+      // A merge commit's diff repeats the changes of the commits it merges, so
+      // counting it double-counts the whole branch.
+      if (c.parents.totalCount > 1) continue
       // The same commit can appear in both a repo and a fork of it (shared
       // history). Count each unique commit once, no matter how many repos surface it.
       if (seenOids.has(c.oid)) continue
       seenOids.add(c.oid)
+      // Hand-written commits here top out around 60k lines; anything far past
+      // that is a bulk import or deletion (vendored upstream code, data files)
+      // and would dwarf every real week on the chart.
+      if (c.additions + c.deletions > BULK_COMMIT_LINES) {
+        console.log(
+          `[stats] skipping bulk commit ${repoName}@${c.oid.slice(0, 7)} +${c.additions} -${c.deletions}: ${c.messageHeadline}`,
+        )
+        continue
+      }
       touched = true
       grandAdditions += c.additions
       grandDeletions += c.deletions
-      const w = mondayUtc(new Date(c.committedDate))
+      const w = weekStartUtc(new Date(c.committedDate))
       const t = totals.get(w) ?? { additions: 0, deletions: 0 }
       totals.set(w, { additions: t.additions + c.additions, deletions: t.deletions + c.deletions })
       const repoMap = perRepo.get(repoName) ?? new Map()
