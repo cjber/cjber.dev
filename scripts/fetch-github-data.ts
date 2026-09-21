@@ -7,7 +7,10 @@ loadEnv()
 
 const USERNAME = process.env.GITHUB_USERNAME ?? 'cjber'
 const TOKEN = process.env.GITHUB_TOKEN
-const BULK_COMMIT_LINES = 100_000
+// Commit emails no longer linked to the GitHub account. GitHub only credits a
+// commit to a user through a linked email, so the account-id filter alone
+// misses everything authored under these.
+const UNLINKED_AUTHOR_EMAILS = ['cillian@thirdweb.com']
 const OUT_PATH = resolve(process.cwd(), 'lib/github-data.json')
 const PINNED_REPOS: Array<{ owner: string; name: string }> = [
   { owner: 'thirdweb-dev', name: 'nebula' },
@@ -93,14 +96,14 @@ async function graphql<T>(query: string, variables: Record<string, unknown>): Pr
 }
 
 const HISTORY_QUERY = `
-  query($owner: String!, $name: String!, $userId: ID!, $since: GitTimestamp!, $cursor: String) {
+  query($owner: String!, $name: String!, $author: CommitAuthor!, $since: GitTimestamp!, $cursor: String) {
     repository(owner: $owner, name: $name) {
       defaultBranchRef {
         target {
           ... on Commit {
-            history(first: 100, author: {id: $userId}, since: $since, after: $cursor) {
+            history(first: 100, author: $author, since: $since, after: $cursor) {
               pageInfo { hasNextPage endCursor }
-              nodes { oid committedDate additions deletions messageHeadline parents { totalCount } }
+              nodes { oid committedDate additions deletions parents { totalCount } }
             }
           }
         }
@@ -109,19 +112,20 @@ const HISTORY_QUERY = `
   }
 `
 
+type CommitAuthor = { id: string } | { emails: string[] }
+
 type Commit = {
   oid: string
   committedDate: string
   additions: number
   deletions: number
-  messageHeadline: string
   parents: { totalCount: number }
 }
 
 async function fetchAuthoredCommits(
   owner: string,
   name: string,
-  userId: string,
+  author: CommitAuthor,
   sinceIso: string,
 ): Promise<Commit[] | null> {
   try {
@@ -141,7 +145,7 @@ async function fetchAuthoredCommits(
       const data: HistoryResp = await graphql<HistoryResp>(HISTORY_QUERY, {
         owner,
         name,
-        userId,
+        author,
         since: sinceIso,
         cursor,
       })
@@ -221,15 +225,6 @@ async function fetchLocStats() {
       // history). Count each unique commit once, no matter how many repos surface it.
       if (seenOids.has(c.oid)) continue
       seenOids.add(c.oid)
-      // Hand-written commits here top out around 60k lines; anything far past
-      // that is a bulk import or deletion (vendored upstream code, data files)
-      // and would dwarf every real week on the chart.
-      if (c.additions + c.deletions > BULK_COMMIT_LINES) {
-        console.log(
-          `[stats] skipping bulk commit ${repoName}@${c.oid.slice(0, 7)} +${c.additions} -${c.deletions}: ${c.messageHeadline}`,
-        )
-        continue
-      }
       touched = true
       grandAdditions += c.additions
       grandDeletions += c.deletions
@@ -251,7 +246,11 @@ async function fetchLocStats() {
     const batch = repos.slice(i, i + BATCH)
     await Promise.all(
       batch.map(async (repo) => {
-        const commits = await fetchAuthoredCommits(repo.owner, repo.name, userId, sinceIso)
+        const authors: CommitAuthor[] = [{ id: userId }, { emails: UNLINKED_AUTHOR_EMAILS }]
+        const results = await Promise.all(
+          authors.map((author) => fetchAuthoredCommits(repo.owner, repo.name, author, sinceIso)),
+        )
+        const commits = results.flatMap((r) => r ?? [])
         completed++
         if (completed % 20 === 0 || completed === repos.length) {
           console.log(`[stats] ${completed}/${repos.length}`)

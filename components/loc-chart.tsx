@@ -185,7 +185,10 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
             <BarChart
               data={chartData}
               margin={{ top: 4, right: 8, left: 4, bottom: 0 }}
-              barCategoryGap={3}
+              // Gaps scale with the slot: fixed pixel gaps left the paired
+              // additions/deletions bars 1px wide on the 1y range.
+              barCategoryGap="15%"
+              barGap={1}
             >
               <XAxis
                 dataKey="date"
