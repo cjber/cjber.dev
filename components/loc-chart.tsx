@@ -124,7 +124,7 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
   }, [data, repoNames])
 
   // One colour per repo only works for as many repos as the palette has
-  // colours; rank by lines touched in the window and fold the tail into "other".
+  // colours; rank by the net lines drawn in the window and fold the tail into "other".
   const { activeRepos, chartData } = useMemo(() => {
     const weight = new Map<string, number>()
     for (const w of data)
@@ -143,7 +143,8 @@ export function LocChart({ generatedAt, weeks, repoNames, totalAdditions, totalD
     return { activeRepos: [...top, OTHER], chartData }
   }, [repoNames, data])
 
-  const isEmpty = data.length === 0
+  // data always holds the filled-in weeks, so check for activity, not rows.
+  const isEmpty = !data.some((w) => w.additions > 0 || w.deletions > 0)
 
   return (
     <Card className="w-full border-0 bg-transparent shadow-none">
