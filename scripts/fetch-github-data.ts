@@ -149,7 +149,11 @@ async function fetchAuthoredCommits(
       }
     }
   } catch (err) {
-    console.warn(`[stats] ${owner}/${name} failed: ${(err as Error).message}`)
+    // A deleted or renamed repo is expected churn in the listing; skip it. Any
+    // other failure would commit a snapshot missing that repo's lines, so abort.
+    const message = (err as Error).message
+    if (!message.includes('Could not resolve to a Repository')) throw err
+    console.warn(`[stats] ${owner}/${name} skipped: ${message}`)
     return null
   }
 }
