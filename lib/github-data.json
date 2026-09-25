@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T06:56:40.119Z",
+  "generatedAt": "2026-09-25T06:57:31.921Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -727,8 +727,8 @@
       "deletions": 1734,
       "net": 171583,
       "dotfiles": 58,
-      "dapr_modules": 164517,
       "tweet-classification": 5594,
+      "dapr_modules": 164517,
       "georelations": 1414
     },
     {
@@ -745,9 +745,9 @@
       "additions": 60176,
       "deletions": 1465,
       "net": 58711,
-      "gds_modules": 59960,
       "dapr_modules": -558,
-      "georelations": -691
+      "georelations": -691,
+      "gds_modules": 59960
     },
     {
       "date": "2022-01-23",
@@ -1114,8 +1114,8 @@
       "additions": 10836,
       "deletions": 15550,
       "net": -4714,
-      "reddit-model": 5293,
-      "reddit-connectivity": -10007
+      "reddit-connectivity": -10007,
+      "reddit-model": 5293
     },
     {
       "date": "2023-11-12",
@@ -1329,8 +1329,8 @@
       "net": 1741,
       "dotfiles": 37,
       "ukcrawl": 62,
-      "overture-uk": 43,
       "ukroutes": 1576,
+      "overture-uk": 43,
       "ingestion-checks": 23
     },
     {
@@ -1376,11 +1376,11 @@
       "deletions": 453,
       "net": 5923,
       "dotfiles": -13,
-      "semantic-catalogue": 866,
-      "semantic-catalogue-demo": 5083,
       "thesis": 61,
       "ukpoi": 25,
-      "ukroutes": -99
+      "ukroutes": -99,
+      "semantic-catalogue": 866,
+      "semantic-catalogue-demo": 5083
     },
     {
       "date": "2024-06-23",
@@ -1415,8 +1415,8 @@
       "net": -885,
       "access-to-everything": -298,
       "ukpoi": -592,
-      "overture-uk": 1,
-      "ukroutes": 4
+      "ukroutes": 4,
+      "overture-uk": 1
     },
     {
       "date": "2024-07-28",
@@ -1434,9 +1434,9 @@
       "additions": 8022,
       "deletions": 6570,
       "net": 1452,
-      "semantic-catalogue": 1438,
       "ukpoi": 4,
-      "ukroutes": 10
+      "ukroutes": 10,
+      "semantic-catalogue": 1438
     },
     {
       "date": "2024-08-11",
@@ -1445,8 +1445,8 @@
       "deletions": 1618,
       "net": -239,
       "access-to-everything": 566,
-      "overture-uk": 0,
-      "ukroutes": -805
+      "ukroutes": -805,
+      "overture-uk": 0
     },
     {
       "date": "2024-08-18",
@@ -1464,9 +1464,9 @@
       "deletions": 6748,
       "net": 24113,
       "dotfiles": 2,
-      "semantic-catalogue": 24100,
       "ukpoi": -1,
-      "ukroutes": 12
+      "ukroutes": 12,
+      "semantic-catalogue": 24100
     },
     {
       "date": "2024-09-01",
@@ -1475,10 +1475,10 @@
       "deletions": 19811,
       "net": -11320,
       "dotfiles": 1386,
-      "semantic-catalogue": -15153,
       "planning-ai": 2331,
       "ukpoi": 14,
-      "ukroutes": 102
+      "ukroutes": 102,
+      "semantic-catalogue": -15153
     },
     {
       "date": "2024-09-08",
@@ -1487,8 +1487,8 @@
       "deletions": 3740,
       "net": 1956,
       "dotfiles": -834,
-      "semantic-catalogue": -986,
-      "planning-ai": 3776
+      "planning-ai": 3776,
+      "semantic-catalogue": -986
     },
     {
       "date": "2024-09-15",
@@ -1497,8 +1497,8 @@
       "deletions": 38019,
       "net": 23960,
       "dotfiles": 3,
-      "semantic-catalogue": 0,
-      "planning-ai": 23957
+      "planning-ai": 23957,
+      "semantic-catalogue": 0
     },
     {
       "date": "2024-10-20",
@@ -1548,11 +1548,11 @@
       "additions": 6001,
       "deletions": 35026,
       "net": -29025,
-      "semantic-catalogue": -3849,
       "planning-ai": -25352,
       "ndvi": 165,
       "ukroutes": 11,
-      "ingestion-checks": 0
+      "ingestion-checks": 0,
+      "semantic-catalogue": -3849
     },
     {
       "date": "2025-01-19",
@@ -1561,8 +1561,8 @@
       "deletions": 1421,
       "net": 98,
       "dotfiles": -202,
-      "semantic-catalogue": -33,
-      "planning-ai": 333
+      "planning-ai": 333,
+      "semantic-catalogue": -33
     },
     {
       "date": "2025-01-26",
@@ -1578,8 +1578,8 @@
       "additions": 23483,
       "deletions": 717,
       "net": 22766,
-      "semantic-catalogue": 22641,
-      "planning-ai": 125
+      "planning-ai": 125,
+      "semantic-catalogue": 22641
     },
     {
       "date": "2025-02-09",
@@ -1587,8 +1587,8 @@
       "additions": 423866,
       "deletions": 244,
       "net": 423622,
-      "semantic-catalogue": 74,
-      "planning-ai": 423548
+      "planning-ai": 423548,
+      "semantic-catalogue": 74
     },
     {
       "date": "2025-02-16",
@@ -1596,8 +1596,8 @@
       "additions": 2190,
       "deletions": 4169,
       "net": -1979,
-      "semantic-catalogue": 40,
-      "planning-ai": -2019
+      "planning-ai": -2019,
+      "semantic-catalogue": 40
     },
     {
       "date": "2025-02-23",
@@ -2180,8 +2180,8 @@
       "nebula": -41754,
       "nebula-mobile": 876,
       "hyprview": 558,
-      "footprint-explorer": 5661,
-      "oxide": 1616
+      "oxide": 1616,
+      "footprint-explorer": 5661
     },
     {
       "date": "2026-05-24",
@@ -2225,11 +2225,11 @@
       "additions": 115933,
       "deletions": 60054,
       "net": 55879,
-      "parallax": 41911,
       "nebula-web": 5124,
       "nebula": -1575,
       "nebula-desktop": 4002,
       "nebula-mobile": 6216,
+      "parallax": 41911,
       "nebula-metabase": 201
     },
     {
@@ -2238,12 +2238,12 @@
       "additions": 91272,
       "deletions": 36373,
       "net": 54899,
-      "parallax": 1098,
       "nebula-web": 8033,
       "dotfiles": -258,
       "nebula": 10684,
       "nebula-desktop": 27325,
       "nebula-mobile": 7765,
+      "parallax": 1098,
       "wowaddon": 252
     },
     {
@@ -2252,11 +2252,11 @@
       "additions": 93986,
       "deletions": 53962,
       "net": 40024,
-      "parallax": 25033,
       "nebula-web": 1615,
       "nebula": 10172,
       "nebula-desktop": 1705,
-      "nebula-mobile": 1499
+      "nebula-mobile": 1499,
+      "parallax": 25033
     },
     {
       "date": "2026-07-05",
@@ -2264,12 +2264,12 @@
       "additions": 56333,
       "deletions": 37958,
       "net": 18375,
-      "parallax": 22925,
       "nebula-web": 14,
       "dotfiles": 1371,
       "nebula": -5594,
       "nebula-desktop": -327,
       "nebula-mobile": -14,
+      "parallax": 22925,
       "oxide": 0
     },
     {
@@ -2278,12 +2278,12 @@
       "additions": 109660,
       "deletions": 489410,
       "net": -379750,
-      "parallax": 2187,
       "nebula-web": 9545,
       "dotfiles": 1362,
       "nebula": 23487,
       "nebula-desktop": 12630,
       "nebula-mobile": 7413,
+      "parallax": 2187,
       "kiln": -436374
     },
     {
@@ -2292,14 +2292,14 @@
       "additions": 72961,
       "deletions": 102636,
       "net": -29675,
-      "parallax": 7038,
       "nebula-web": -32490,
       "dotfiles": 912,
       "nebula": -9030,
       "nebula-desktop": 1997,
       "nebula-mobile": 1274,
-      "nebula-metabase": 241,
-      "nebula-ai-skill": 383
+      "parallax": 7038,
+      "nebula-ai-skill": 383,
+      "nebula-metabase": 241
     },
     {
       "date": "2026-07-26",
@@ -2307,12 +2307,12 @@
       "additions": 165432,
       "deletions": 115492,
       "net": 49940,
-      "parallax": -7073,
       "nebula-web": 1640,
       "dotfiles": 368,
       "nebula": 26927,
       "nebula-desktop": 7265,
       "nebula-mobile": 7552,
+      "parallax": -7073,
       "kiln": 13261
     },
     {
@@ -2321,12 +2321,12 @@
       "additions": 112775,
       "deletions": 32911,
       "net": 79864,
-      "parallax": 6100,
       "nebula-web": 5133,
       "dotfiles": 55,
       "nebula": 41742,
       "nebula-desktop": 4625,
       "nebula-mobile": 21323,
+      "parallax": 6100,
       "nebula-metabase": 821,
       "kiln": 65
     },
@@ -2336,12 +2336,12 @@
       "additions": 87746,
       "deletions": 45578,
       "net": 42168,
-      "parallax": -7725,
       "nebula-web": -441,
       "dotfiles": 403,
       "nebula": 50371,
       "nebula-desktop": 66,
-      "nebula-mobile": -506
+      "nebula-mobile": -506,
+      "parallax": -7725
     },
     {
       "date": "2026-08-16",
@@ -2349,12 +2349,12 @@
       "additions": 101974,
       "deletions": 43521,
       "net": 58453,
-      "parallax": 5664,
       "nebula-web": 1445,
       "dotfiles": 189,
       "nebula": 35880,
       "nebula-desktop": 14183,
-      "nebula-mobile": 1092
+      "nebula-mobile": 1092,
+      "parallax": 5664
     },
     {
       "date": "2026-08-23",
@@ -2362,9 +2362,9 @@
       "additions": 69727,
       "deletions": 32087,
       "net": 37640,
-      "parallax": 19973,
       "dotfiles": 220,
-      "nebula": 17447
+      "nebula": 17447,
+      "parallax": 19973
     },
     {
       "date": "2026-08-30",
@@ -2372,12 +2372,12 @@
       "additions": 73634,
       "deletions": 66586,
       "net": 7048,
-      "parallax": 928,
       "nebula-web": -1718,
       "dotfiles": 5,
       "nebula": 7703,
       "nebula-desktop": 140,
-      "nebula-mobile": -10
+      "nebula-mobile": -10,
+      "parallax": 928
     },
     {
       "date": "2026-09-06",
@@ -2385,13 +2385,13 @@
       "additions": 168842,
       "deletions": 46991,
       "net": 121851,
-      "parallax": 846,
       "nebula-web": 7909,
       "dotfiles": 399,
       "nebula": 30616,
       "nebula-desktop": 9577,
       "nebula-mobile": 9838,
       "skills": 2630,
+      "parallax": 846,
       "wow-raid-spectacle": 60036
     },
     {
@@ -2401,111 +2401,113 @@
       "deletions": 41575,
       "net": 76426,
       "cjber.dev": 7251,
-      "parallax": 7082,
       "nebula-web": 1035,
       "dotfiles": 269,
       "nebula": 33877,
       "nebula-desktop": 4777,
       "nebula-mobile": 1065,
-      "nebula-metabase": 1172,
       "fastbrowse": 19815,
+      "parallax": 7082,
       "jev-ultrafast": 373,
       "fastbrowse-site": 888,
+      "nebula-metabase": 1172,
       "kiln": -1178
     },
     {
       "date": "2026-09-20",
       "weekTimestamp": 1789862400,
-      "additions": 187055,
-      "deletions": 35774,
-      "net": 151281,
-      "skillup-forever": 20751,
+      "additions": 342934,
+      "deletions": 88671,
+      "net": 254263,
       "cjber.dev": -4247,
-      "parallax": 155,
-      "dotfiles": 222,
-      "nebula": 14044,
-      "adventure-guide-forever": 8590,
-      "work-orders-forever": 6577,
-      "shortest-path-forever": 35052,
-      "legacy-forever": 12216,
+      "skillup-forever": 23099,
+      "tweaks-forever": 16764,
+      "dotfiles": 228,
+      "nebula": 22779,
+      "adventure-guide-forever": 34208,
+      "legacy-forever": 27143,
+      "shortest-path-forever": 52514,
       "nebula-desktop": 5225,
       ".github": 225,
-      "sift": 21974,
-      "skills": 2137,
-      "nebula-metabase": 398,
-      "tweaks-forever": 11346,
+      "open-poker-bot": 14198,
+      "sift": 26213,
+      "skills": 2300,
       "nebula-docs": 124,
+      "work-orders-forever": 13362,
       "fastbrowse": 12017,
+      "parallax": 3238,
       "cjber": 13,
+      "nebula-ai-skill": 2384,
       "fastbrowse-site": 2078,
-      "nebula-ai-skill": 2384
+      "nebula-metabase": 398
     }
   ],
   "repoNames": [
-    "skillup-forever",
     "cjber.dev",
-    "parallax",
+    "skillup-forever",
+    "tweaks-forever",
     "nebula-web",
     "dotfiles",
     "nebula",
     "adventure-guide-forever",
-    "work-orders-forever",
-    "shortest-path-forever",
     "legacy-forever",
+    "shortest-path-forever",
     "nebula-desktop",
     "nebula-mobile",
     ".github",
+    "open-poker-bot",
     "sift",
     "skills",
-    "nebula-metabase",
-    "tweaks-forever",
     "nebula-docs",
+    "work-orders-forever",
     "fastbrowse",
-    "jev-ultrafast",
+    "parallax",
     "cjber",
-    "fastbrowse-site",
-    "wow-raid-spectacle",
     "nebula-ai-skill",
+    "jev-ultrafast",
+    "fastbrowse-site",
+    "nebula-metabase",
     "kiln",
     "wowaddon",
     "hyprview",
-    "footprint-explorer",
     "oxide",
+    "footprint-explorer",
+    "wow-raid-spectacle",
     "berragan.co.uk",
-    "ukcrawl",
     "marketing-intel",
+    "ukcrawl",
     "reddit-footprint",
     "abm_liv",
-    "semantic-catalogue",
     "planning-ai",
-    "semantic-catalogue-demo",
-    "access-to-everything",
     "thesis",
+    "access-to-everything",
     "ukpoi",
     "ndvi",
-    "overture-uk",
     "ukroutes",
+    "overture-uk",
     "ingestion-checks",
+    "semantic-catalogue",
     "ger-wiki",
-    "gds_modules",
-    "dapr_modules",
-    "tweet-classification",
-    "reddit-model",
+    "semantic-catalogue-demo",
     "reddit-connectivity",
+    "reddit-model",
+    "tweet-classification",
+    "dapr_modules",
     "georelations",
     "cdrc-semantic-search",
     "reddit-geoext",
+    "gds_modules",
     "gds",
     "ward-lifetimes",
     "uolrmarkdown",
     "cjrmd",
     "dissertation"
   ],
-  "totalAdditions": 5189106,
-  "totalDeletions": 3645041,
-  "totalNet": 1544065,
+  "totalAdditions": 5344985,
+  "totalDeletions": 3697938,
+  "totalNet": 1647047,
   "calendar": {
-    "totalContributions": 11884,
+    "totalContributions": 12130,
     "weeks": [
       {
         "firstDay": "2025-09-21",
@@ -3333,7 +3335,7 @@
           {
             "date": "2026-02-12",
             "count": 47,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-02-13",
@@ -3608,7 +3610,7 @@
           {
             "date": "2026-04-01",
             "count": 45,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-04-02",
@@ -3768,7 +3770,7 @@
           {
             "date": "2026-04-29",
             "count": 47,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-04-30",
@@ -3853,12 +3855,12 @@
           {
             "date": "2026-05-14",
             "count": 44,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-15",
             "count": 47,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-16",
@@ -3903,7 +3905,7 @@
           {
             "date": "2026-05-23",
             "count": 47,
-            "level": 2
+            "level": 1
           }
         ]
       },
@@ -3923,12 +3925,12 @@
           {
             "date": "2026-05-26",
             "count": 44,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-27",
             "count": 46,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-28",
@@ -4013,7 +4015,7 @@
           {
             "date": "2026-06-11",
             "count": 44,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-12",
@@ -4058,7 +4060,7 @@
           {
             "date": "2026-06-19",
             "count": 141,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-06-20",
@@ -4203,7 +4205,7 @@
           {
             "date": "2026-07-14",
             "count": 95,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-07-15",
@@ -4238,7 +4240,7 @@
           {
             "date": "2026-07-20",
             "count": 87,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-07-21",
@@ -4283,7 +4285,7 @@
           {
             "date": "2026-07-28",
             "count": 134,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-07-29",
@@ -4318,7 +4320,7 @@
           {
             "date": "2026-08-03",
             "count": 143,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-08-04",
@@ -4333,7 +4335,7 @@
           {
             "date": "2026-08-06",
             "count": 45,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-08-07",
@@ -4528,12 +4530,12 @@
           {
             "date": "2026-09-09",
             "count": 44,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-09-10",
             "count": 91,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-11",
@@ -4558,7 +4560,7 @@
           {
             "date": "2026-09-14",
             "count": 87,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-15",
@@ -4598,7 +4600,7 @@
           {
             "date": "2026-09-21",
             "count": 135,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-09-22",
@@ -4612,8 +4614,13 @@
           },
           {
             "date": "2026-09-24",
-            "count": 5,
-            "level": 1
+            "count": 251,
+            "level": 4
+          },
+          {
+            "date": "2026-09-25",
+            "count": 0,
+            "level": 0
           }
         ]
       }
