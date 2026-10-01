@@ -1,7 +1,7 @@
 name: Refresh GitHub snapshot
 
 # Fetches a fresh contributions and LoC snapshot from the GitHub API and
-# commits lib/github-data.json. The git push then triggers Cloudflare
+# commits the activity and public-project snapshots. The git push then triggers Cloudflare
 # Pages' git-integration auto-deploy, so the live site shows current
 # data without needing a CF deploy hook or CF-side GITHUB_TOKEN.
 #
@@ -19,6 +19,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/fetch-github-data.ts'
+      - 'scripts/fetch-open-source.ts'
       - '.github/workflows/refresh-github-stats.yml'
 
 concurrency:
@@ -44,16 +45,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: cjber
-        run: npx tsx scripts/fetch-github-data.ts
+        run: |
+          npm run fetch-data
+          npm run fetch-open-source
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- lib/github-data.json; then
+          if git diff --quiet -- lib/github-data.json lib/open-source.json; then
             echo "no snapshot changes"
             exit 0
           fi
-          git add lib/github-data.json
+          git add lib/github-data.json lib/open-source.json
           git commit -m "data: refresh GitHub snapshot ($(date -u +%Y-%m-%d))"
           git push

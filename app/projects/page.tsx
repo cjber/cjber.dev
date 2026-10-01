@@ -1,11 +1,9 @@
 import type React from 'react'
 import Link from 'next/link'
+import { OpenSourceProjects } from '@/components/open-source-projects'
 import {
   NebulaIcon,
   ThirdwebIcon,
-  HyprviewIcon,
-  OxideIcon,
-  DotfilesIcon,
   ResearchIcon,
 } from '@/components/project-icons'
 
@@ -40,29 +38,6 @@ const ENTRIES: Entry[] = [
     meta: '2025 – 2026',
     primary: { label: 'thirdweb.com/ai', href: 'https://thirdweb.com/ai' },
     Icon: ThirdwebIcon,
-  },
-  {
-    name: 'hyprview',
-    description:
-      'Workspace overview for Hyprland 0.55+. Pure Lua module; no plugin or build step.',
-    meta: 'OSS',
-    primary: { label: 'github.com/cjber/hyprview', href: 'https://github.com/cjber/hyprview' },
-    Icon: HyprviewIcon,
-  },
-  {
-    name: 'oxide',
-    description:
-      'Dark colour scheme with rust-orange, teal, and peach accents. Palette plus thirteen application ports.',
-    meta: 'OSS',
-    primary: { label: 'github.com/cjber/oxide', href: 'https://github.com/cjber/oxide' },
-    Icon: OxideIcon,
-  },
-  {
-    name: 'dotfiles',
-    description:
-      'Arch Linux setup managed with dotter. Hyprland, Neovim, Zellij, Kitty, Waybar.',
-    primary: { label: 'github.com/cjber/dotfiles', href: 'https://github.com/cjber/dotfiles' },
-    Icon: DotfilesIcon,
   },
   {
     name: 'PhD research',
@@ -153,6 +128,8 @@ export default function ProjectsPage() {
             <EntryRow key={e.name} entry={e} />
           ))}
         </div>
+
+        <OpenSourceProjects />
 
         <footer className="text-center text-sm text-muted-foreground font-mono">
           <div className="flex justify-center gap-6">

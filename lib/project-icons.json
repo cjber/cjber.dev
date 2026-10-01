@@ -1,0 +1,52 @@
+{
+  "adventure-guide-forever": {
+    "icon": "/project-icons/adventure-guide-forever.svg",
+    "source": "https://github.com/cjber/adventure-guide-forever/blob/main/media/icon.svg",
+    "wide": false
+  },
+  "legacy-forever": {
+    "icon": "/project-icons/legacy-forever.svg",
+    "source": "https://github.com/cjber/legacy-forever/blob/main/media/icon.svg",
+    "wide": false
+  },
+  "shortest-path-forever": {
+    "icon": "/project-icons/shortest-path-forever.svg",
+    "source": "https://github.com/cjber/shortest-path-forever/blob/main/media/icon.svg",
+    "wide": false
+  },
+  "skillup-forever": {
+    "icon": "/project-icons/skillup-forever.svg",
+    "source": "https://github.com/cjber/skillup-forever/blob/main/media/icon.svg",
+    "wide": false
+  },
+  "tweaks-forever": {
+    "icon": "/project-icons/tweaks-forever.svg",
+    "source": "https://github.com/cjber/tweaks-forever/blob/main/media/icon.svg",
+    "wide": false
+  },
+  "hyprview": {
+    "icon": "/project-icons/hyprview.svg",
+    "source": "https://github.com/cjber/hyprview/blob/main/.github/logo.svg",
+    "wide": false
+  },
+  "oxide": {
+    "icon": "/project-icons/oxide.svg",
+    "source": "https://github.com/cjber/oxide/blob/main/.github/logo.svg",
+    "wide": false
+  },
+  "semantic-catalogue": {
+    "icon": "/project-icons/semantic-catalogue.svg",
+    "source": "https://github.com/cjber/semantic-catalogue/blob/main/docs/figs/svg/logo-no-background.svg",
+    "wide": true
+  },
+  "ukroutes": {
+    "icon": "/project-icons/ukroutes.svg",
+    "source": "https://github.com/cjber/ukroutes/blob/main/figs/logo/svg/logo-no-background.svg",
+    "wide": true
+  },
+  "kiln": {
+    "icon": "/kiln.svg",
+    "source": "https://github.com/cjber/kiln/blob/main/assets/icon.svg",
+    "wide": false
+  }
+}
