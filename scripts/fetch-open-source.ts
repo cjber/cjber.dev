@@ -26,7 +26,6 @@ type Repository = {
   fork: boolean
   private: boolean
 }
-type PullRequest = { title: string; html_url: string; repository_url: string }
 
 async function main() {
   const repositories: Repository[] = []
@@ -34,20 +33,6 @@ async function main() {
     const batch = await get<Repository[]>(`/users/${encodeURIComponent(username)}/repos?type=owner&sort=full_name&per_page=100&page=${page}`)
     repositories.push(...batch.filter(repo => !repo.private))
     if (batch.length < 100) break
-  }
-
-  const contributions = new Map<string, PullRequest[]>()
-  const query = encodeURIComponent(`author:${username} is:pr is:merged is:public -user:${username}`)
-  for (let page = 1; ; page++) {
-    const batch = await get<{ total_count: number; incomplete_results: boolean; items: PullRequest[] }>(`/search/issues?q=${query}&sort=created&order=desc&per_page=100&page=${page}`)
-    if (batch.incomplete_results || batch.total_count > 1000) throw new Error('GitHub search is incomplete; keep the existing snapshot.')
-    for (const pr of batch.items) {
-      const repository = pr.repository_url.replace('https://api.github.com/repos/', '')
-      const items = contributions.get(repository) ?? []
-      items.push(pr)
-      contributions.set(repository, items)
-    }
-    if (page * 100 >= batch.total_count) break
   }
 
   const snapshot = {
@@ -60,14 +45,9 @@ async function main() {
       archived: repo.archived,
       fork: repo.fork,
     })),
-    contributions: [...contributions].sort(([a], [b]) => a.localeCompare(b)).map(([name, prs]) => ({
-      name,
-      url: `https://github.com/${name}`,
-      pullRequests: prs.map(pr => ({ title: pr.title, url: pr.html_url })),
-    })),
   }
   writeFileSync(resolve('lib/open-source.json'), JSON.stringify(snapshot, null, 2) + '\n')
-  console.log(`Saved ${repositories.length} public repositories and contributions to ${contributions.size} upstream projects.`)
+  console.log(`Saved ${repositories.length} public repositories.`)
 }
 
 main().catch(error => {
