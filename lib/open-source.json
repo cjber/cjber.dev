@@ -1,0 +1,871 @@
+{
+  "generatedAt": "2026-10-01T09:41:08.457Z",
+  "username": "cjber",
+  "repositories": [
+    {
+      "name": "cjber/.github",
+      "url": "https://github.com/cjber/.github",
+      "description": "Default community health files for cjber's repositories",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/abm_liv",
+      "url": "https://github.com/cjber/abm_liv",
+      "description": "Agent Based Model for Crime in Liverpool",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/access-to-everything",
+      "url": "https://github.com/cjber/access-to-everything",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/adventure-guide-forever",
+      "url": "https://github.com/cjber/adventure-guide-forever",
+      "description": "WoW: Forever addon: where to go next, for your level, on the world map.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/cdrc-semantic-search",
+      "url": "https://github.com/cjber/cdrc-semantic-search",
+      "description": "The CDRC Semantic Search System is a project designed to enhance the search capabilities of the Centre for Consumer Data Research (CDRC) data catalogue.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/cjber",
+      "url": "https://github.com/cjber/cjber",
+      "description": "Profile README",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/cjber.dev",
+      "url": "https://github.com/cjber/cjber.dev",
+      "description": "Source for cillian.dev",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/cjrmd",
+      "url": "https://github.com/cjber/cjrmd",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/dapr_modules",
+      "url": "https://github.com/cjber/dapr_modules",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/dissertation",
+      "url": "https://github.com/cjber/dissertation",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/dotfiles",
+      "url": "https://github.com/cjber/dotfiles",
+      "description": "My personal dotfiles; Arch Linux, Neovim etc.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/gds",
+      "url": "https://github.com/cjber/gds",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/gds_modules",
+      "url": "https://github.com/cjber/gds_modules",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/georelations",
+      "url": "https://github.com/cjber/georelations",
+      "description": "A two stage ensemble for extracting geographic relationships between two named geographic entities in text.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/ger-wiki",
+      "url": "https://github.com/cjber/ger-wiki",
+      "description": "Transformer based place name identification.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/hyprview",
+      "url": "https://github.com/cjber/hyprview",
+      "description": "Float-grid workspace overview for Hyprland 0.55+",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/kiln",
+      "url": "https://github.com/cjber/kiln",
+      "description": "Every Claude Code, Codex and Pi session on your machine in one vim-keyed terminal list",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/legacy-forever",
+      "url": "https://github.com/cjber/legacy-forever",
+      "description": "WoW: Forever addon: your unfinished Legacy challenges on the world map, with live progress in the objective tracker.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/MagiskOnWSA",
+      "url": "https://github.com/cjber/MagiskOnWSA",
+      "description": "Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "name": "cjber/ndvi",
+      "url": "https://github.com/cjber/ndvi",
+      "description": "This project processes Sentinel data to calculate vegetation indices and compile statistics for Local Super Output Areas (LSOAs). ",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/overture-uk",
+      "url": "https://github.com/cjber/overture-uk",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/oxide",
+      "url": "https://github.com/cjber/oxide",
+      "description": "Dark colour scheme with rust-orange, teal, and peach accents",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/reddit-connectivity",
+      "url": "https://github.com/cjber/reddit-connectivity",
+      "description": "Mapping Cognitive Place Connectivity within the United Kingdom through Online Discussion on Reddit",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/reddit-footprint",
+      "url": "https://github.com/cjber/reddit-footprint",
+      "description": "Regional Identity and Cohesion Identified in Britain through Reddit Comments",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/reddit-model",
+      "url": "https://github.com/cjber/reddit-model",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/semantic-catalogue",
+      "url": "https://github.com/cjber/semantic-catalogue",
+      "description": "The Semantic Catalogue is a project designed to enhance the search capabilities of data catalogues for research purposes.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/semantic-catalogue-demo",
+      "url": "https://github.com/cjber/semantic-catalogue-demo",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/shortest-path-forever",
+      "url": "https://github.com/cjber/shortest-path-forever",
+      "description": "The fastest way anywhere in WoW: Forever: walks, flight paths, boats, zeppelins, lifts, the tram and portals, guided turn by turn",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/skills",
+      "url": "https://github.com/cjber/skills",
+      "description": "Claude Code skills: /pr ships one green PR across two models, /deadcode proves code dead before deleting it",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/skillup-forever",
+      "url": "https://github.com/cjber/skillup-forever",
+      "description": "Classic profession-levelling numbers (required skill, thresholds, skill-up chance) in WoW: Forever's Professions window",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/thesis",
+      "url": "https://github.com/cjber/thesis",
+      "description": "PhD Thesis at the University of Liverpool. Built using Quarto Thesis template: nmfs-opensci/quarto-thesis",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/tweaks-forever",
+      "url": "https://github.com/cjber/tweaks-forever",
+      "description": "Small quality-of-life automations and fixes for WoW: Forever that extend the default UI",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/tweet-classification",
+      "url": "https://github.com/cjber/tweet-classification",
+      "description": "Classification of Tweets relating to flooding events.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/ukcrawl",
+      "url": "https://github.com/cjber/ukcrawl",
+      "description": null,
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/ukpoi",
+      "url": "https://github.com/cjber/ukpoi",
+      "description": "Overture Point of Interest (POI) data for the United Kingdom. Automatically queries the latest Overture AWS data using Dagster for ETL orchestration. The project is containerised using Docker (or Podman) Compose for easy deployment and management. Uses DuckDB with the spatial plugin to query only the UK bounding box.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/ukroutes",
+      "url": "https://github.com/cjber/ukroutes",
+      "description": "This project uses networkx to estimate drive times from source nodes to destination nodes on the UK road network.",
+      "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/uolrmarkdown",
+      "url": "https://github.com/cjber/uolrmarkdown",
+      "description": null,
+      "archived": true,
+      "fork": false
+    }
+  ],
+  "contributions": [
+    {
+      "name": "agent-labs-dev/fastbrowse",
+      "url": "https://github.com/agent-labs-dev/fastbrowse",
+      "pullRequests": [
+        {
+          "title": "chore: 0.5.14",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/194"
+        },
+        {
+          "title": "chore: 0.5.13",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/193"
+        },
+        {
+          "title": "chore: release fastbrowse 0.5.12",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/192"
+        },
+        {
+          "title": "chore: release fastbrowse 0.5.11",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/191"
+        },
+        {
+          "title": "fix: honor radio groups, frame contracts and eval outcomes",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/188"
+        },
+        {
+          "title": "chore: release fastbrowse 0.5.10",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/187"
+        },
+        {
+          "title": "fix: recover from HTTP failures without repeating failed links",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/186"
+        },
+        {
+          "title": "ci: add sift quality checks and correct audit guidance",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/182"
+        },
+        {
+          "title": "fix: complete CLI contracts and publish repeated browser evaluations",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/181"
+        },
+        {
+          "title": "fix: preserve credentials and evidence across browser workflows",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/179"
+        },
+        {
+          "title": "test(evals): a stateful mock site and a suite for logins, sessions and gated actions",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/173"
+        },
+        {
+          "title": "test: capability audit suite for the CLI, MCP and embed surfaces",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/172"
+        },
+        {
+          "title": "chore: 0.5.9",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/165"
+        },
+        {
+          "title": "feat(jev): reach Jev through OpenRouter by default, Vercel gateway as fallback",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/164"
+        },
+        {
+          "title": "fix(jev): act on the gateway's own error, not the wrapper",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/163"
+        },
+        {
+          "title": "ci(release): publish only commits on main, smoke-test the wheel first",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/162"
+        },
+        {
+          "title": "perf: fewer hand-offs on the way to an answer",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/161"
+        },
+        {
+          "title": "docs(evals): publish 0.5.7 results",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/159"
+        },
+        {
+          "title": "chore: 0.5.7",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/158"
+        },
+        {
+          "title": "fix(policy): ask a shed step request again with fewer controls",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/157"
+        },
+        {
+          "title": "fix(agent): answers state values and a start address counts as visited",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/156"
+        },
+        {
+          "title": "fix(safety): masking keeps the host a secret was typed on",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/155"
+        },
+        {
+          "title": "fix(evals): fair comparisons — same tasks, matched attempts, outages of any kind excluded",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/154"
+        },
+        {
+          "title": "fix(evals): provider outages count in no benchmark figure",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/153"
+        },
+        {
+          "title": "fix(evals): the results feed leads each release with the core suite",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/152"
+        },
+        {
+          "title": "docs(evals): publish 0.5.6 results",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/151"
+        },
+        {
+          "title": "fix(evals): a date stated in ISO form counts as stated",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/150"
+        },
+        {
+          "title": "fix(evals): grade the hosted arm on its landed verdict; keep jev-ultrafast running",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/149"
+        },
+        {
+          "title": "chore: 0.5.6",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/148"
+        },
+        {
+          "title": "fix: completion checks see the date and what each action typed",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/147"
+        },
+        {
+          "title": "feat(evals): stricter graders, arms registry, pinned datasets and a site feed",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/146"
+        },
+        {
+          "title": "fix: wizard corrections read as loops; filled form values unquotable",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/145"
+        },
+        {
+          "title": "ci: advisory Jev prose review, and rebuild the site when docs change",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/142"
+        },
+        {
+          "title": "chore: 0.5.5",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/141"
+        },
+        {
+          "title": "fix: eval failures in browsing, reading and Jev outages; versioned evals",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/140"
+        },
+        {
+          "title": "fix: incomplete comparisons, purchase answers, stale steps and wasted form steps",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/138"
+        },
+        {
+          "title": "chore: 0.5.4",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/130"
+        },
+        {
+          "title": "fix: seven backlog defects in reading, stalling, verification and the eval harness",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/124"
+        },
+        {
+          "title": "chore: 0.5.3",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/120"
+        },
+        {
+          "title": "feat: stretch eval suites, reversal-loop recovery and recovery memory",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/119"
+        },
+        {
+          "title": "feat(cli): --proxy-country picks where the cloud browser browses from",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/118"
+        },
+        {
+          "title": "fix(snapshot): leave style and script text out of element names",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/116"
+        },
+        {
+          "title": "feat(cli): --cdp-url attaches a run to a browser already running",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/115"
+        },
+        {
+          "title": "fix(policy): compact a dense page's elements before refusing it",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/114"
+        },
+        {
+          "title": "feat: filter with Jev instead of truncating - dense controls and long-page reads",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/113"
+        },
+        {
+          "title": "feat(bitwarden): type a vault item's TOTP code on 2FA prompts",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/112"
+        },
+        {
+          "title": "fix(agent): type the stored username into an email or phone sign-in field",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/111"
+        },
+        {
+          "title": "fix(agent): credit every step to Jev or the LLM, never \"code\"",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/109"
+        },
+        {
+          "title": "feat: contributor guide, issue and PR templates, --version",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/108"
+        },
+        {
+          "title": "fix: Google Flights reliability (missing-field recovery, stronger verifier, 50 steps)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/107"
+        },
+        {
+          "title": "docs(evals): 0.5.2 head-to-head results",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/104"
+        },
+        {
+          "title": "fix(agent): read a page before scrolling it",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/103"
+        },
+        {
+          "title": "chore: 0.5.2",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/102"
+        },
+        {
+          "title": "fix: provider cut-offs, rate-limited answer keys and unreachable browsers are outages",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/100"
+        },
+        {
+          "title": "chore: 0.5.1",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/98"
+        },
+        {
+          "title": "feat!: cloud browser by default, and fix the demo-run defects (lookup acceptance, transparent choices, covered clicks, honest recordings)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/97"
+        },
+        {
+          "title": "feat(recording): end on the answer with its citations, not raw links",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/96"
+        },
+        {
+          "title": "chore: 0.5.0",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/95"
+        },
+        {
+          "title": "refactor: audit every LLM prompt and Jev question against structured-output and prompting guidance",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/93"
+        },
+        {
+          "title": "feat(retrieval): readers cite page blocks instead of retyping quotes",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/92"
+        },
+        {
+          "title": "feat: catch grinding runs, stream live frames, gate every click",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/83"
+        },
+        {
+          "title": "fix: fall back to the front page when a start page this run guessed opens nothing",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/81"
+        },
+        {
+          "title": "chore: 0.4.2",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/80"
+        },
+        {
+          "title": "fix: set a form's mode before filling it, and its filters before submitting",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/78"
+        },
+        {
+          "title": "docs: point the claims at the run behind them, and say why the other arm's runs failed",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/77"
+        },
+        {
+          "title": "docs(evals): say how a failure is counted, and what the passing runs cost",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/76"
+        },
+        {
+          "title": "docs: the comparison, run again with no cap on either side",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/71"
+        },
+        {
+          "title": "feat: a secret can be declared for a site, not just for one of its hosts (0.4.1)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/70"
+        },
+        {
+          "title": "feat: what an application needs to run fastbrowse as its browser engine (0.4.0)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/69"
+        },
+        {
+          "title": "docs: AGENTS.md, and the secret check a step frame needed to keep it true",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/68"
+        },
+        {
+          "title": "docs: a changelog, backfilled, that the release notes are published from",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/67"
+        },
+        {
+          "title": "chore: 0.3.3",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/66"
+        },
+        {
+          "title": "build: support Python 3.13, so an application pinned to it can depend on this",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/65"
+        },
+        {
+          "title": "chore: 0.3.2",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/64"
+        },
+        {
+          "title": "feat: send the page a step acted on, for a caller showing the run live",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/63"
+        },
+        {
+          "title": "fix: paginated lists, truncated replies, bot checks, limit formatting, --json contract (#57–#61)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/62"
+        },
+        {
+          "title": "chore: 0.3.1",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/56"
+        },
+        {
+          "title": "feat: run a cloud browser as a profile someone already signed in",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/55"
+        },
+        {
+          "title": "build: type-check with ty, and run ruff and ty before each commit",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/54"
+        },
+        {
+          "title": "feat: read a list split across pages whole, and stop repeating a click that did nothing (#12)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/53"
+        },
+        {
+          "title": "refactor(mcp): share the CLI's browser and secret rules instead of restating them",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/52"
+        },
+        {
+          "title": "chore: 0.3.0",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/51"
+        },
+        {
+          "title": "feat: read a list split across pages whole, and stop repeating a click that did nothing (#12)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/45"
+        },
+        {
+          "title": "fix: read the package's own text files as UTF-8, and format a day portably",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/44"
+        },
+        {
+          "title": "feat: serve fastbrowse to MCP clients as one browse tool",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/43"
+        },
+        {
+          "title": "fix: outlast a brief provider outage instead of losing the run to it",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/42"
+        },
+        {
+          "title": "docs(readme): lead with the Browser Use comparison and what fastbrowse wins",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/41"
+        },
+        {
+          "title": "fix: act on a redrawn control's one twin instead of deciding again",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/40"
+        },
+        {
+          "title": "perf: act on Jev's unsure pick once per page state before paying for recovery",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/39"
+        },
+        {
+          "title": "fix: wait for an empty page to draw before reading it",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/38"
+        },
+        {
+          "title": "build(evals): run both other arms on their latest releases",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/37"
+        },
+        {
+          "title": "fix: let a finish stand when the verifier doubts only what the notes cite (#7)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/36"
+        },
+        {
+          "title": "fix: try the start page again when it never finishes loading",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/35"
+        },
+        {
+          "title": "fix(evals): judge a repeated action by the page it was taken from",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/34"
+        },
+        {
+          "title": "fix: try the start page again once when the browser cannot reach it",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/33"
+        },
+        {
+          "title": "fix: draw the page before moving the pointer onto a point measured in the DOM",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/32"
+        },
+        {
+          "title": "fix(evals): keep a hosted session's cost when its output fails the schema",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/31"
+        },
+        {
+          "title": "docs: head-to-head results from three passes on every arm",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/30"
+        },
+        {
+          "title": "fix: treat a return to an earlier page state as no progress (#12)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/28"
+        },
+        {
+          "title": "fix: let recovery direct a read, scroll, back or escape, not only a control",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/27"
+        },
+        {
+          "title": "feat(evals): keep each run's step log and judgement trace in the eval row",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/26"
+        },
+        {
+          "title": "feat(evals): count wasted actions next to pass rate",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/25"
+        },
+        {
+          "title": "fix: cite every note a comparison claim is drawn from",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/24"
+        },
+        {
+          "title": "perf: verify on flash-lite",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/23"
+        },
+        {
+          "title": "fix: count a derived comparison as met when the notes hold its facts (#7)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/22"
+        },
+        {
+          "title": "fix: read typed-search results before leaving them (#7)",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/21"
+        },
+        {
+          "title": "docs(readme): demo GIF from a nonstop Google Flights search",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/20"
+        },
+        {
+          "title": "fix(evals): grade the form behind a popup the run left open",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/19"
+        },
+        {
+          "title": "perf: accept DONE on confirmed requirements without the LLM verifier",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/18"
+        },
+        {
+          "title": "fix(evals): grade Google Flights on the search it rendered, not its URL",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/17"
+        },
+        {
+          "title": "General fixes from a dev/held-out split: frames, icons, hover, action effects, loop budget",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/15"
+        },
+        {
+          "title": "docs(evals): hosted Browser Use re-run with a $0.60 cap",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/14"
+        },
+        {
+          "title": "feat(evals): jev-ultrafast arm, fair-arm grading, recordings and head-to-head results",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/13"
+        },
+        {
+          "title": "fix: tell identically labelled controls apart, and stop ending runs on one model's 'you never told me'",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/11"
+        },
+        {
+          "title": "feat: 15-task live eval suite with Bitwarden logins, and the agent fixes it found",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/9"
+        },
+        {
+          "title": "feat: --record video, and sign in with a stored login the task does not mention",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/6"
+        },
+        {
+          "title": "docs(readme): Browser Use comparison only; build: version 0.1.0",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/5"
+        },
+        {
+          "title": "perf: faster than hosted Browser Use (12.9s median), Jev grounded in Typesafe docs",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/4"
+        },
+        {
+          "title": "perf: 26.7s a task, draft answers, and the open-source readiness review",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/3"
+        },
+        {
+          "title": "perf: cut a task from 44s to 38.5s, and fix the fill that stalled on its own suggestions",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/2"
+        },
+        {
+          "title": "feat: a browser agent that picks instead of generating",
+          "url": "https://github.com/agent-labs-dev/fastbrowse/pull/1"
+        }
+      ]
+    },
+    {
+      "name": "agent-labs-dev/nebula-ai-skill",
+      "url": "https://github.com/agent-labs-dev/nebula-ai-skill",
+      "pullRequests": [
+        {
+          "title": "feat: support nebula-ai 0.1.11 exit codes and waiting results",
+          "url": "https://github.com/agent-labs-dev/nebula-ai-skill/pull/6"
+        },
+        {
+          "title": "feat!: call the nebula-ai CLI directly and remove the wrapper script",
+          "url": "https://github.com/agent-labs-dev/nebula-ai-skill/pull/5"
+        },
+        {
+          "title": "feat: support nebula-ai CLI 0.1.10",
+          "url": "https://github.com/agent-labs-dev/nebula-ai-skill/pull/4"
+        },
+        {
+          "title": "feat: sync skill with nebula-ai 0.1.9 and guard against CLI drift",
+          "url": "https://github.com/agent-labs-dev/nebula-ai-skill/pull/3"
+        },
+        {
+          "title": "feat: add agent-neutral Nebula AI skill",
+          "url": "https://github.com/agent-labs-dev/nebula-ai-skill/pull/1"
+        }
+      ]
+    },
+    {
+      "name": "EpistasisLab/tpot",
+      "url": "https://github.com/EpistasisLab/tpot",
+      "pullRequests": [
+        {
+          "title": "fix export line in NN example",
+          "url": "https://github.com/EpistasisLab/tpot/pull/1084"
+        }
+      ]
+    },
+    {
+      "name": "haozhu233/kableExtra",
+      "url": "https://github.com/haozhu233/kableExtra",
+      "pullRequests": [
+        {
+          "title": "Improve spacing between table and footer",
+          "url": "https://github.com/haozhu233/kableExtra/pull/458"
+        },
+        {
+          "title": "add_footnote() is deprecated.",
+          "url": "https://github.com/haozhu233/kableExtra/pull/456"
+        }
+      ]
+    },
+    {
+      "name": "jbarrow/allennlp_tutorial",
+      "url": "https://github.com/jbarrow/allennlp_tutorial",
+      "pullRequests": [
+        {
+          "title": "Updates to lstm config for AllenNLP 1.0 for section 3",
+          "url": "https://github.com/jbarrow/allennlp_tutorial/pull/8"
+        },
+        {
+          "title": "Remove @overrides decorators and dry-run",
+          "url": "https://github.com/jbarrow/allennlp_tutorial/pull/7"
+        }
+      ]
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "pullRequests": [
+        {
+          "title": "community: add score to PineconeHybridSearchRetriever",
+          "url": "https://github.com/langchain-ai/langchain/pull/25781"
+        }
+      ]
+    },
+    {
+      "name": "mamba-org/mamba",
+      "url": "https://github.com/mamba-org/mamba",
+      "pullRequests": [
+        {
+          "title": "fix typo succes -> success",
+          "url": "https://github.com/mamba-org/mamba/pull/926"
+        }
+      ]
+    },
+    {
+      "name": "neovim/nvim-lspconfig",
+      "url": "https://github.com/neovim/nvim-lspconfig",
+      "pullRequests": [
+        {
+          "title": "Add quarto and rmd filetype to ltex.lua",
+          "url": "https://github.com/neovim/nvim-lspconfig/pull/2801"
+        }
+      ]
+    },
+    {
+      "name": "osprey-oss/cookiecutter-uv",
+      "url": "https://github.com/osprey-oss/cookiecutter-uv",
+      "pullRequests": [
+        {
+          "title": "replace ADD with COPY in Dockerfile",
+          "url": "https://github.com/osprey-oss/cookiecutter-uv/pull/41"
+        }
+      ]
+    },
+    {
+      "name": "r-lidar/lidR",
+      "url": "https://github.com/r-lidar/lidR",
+      "pullRequests": [
+        {
+          "title": "Minor corrections to written examples",
+          "url": "https://github.com/r-lidar/lidR/pull/257"
+        }
+      ]
+    }
+  ]
+}

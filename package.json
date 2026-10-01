@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "fetch-data": "tsx scripts/fetch-github-data.ts",
     "build": "next build",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch-open-source": "tsx scripts/fetch-open-source.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
