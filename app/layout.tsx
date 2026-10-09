@@ -15,8 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cillian.dev"),
   title: "Cillian Berragan",
-  description: "Founding Engineer at Nebula. Previously thirdweb.",
-  keywords: "Cillian Berragan, Software Engineer, Nebula, AI, ML",
+  description:
+    "Founding AI Engineer at Nebula, building AI agents and the backend that runs them. Author of fastbrowse. Previously thirdweb. PhD in NLP.",
+  alternates: { canonical: "/" },
+  keywords: "Cillian Berragan, AI Engineer, AI agents, Nebula, fastbrowse, NLP",
   authors: [{ name: "Cillian Berragan" }],
   creator: "Cillian Berragan",
   robots: {
@@ -29,12 +31,12 @@ export const metadata: Metadata = {
     url: "https://cillian.dev",
     siteName: "Cillian Berragan",
     title: "Cillian Berragan",
-    description: "Founding Engineer at Nebula",
+    description: "Founding AI Engineer at Nebula. Author of fastbrowse.",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Cillian Berragan",
-    description: "Founding Engineer at Nebula",
+    description: "Founding AI Engineer at Nebula. Author of fastbrowse.",
   },
 };
 

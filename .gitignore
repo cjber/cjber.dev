@@ -47,5 +47,8 @@ next-env.d.ts
 
 # Build-time GitHub snapshot (regenerated each build)
 
+# generated from lib/cv.ts by scripts/build-cv-pdf.ts
+/public/cv.pdf
+
 # cloudflare
 /.wrangler/

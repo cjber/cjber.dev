@@ -1,17 +1,22 @@
 import type React from 'react'
 import Link from 'next/link'
 import { OpenSourceProjects } from '@/components/open-source-projects'
+import { LINKS, PUBLICATIONS } from '@/lib/cv'
 import {
+  FastbrowseIcon,
   NebulaIcon,
   ThirdwebIcon,
   ResearchIcon,
 } from '@/components/project-icons'
 
 export const metadata = {
-  title: 'Projects — Cillian Berragan',
+  title: 'Projects - Cillian Berragan',
+  description:
+    'What Cillian Berragan has built: Nebula, fastbrowse, thirdweb AI, published research and open-source tools.',
+  alternates: { canonical: '/projects' },
 }
 
-type LinkRef = { label: string; href: string }
+type LinkRef = { label: string; href: string; note?: string }
 
 type Entry = {
   name: string
@@ -26,29 +31,39 @@ const ENTRIES: Entry[] = [
   {
     name: 'Nebula',
     description:
-      'Autonomous AI workforce platform. Founding engineer; agent execution, durable workflows, 600+ app integrations.',
+      'A multiplayer workspace where teams work alongside AI agents that have real tools, memory and their own computers. I own the backend: agent execution, durable workflows and 600+ app integrations.',
     meta: 'Current',
     primary: { label: 'nebula.gg', href: 'https://nebula.gg' },
     Icon: NebulaIcon,
   },
   {
+    name: 'fastbrowse',
+    description:
+      'An open-source browser agent. A choice model picks each action from the controls on the page, so it cannot click something that is not there, and every claim in an answer cites a quote from the page.',
+    meta: 'Open source',
+    primary: { label: 'GitHub', href: 'https://github.com/agent-labs-dev/fastbrowse' },
+    links: [
+      { label: 'fastbrowse.ai', href: 'https://www.fastbrowse.ai' },
+      { label: 'PyPI', href: 'https://pypi.org/project/fastbrowse/' },
+    ],
+    Icon: FastbrowseIcon,
+  },
+  {
     name: 'thirdweb AI',
     description:
-      'Conversational onchain agent platform. RAG pipelines, API surfaces, agent tooling as primary backend engineer.',
-    meta: '2025 – 2026',
+      'A conversational agent platform for onchain infrastructure. I was its primary backend engineer, across RAG pipelines, APIs and agent tooling.',
+    meta: '2025 - 2026',
     primary: { label: 'thirdweb.com/ai', href: 'https://thirdweb.com/ai' },
     Icon: ThirdwebIcon,
   },
   {
-    name: 'PhD research',
+    name: 'Published research',
     description:
-      'Extracting and mapping cognitive place from social media text. Geographic NLP at the University of Liverpool, 2019 – 2023.',
-    meta: 'PhD',
+      'Geographic NLP at the University of Liverpool: extracting and mapping how people talk about places from social media text.',
+    meta: '2019 - 2023',
     links: [
-      { label: 'Scholar', href: 'https://scholar.google.com/citations?user=mBNb4rgAAAAJ&hl=en' },
-      { label: 'TIBG 2024', href: 'https://rgs-ibg.onlinelibrary.wiley.com/journal/14755661' },
-      { label: 'reddit-footprint', href: 'https://github.com/cjber/reddit-footprint' },
-      { label: 'thesis', href: 'https://github.com/cjber/thesis' },
+      ...PUBLICATIONS.map((p) => ({ label: p.title, note: `${p.venue}, ${p.year}`, href: p.url })),
+      { label: 'All papers on Google Scholar', href: LINKS.scholar },
     ],
     Icon: ResearchIcon,
   },
@@ -87,19 +102,21 @@ function EntryRow({ entry }: { entry: Entry }) {
             {entry.description}
           </p>
           {entry.links && (
-            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+            <ul className={entry.links.some((l) => l.note) ? 'mt-3 space-y-2' : 'flex flex-wrap gap-x-4 gap-y-1 mt-2'}>
               {entry.links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {l.label}
-                </a>
+                <li key={l.href} className="font-mono text-xs text-muted-foreground">
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`hover:text-primary transition-colors ${l.note ? 'text-foreground/90' : ''}`}
+                  >
+                    {l.label}
+                  </a>
+                  {l.note && <span className="block text-muted-foreground/80 mt-0.5">{l.note}</span>}
+                </li>
               ))}
-            </div>
+            </ul>
           )}
         </div>
       </div>
@@ -109,8 +126,8 @@ function EntryRow({ entry }: { entry: Entry }) {
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-8">
-      <div className="max-w-3xl w-full">
+    <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-5 py-8 sm:p-8">
+      <div className="max-w-3xl w-full min-w-0">
         <div className="mb-8 flex items-baseline justify-between">
           <h1 className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
             Projects
@@ -133,7 +150,7 @@ export default function ProjectsPage() {
 
         <footer className="text-center text-sm text-muted-foreground font-mono">
           <div className="flex justify-center gap-6">
-            <a href="https://github.com/cjber" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+            <a href={LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
             <a href="mailto:cillian@berragan.co.uk" className="hover:text-primary transition-colors">Email</a>
           </div>
         </footer>
