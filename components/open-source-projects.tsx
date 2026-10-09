@@ -20,7 +20,7 @@ function RepositoryRow({ repository }: { repository: Repository }) {
       {mark ? (
         // eslint-disable-next-line @next/next/no-img-element -- Preserve each project's existing mark.
         <img src={mark.icon} alt="" width={mark.wide ? 96 : 40} height="40" loading="lazy" className={`${mark.wide ? "w-24 bg-zinc-100 p-1" : "w-10"} h-10 object-contain shrink-0 rounded-md`} />
-      ) : name === 'dotfiles' ? <DotfilesIcon className="w-10 h-10 text-muted-foreground shrink-0" /> : null}
+      ) : name === 'dotfiles' ? <DotfilesIcon className="w-10 h-10 text-muted-foreground shrink-0" /> : <span className="w-10 shrink-0" aria-hidden />}
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-4">
           <a href={repository.url} target="_blank" rel="noopener noreferrer" className="font-mono text-base hover:text-primary transition-colors break-words">
@@ -40,7 +40,7 @@ export function OpenSourceProjects() {
   return (
     <section className="mb-12">
       <h2 className="font-mono text-lg mb-2">Open source</h2>
-      <p className="font-mono text-sm text-muted-foreground mb-6">Tools, addons and research projects.</p>
+      <p className="font-mono text-sm text-muted-foreground mb-6">Tools and addons I maintain, and archived research code.</p>
       {groups.map(group => {
         const members = repositories.filter(repository => {
           const name = repository.name.split('/')[1]

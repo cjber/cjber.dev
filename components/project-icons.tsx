@@ -61,6 +61,17 @@ export function OxideIcon({ className }: IconProps) {
   )
 }
 
+export function FastbrowseIcon({ className }: IconProps) {
+  // Browser window with a pointer picking a control.
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M20 11V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h5" />
+      <path d="M4 9h16" />
+      <path d="M13 13l2.5 7 1.5-3 3-1.5z" />
+    </svg>
+  )
+}
+
 export function DotfilesIcon({ className }: IconProps) {
   // Terminal prompt: $ + cursor.
   return (
