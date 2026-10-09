@@ -9,7 +9,7 @@ export const PROFILE = {
   email: 'cillian@berragan.co.uk',
   site: 'https://cillian.dev',
   summary:
-    'I build AI agents and the systems that run them. At Nebula I own the backend: agent execution, durable workflows and integrations with 600+ apps. I also wrote fastbrowse, an open-source browser agent. PhD in natural language processing.',
+    'I build AI agents and the systems that run them. At Nebula I own the backend: agent execution, durable workflows and integrations with hundreds of apps. I also wrote fastbrowse, an open-source browser agent. PhD in natural language processing.',
 }
 
 export const LINKS = {
@@ -38,7 +38,7 @@ export const ROLES: Role[] = [
     bullets: [
       'Nebula is a multiplayer workspace where teams work alongside AI agents that have real tools, memory and their own computers.',
       'Own the backend as its primary engineer: the agent execution engine, durable workflow orchestration, multi-agent coordination, persistent memory and real-time streaming.',
-      'Built the integrations that let agents act across 600+ apps, and the APIs behind the desktop, mobile and CLI clients.',
+      'Built the integrations that let agents act across hundreds of apps, and the APIs behind the desktop, mobile and CLI clients.',
       'Wrote fastbrowse, an open-source browser agent: a choice model picks each action from the controls on the page, and every claim in an answer cites a quote from it.',
     ],
   },
