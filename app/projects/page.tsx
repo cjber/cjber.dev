@@ -31,7 +31,7 @@ const ENTRIES: Entry[] = [
   {
     name: 'Nebula',
     description:
-      'A multiplayer workspace where teams work alongside AI agents that have real tools, memory and their own computers. I own the backend: agent execution, durable workflows and 600+ app integrations.',
+      'A multiplayer workspace where teams work alongside AI agents that have real tools, memory and their own computers. I own the backend: agent execution, durable workflows and integrations with hundreds of apps.',
     meta: 'Current',
     primary: { label: 'nebula.gg', href: 'https://nebula.gg' },
     Icon: NebulaIcon,
