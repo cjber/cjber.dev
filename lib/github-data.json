@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T06:57:59.916Z",
+  "generatedAt": "2026-10-12T07:20:57.094Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -263,8 +263,8 @@
       "deletions": 141,
       "net": 153,
       "dotfiles": 46,
-      "uolrmarkdown": -16,
-      "cjrmd": 123
+      "cjrmd": 123,
+      "uolrmarkdown": -16
     },
     {
       "date": "2020-07-05",
@@ -322,8 +322,8 @@
       "deletions": 4406,
       "net": -3982,
       "dotfiles": 6,
-      "uolrmarkdown": -4013,
-      "cjrmd": 25
+      "cjrmd": 25,
+      "uolrmarkdown": -4013
     },
     {
       "date": "2020-08-23",
@@ -1413,8 +1413,8 @@
       "additions": 518,
       "deletions": 1403,
       "net": -885,
-      "ukpoi": -592,
       "access-to-everything": -298,
+      "ukpoi": -592,
       "ukroutes": 4,
       "overture-uk": 1
     },
@@ -1424,8 +1424,8 @@
       "additions": 234,
       "deletions": 195,
       "net": 39,
-      "ukpoi": -6,
       "access-to-everything": 59,
+      "ukpoi": -6,
       "ukroutes": -14
     },
     {
@@ -2072,8 +2072,8 @@
       "nebula-web": 26,
       "dotfiles": 139,
       "nebula": 6740,
-      "nebula-mobile": 40,
-      "nebula-docs": 1659
+      "nebula-docs": 1659,
+      "nebula-mobile": 40
     },
     {
       "date": "2026-03-15",
@@ -2083,8 +2083,8 @@
       "net": -8652,
       "nebula-web": 1339,
       "nebula": -16491,
-      "berragan.co.uk": 6379,
-      "nebula-docs": 121
+      "nebula-docs": 121,
+      "berragan.co.uk": 6379
     },
     {
       "date": "2026-03-22",
@@ -2176,8 +2176,8 @@
       "cjber.dev": -2009,
       "nebula-web": 668,
       "nebula": -41754,
-      "nebula-mobile": 876,
       "oxide": 1616,
+      "nebula-mobile": 876,
       "footprint-explorer": 5661,
       "hyprview": 558
     },
@@ -2225,9 +2225,9 @@
       "net": 55879,
       "nebula-web": 5124,
       "nebula": -1575,
+      "parallax": 41911,
       "nebula-desktop": 4002,
       "nebula-mobile": 6216,
-      "parallax": 41911,
       "nebula-metabase": 201
     },
     {
@@ -2239,9 +2239,9 @@
       "nebula-web": 8033,
       "dotfiles": -258,
       "nebula": 10684,
+      "parallax": 1098,
       "nebula-desktop": 27325,
       "nebula-mobile": 7765,
-      "parallax": 1098,
       "wowaddon": 252
     },
     {
@@ -2252,9 +2252,9 @@
       "net": 40024,
       "nebula-web": 1615,
       "nebula": 10172,
+      "parallax": 25033,
       "nebula-desktop": 1705,
-      "nebula-mobile": 1499,
-      "parallax": 25033
+      "nebula-mobile": 1499
     },
     {
       "date": "2026-07-05",
@@ -2265,10 +2265,10 @@
       "nebula-web": 14,
       "dotfiles": 1371,
       "nebula": -5594,
-      "nebula-desktop": -327,
-      "nebula-mobile": -14,
       "oxide": 0,
-      "parallax": 22925
+      "parallax": 22925,
+      "nebula-desktop": -327,
+      "nebula-mobile": -14
     },
     {
       "date": "2026-07-12",
@@ -2279,9 +2279,9 @@
       "nebula-web": 9545,
       "dotfiles": 1362,
       "nebula": 23487,
+      "parallax": 2187,
       "nebula-desktop": 12630,
-      "nebula-mobile": 7413,
-      "parallax": 2187
+      "nebula-mobile": 7413
     },
     {
       "date": "2026-07-19",
@@ -2292,9 +2292,9 @@
       "nebula-web": -32490,
       "dotfiles": 912,
       "nebula": -9030,
+      "parallax": 7038,
       "nebula-desktop": 1997,
       "nebula-mobile": 1274,
-      "parallax": 7038,
       "nebula-ai-skill": 383,
       "nebula-metabase": 241
     },
@@ -2307,9 +2307,9 @@
       "nebula-web": 1640,
       "dotfiles": 368,
       "nebula": 26927,
+      "parallax": -7073,
       "nebula-desktop": 7265,
-      "nebula-mobile": 7552,
-      "parallax": -7073
+      "nebula-mobile": 7552
     },
     {
       "date": "2026-08-02",
@@ -2320,9 +2320,9 @@
       "nebula-web": 5133,
       "dotfiles": 55,
       "nebula": 41742,
+      "parallax": 6100,
       "nebula-desktop": 4625,
       "nebula-mobile": 21323,
-      "parallax": 6100,
       "nebula-metabase": 821
     },
     {
@@ -2334,9 +2334,9 @@
       "nebula-web": -441,
       "dotfiles": 403,
       "nebula": 50371,
+      "parallax": -7725,
       "nebula-desktop": 66,
-      "nebula-mobile": -506,
-      "parallax": -7725
+      "nebula-mobile": -506
     },
     {
       "date": "2026-08-16",
@@ -2347,9 +2347,9 @@
       "nebula-web": 1445,
       "dotfiles": 189,
       "nebula": 35880,
+      "parallax": 5664,
       "nebula-desktop": 14183,
-      "nebula-mobile": 1092,
-      "parallax": 5664
+      "nebula-mobile": 1092
     },
     {
       "date": "2026-08-23",
@@ -2370,9 +2370,9 @@
       "nebula-web": -1718,
       "dotfiles": 5,
       "nebula": 7703,
+      "parallax": 928,
       "nebula-desktop": 140,
-      "nebula-mobile": -10,
-      "parallax": 928
+      "nebula-mobile": -10
     },
     {
       "date": "2026-09-06",
@@ -2383,9 +2383,9 @@
       "nebula-web": 7909,
       "dotfiles": 399,
       "nebula": 30616,
+      "parallax": 846,
       "nebula-desktop": 9577,
       "nebula-mobile": 9838,
-      "parallax": 846,
       "wow-raid-spectacle": 60036
     },
     {
@@ -2398,12 +2398,12 @@
       "nebula-web": 1035,
       "dotfiles": 269,
       "nebula": 33877,
-      "fastbrowse": 19815,
+      "parallax": 7082,
       "nebula-desktop": 4777,
       "nebula-mobile": 1065,
-      "jev-ultrafast": 373,
       "fastbrowse-site": 888,
-      "parallax": 7082,
+      "fastbrowse": 19815,
+      "jev-ultrafast": 373,
       "nebula-metabase": 1172
     },
     {
@@ -2416,20 +2416,20 @@
       "skillup-forever": 24178,
       "dotfiles": 245,
       "nebula": 37878,
+      "nebula-docs": 124,
       "legacy-forever": 28854,
       "shortest-path-forever": 55576,
-      "fastbrowse": 22088,
+      "parallax": 3018,
       "nebula-desktop": 5225,
       "fastbrowse-site": 2737,
       "tweaks-forever": 19853,
       "adventure-guide-forever": 49631,
-      "parallax": 3018,
-      "nebula-ai-skill": 2384,
+      "fastbrowse": 22088,
       "sift": 26213,
+      "nebula-ai-skill": 2384,
       "nebula-metabase": 398,
-      "nebula-docs": 124,
-      ".github": 225,
       "cjber": 13,
+      ".github": 225,
       "wowaddon": 7529,
       "open-poker-bot": 14198,
       "work-orders-forever": 13362
@@ -2445,9 +2445,10 @@
       "nebula-web": 141,
       "dotfiles": 67,
       "nebula": 56335,
+      "nebula-docs": 10,
       "legacy-forever": 10231,
       "shortest-path-forever": 14770,
-      "fastbrowse": 20164,
+      "parallax": 35825,
       "nebula-desktop": 10848,
       "nebula-mobile": 4408,
       "bugpatrol": 3250,
@@ -2455,14 +2456,13 @@
       "fastbrowse-site": 79,
       "tweaks-forever": 13783,
       "adventure-guide-forever": 26542,
-      "parallax": 35825,
+      "fastbrowse": 20164,
       "fastbrowse-hosted": 0,
       "sift": 1035,
       "nebula-metabase": 555,
       "kiln": 14126,
-      "nebula-docs": 10,
-      ".github": 6,
       "cjber": 11,
+      ".github": 6,
       "wowaddon": 3,
       "open-poker-bot": 3094,
       "work-orders-forever": 16980
@@ -2478,27 +2478,35 @@
       "nebula-web": 10,
       "dotfiles": 823,
       "nebula": 81818,
+      "nebula-docs": 1879,
       "legacy-forever": 2671,
       "shortest-path-forever": 11318,
-      "fastbrowse": 13799,
+      "parallax": 27388,
       "nebula-desktop": 18520,
       "nebula-mobile": 7331,
       "bugpatrol": 9,
-      "jev-ultrafast": 1,
       "skills": 2692,
       "fastbrowse-site": 12995,
       "tweaks-forever": 5627,
       "adventure-guide-forever": 12509,
-      "parallax": 27388,
+      "fastbrowse": 13799,
+      "jev-ultrafast": 1,
       "fastbrowse-hosted": 3395,
-      "nebula-ai-skill": 400,
       "sift": 700,
+      "nebula-ai-skill": 400,
       "nebula-metabase": -2,
       "berragan.co.uk": 1758,
       "kiln": 300,
-      "nebula-docs": 1879,
       "wowaddon": -5,
       "work-orders-forever": 0
+    },
+    {
+      "date": "2026-10-11",
+      "weekTimestamp": 1791676800,
+      "additions": 112,
+      "deletions": 68,
+      "net": 44,
+      "nebula": 44
     }
   ],
   "repoNames": [
@@ -2507,32 +2515,32 @@
     "nebula-web",
     "dotfiles",
     "nebula",
+    "oxide",
+    "nebula-docs",
     "legacy-forever",
     "shortest-path-forever",
-    "fastbrowse",
+    "parallax",
     "nebula-desktop",
     "nebula-mobile",
-    "oxide",
     "bugpatrol",
-    "jev-ultrafast",
     "skills",
     "fastbrowse-site",
     "tweaks-forever",
     "adventure-guide-forever",
-    "parallax",
+    "fastbrowse",
+    "jev-ultrafast",
     "fastbrowse-hosted",
-    "nebula-ai-skill",
-    "sift",
     "wow-raid-spectacle",
+    "sift",
+    "nebula-ai-skill",
     "nebula-metabase",
     "berragan.co.uk",
     "kiln",
-    "nebula-docs",
-    ".github",
     "cjber",
+    ".github",
     "wowaddon",
-    "footprint-explorer",
     "open-poker-bot",
+    "footprint-explorer",
     "work-orders-forever",
     "hyprview",
     "ukcrawl",
@@ -2540,8 +2548,8 @@
     "abm_liv",
     "planning-ai",
     "thesis",
-    "ukpoi",
     "access-to-everything",
+    "ukpoi",
     "ndvi",
     "ukroutes",
     "overture-uk",
@@ -2551,23 +2559,23 @@
     "ger-wiki",
     "dapr_modules",
     "reddit-connectivity",
-    "tweet-classification",
     "reddit-model",
-    "georelations",
+    "tweet-classification",
     "cdrc-semantic-search",
+    "georelations",
     "reddit-geoext",
     "ward-lifetimes",
-    "gds_modules",
     "gds",
-    "uolrmarkdown",
+    "gds_modules",
     "cjrmd",
+    "uolrmarkdown",
     "dissertation"
   ],
-  "totalAdditions": 6152904,
-  "totalDeletions": 3561826,
-  "totalNet": 2591078,
+  "totalAdditions": 6153016,
+  "totalDeletions": 3561894,
+  "totalNet": 2591122,
   "calendar": {
-    "totalContributions": 14270,
+    "totalContributions": 14272,
     "weeks": [
       {
         "firstDay": "2025-10-12",
@@ -4654,7 +4662,12 @@
         "days": [
           {
             "date": "2026-10-11",
-            "count": 5,
+            "count": 33,
+            "level": 1
+          },
+          {
+            "date": "2026-10-12",
+            "count": 14,
             "level": 1
           }
         ]
