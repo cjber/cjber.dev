@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:57:11.462Z",
+  "generatedAt": "2026-10-17T06:52:04.255Z",
   "weeks": [
     {
       "date": "2019-08-04",
@@ -1114,8 +1114,8 @@
       "additions": 10836,
       "deletions": 15550,
       "net": -4714,
-      "reddit-connectivity": -10007,
-      "reddit-model": 5293
+      "reddit-model": 5293,
+      "reddit-connectivity": -10007
     },
     {
       "date": "2023-11-12",
@@ -1329,8 +1329,8 @@
       "net": 1741,
       "dotfiles": 37,
       "ukcrawl": 62,
-      "ukroutes": 1576,
       "overture-uk": 43,
+      "ukroutes": 1576,
       "ingestion-checks": 23
     },
     {
@@ -1414,8 +1414,8 @@
       "deletions": 1403,
       "net": -885,
       "ukpoi": -592,
-      "ukroutes": 4,
       "overture-uk": 1,
+      "ukroutes": 4,
       "access-to-everything": -298
     },
     {
@@ -1444,8 +1444,8 @@
       "additions": 1379,
       "deletions": 1618,
       "net": -239,
-      "ukroutes": -805,
       "overture-uk": 0,
+      "ukroutes": -805,
       "access-to-everything": 566
     },
     {
@@ -2072,8 +2072,8 @@
       "nebula-web": 26,
       "dotfiles": 139,
       "nebula": 6740,
-      "nebula-docs": 1659,
-      "nebula-mobile": 40
+      "nebula-mobile": 40,
+      "nebula-docs": 1659
     },
     {
       "date": "2026-03-15",
@@ -2223,10 +2223,10 @@
       "additions": 115933,
       "deletions": 60054,
       "net": 55879,
+      "parallax": 41911,
       "nebula-web": 5124,
       "nebula": -1575,
       "nebula-desktop": 4002,
-      "parallax": 41911,
       "nebula-mobile": 6216,
       "nebula-metabase": 201
     },
@@ -2236,13 +2236,13 @@
       "additions": 91272,
       "deletions": 36373,
       "net": 54899,
+      "parallax": 1098,
       "nebula-web": 8033,
       "dotfiles": -258,
       "nebula": 10684,
       "nebula-desktop": 27325,
-      "wowaddon": 252,
-      "parallax": 1098,
-      "nebula-mobile": 7765
+      "nebula-mobile": 7765,
+      "wowaddon": 252
     },
     {
       "date": "2026-06-28",
@@ -2250,10 +2250,10 @@
       "additions": 93986,
       "deletions": 53962,
       "net": 40024,
+      "parallax": 25033,
       "nebula-web": 1615,
       "nebula": 10172,
       "nebula-desktop": 1705,
-      "parallax": 25033,
       "nebula-mobile": 1499
     },
     {
@@ -2262,11 +2262,11 @@
       "additions": 56333,
       "deletions": 37958,
       "net": 18375,
+      "parallax": 22925,
       "nebula-web": 14,
       "dotfiles": 1371,
       "nebula": -5594,
       "nebula-desktop": -327,
-      "parallax": 22925,
       "nebula-mobile": -14,
       "oxide": 0
     },
@@ -2276,11 +2276,11 @@
       "additions": 106373,
       "deletions": 49749,
       "net": 56624,
+      "parallax": 2187,
       "nebula-web": 9545,
       "dotfiles": 1362,
       "nebula": 23487,
       "nebula-desktop": 12630,
-      "parallax": 2187,
       "nebula-mobile": 7413
     },
     {
@@ -2289,11 +2289,11 @@
       "additions": 72961,
       "deletions": 102636,
       "net": -29675,
+      "parallax": 7038,
       "nebula-web": -32490,
       "dotfiles": 912,
       "nebula": -9030,
       "nebula-desktop": 1997,
-      "parallax": 7038,
       "nebula-mobile": 1274,
       "nebula-ai-skill": 383,
       "nebula-metabase": 241
@@ -2304,11 +2304,11 @@
       "additions": 146547,
       "deletions": 109868,
       "net": 36679,
+      "parallax": -7073,
       "nebula-web": 1640,
       "dotfiles": 368,
       "nebula": 26927,
       "nebula-desktop": 7265,
-      "parallax": -7073,
       "nebula-mobile": 7552
     },
     {
@@ -2317,11 +2317,11 @@
       "additions": 112706,
       "deletions": 32907,
       "net": 79799,
+      "parallax": 6100,
       "nebula-web": 5133,
       "dotfiles": 55,
       "nebula": 41742,
       "nebula-desktop": 4625,
-      "parallax": 6100,
       "nebula-mobile": 21323,
       "nebula-metabase": 821
     },
@@ -2331,11 +2331,11 @@
       "additions": 87746,
       "deletions": 45578,
       "net": 42168,
+      "parallax": -7725,
       "nebula-web": -441,
       "dotfiles": 403,
       "nebula": 50371,
       "nebula-desktop": 66,
-      "parallax": -7725,
       "nebula-mobile": -506
     },
     {
@@ -2344,11 +2344,11 @@
       "additions": 101974,
       "deletions": 43521,
       "net": 58453,
+      "parallax": 5664,
       "nebula-web": 1445,
       "dotfiles": 189,
       "nebula": 35880,
       "nebula-desktop": 14183,
-      "parallax": 5664,
       "nebula-mobile": 1092
     },
     {
@@ -2357,9 +2357,9 @@
       "additions": 69727,
       "deletions": 32087,
       "net": 37640,
+      "parallax": 19973,
       "dotfiles": 220,
-      "nebula": 17447,
-      "parallax": 19973
+      "nebula": 17447
     },
     {
       "date": "2026-08-30",
@@ -2367,11 +2367,11 @@
       "additions": 73634,
       "deletions": 66586,
       "net": 7048,
+      "parallax": 928,
       "nebula-web": -1718,
       "dotfiles": 5,
       "nebula": 7703,
       "nebula-desktop": 140,
-      "parallax": 928,
       "nebula-mobile": -10
     },
     {
@@ -2380,11 +2380,11 @@
       "additions": 166182,
       "deletions": 46961,
       "net": 119221,
+      "parallax": 846,
       "nebula-web": 7909,
       "dotfiles": 399,
       "nebula": 30616,
       "nebula-desktop": 9577,
-      "parallax": 846,
       "nebula-mobile": 9838,
       "wow-raid-spectacle": 60036
     },
@@ -2395,15 +2395,15 @@
       "deletions": 39835,
       "net": 77604,
       "cjber.dev": 7251,
+      "parallax": 7082,
       "nebula-web": 1035,
       "dotfiles": 269,
       "nebula": 33877,
       "nebula-desktop": 4777,
-      "fastbrowse": 19815,
-      "parallax": 7082,
       "nebula-mobile": 1065,
-      "jev-ultrafast": 373,
       "fastbrowse-site": 888,
+      "fastbrowse": 19815,
+      "jev-ultrafast": 373,
       "nebula-metabase": 1172
     },
     {
@@ -2413,23 +2413,23 @@
       "deletions": 161003,
       "net": 309482,
       "cjber.dev": -4247,
-      "adventure-guide-forever": 49631,
+      "parallax": 3018,
       "dotfiles": 245,
       "nebula": 37878,
       "legacy-forever": 28854,
-      "tweaks-forever": 19853,
       "skillup-forever": 24178,
+      "tweaks-forever": 19853,
       "shortest-path-forever": 55576,
+      "adventure-guide-forever": 49631,
       "nebula-desktop": 5225,
-      "wowaddon": 7529,
+      "cjber": 13,
+      "fastbrowse-site": 2737,
       "nebula-docs": 124,
       "fastbrowse": 22088,
-      "parallax": 3018,
-      "sift": 26213,
+      "wowaddon": 7529,
       "nebula-ai-skill": 2384,
-      "fastbrowse-site": 2737,
+      "sift": 26213,
       ".github": 225,
-      "cjber": 13,
       "open-poker-bot": 14198,
       "nebula-metabase": 398,
       "work-orders-forever": 13362
@@ -2441,30 +2441,30 @@
       "deletions": 117044,
       "net": 250365,
       "cjber.dev": 700,
-      "adventure-guide-forever": 26542,
+      "parallax": 35825,
       "nebula-web": 141,
       "dotfiles": 67,
       "nebula": 56335,
+      "legacy-forever": 10231,
+      "skillup-forever": 11576,
+      "tweaks-forever": 13783,
+      "shortest-path-forever": 14770,
+      "adventure-guide-forever": 26542,
+      "nebula-desktop": 10848,
+      "nebula-mobile": 4408,
+      "cjber": 11,
       "bugpatrol": 3250,
       "fastbrowse-hosted": 0,
-      "legacy-forever": 10231,
-      "tweaks-forever": 13783,
-      "skillup-forever": 11576,
-      "shortest-path-forever": 14770,
-      "nebula-desktop": 10848,
-      "wowaddon": 3,
       "skills": 5826,
+      "fastbrowse-site": 79,
       "nebula-docs": 10,
       "fastbrowse": 20164,
-      "parallax": 35825,
-      "nebula-mobile": 4408,
+      "wowaddon": 3,
       "sift": 1035,
-      "kiln": 14126,
-      "fastbrowse-site": 79,
       ".github": 6,
-      "cjber": 11,
       "open-poker-bot": 3094,
       "nebula-metabase": 555,
+      "kiln": 14126,
       "work-orders-forever": 16980
     },
     {
@@ -2474,84 +2474,86 @@
       "deletions": 130926,
       "net": 218227,
       "cjber.dev": 444,
-      "adventure-guide-forever": 12509,
+      "parallax": 27388,
       "nebula-web": 10,
       "dotfiles": 823,
       "nebula": 81818,
+      "legacy-forever": 2671,
+      "skillup-forever": 11847,
+      "tweaks-forever": 5627,
+      "shortest-path-forever": 11318,
+      "adventure-guide-forever": 12509,
+      "nebula-desktop": 18520,
+      "nebula-mobile": 7331,
       "bugpatrol": 9,
       "fastbrowse-hosted": 3395,
-      "legacy-forever": 2671,
-      "tweaks-forever": 5627,
-      "skillup-forever": 11847,
-      "shortest-path-forever": 11318,
-      "nebula-desktop": 18520,
-      "wowaddon": -5,
       "skills": 2692,
+      "fastbrowse-site": 12995,
       "nebula-docs": 1879,
       "fastbrowse": 13799,
-      "parallax": 27388,
-      "nebula-mobile": 7331,
+      "wowaddon": -5,
       "jev-ultrafast": 1,
-      "sift": 700,
       "nebula-ai-skill": 400,
-      "kiln": 300,
-      "fastbrowse-site": 12995,
-      "nebula-metabase": -2,
+      "sift": 700,
       "berragan.co.uk": 1758,
+      "nebula-metabase": -2,
+      "kiln": 300,
       "work-orders-forever": 0
     },
     {
       "date": "2026-10-11",
       "weekTimestamp": 1791676800,
-      "additions": 53387,
-      "deletions": 8664,
-      "net": 44723,
-      "adventure-guide-forever": 6107,
-      "nebula": 3619,
-      "fastbrowse-hosted": 1834,
-      "legacy-forever": 2763,
-      "tweaks-forever": 6622,
-      "skillup-forever": 5832,
-      "shortest-path-forever": 7253,
+      "additions": 93294,
+      "deletions": 21168,
+      "net": 72126,
+      "parallax": 2603,
+      "nebula": 3404,
+      "legacy-forever": 5937,
+      "skillup-forever": 11871,
+      "tweaks-forever": 11515,
+      "shortest-path-forever": 12587,
+      "adventure-guide-forever": 7103,
+      "cjber": 0,
+      "fastbrowse-hosted": 3595,
+      "skills": 2552,
+      "fastbrowse-site": 669,
+      "fastbrowse": 9680,
       "wowaddon": 151,
-      "skills": 1507,
-      "fastbrowse": 7907,
-      "sift": 459,
-      "fastbrowse-site": 669
+      "sift": 459
     }
   ],
   "repoNames": [
     "cjber.dev",
-    "adventure-guide-forever",
+    "parallax",
     "nebula-web",
     "dotfiles",
     "nebula",
+    "legacy-forever",
+    "skillup-forever",
+    "tweaks-forever",
+    "shortest-path-forever",
+    "adventure-guide-forever",
+    "nebula-desktop",
+    "nebula-mobile",
+    "cjber",
     "bugpatrol",
     "fastbrowse-hosted",
-    "legacy-forever",
-    "tweaks-forever",
-    "skillup-forever",
-    "shortest-path-forever",
-    "nebula-desktop",
-    "wowaddon",
     "skills",
+    "fastbrowse-site",
     "nebula-docs",
     "fastbrowse",
-    "parallax",
-    "nebula-mobile",
-    "oxide",
+    "wowaddon",
     "jev-ultrafast",
-    "sift",
+    "oxide",
     "nebula-ai-skill",
-    "kiln",
-    "fastbrowse-site",
+    "sift",
     ".github",
-    "cjber",
     "open-poker-bot",
-    "nebula-metabase",
-    "wow-raid-spectacle",
     "berragan.co.uk",
+    "nebula-metabase",
+    "kiln",
     "work-orders-forever",
+    "wow-raid-spectacle",
     "hyprview",
     "footprint-explorer",
     "abm_liv",
@@ -2560,33 +2562,33 @@
     "ukcrawl",
     "ndvi",
     "reddit-footprint",
-    "ukroutes",
     "overture-uk",
+    "ukroutes",
     "ingestion-checks",
     "semantic-catalogue",
-    "semantic-catalogue-demo",
     "ger-wiki",
-    "reddit-connectivity",
+    "semantic-catalogue-demo",
     "dapr_modules",
     "reddit-model",
-    "thesis",
+    "reddit-connectivity",
     "access-to-everything",
+    "thesis",
     "cdrc-semantic-search",
     "reddit-geoext",
     "gds_modules",
     "gds",
-    "uolrmarkdown",
     "tweet-classification",
+    "uolrmarkdown",
     "georelations",
     "dissertation",
     "ward-lifetimes",
     "cjrmd"
   ],
-  "totalAdditions": 6206291,
-  "totalDeletions": 3570490,
-  "totalNet": 2635801,
+  "totalAdditions": 6246198,
+  "totalDeletions": 3582994,
+  "totalNet": 2663204,
   "calendar": {
-    "totalContributions": 14721,
+    "totalContributions": 14938,
     "weeks": [
       {
         "firstDay": "2025-10-12",
@@ -3319,7 +3321,7 @@
           {
             "date": "2026-02-16",
             "count": 60,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-02-17",
@@ -3404,7 +3406,7 @@
           {
             "date": "2026-03-03",
             "count": 60,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-03-04",
@@ -3434,7 +3436,7 @@
           {
             "date": "2026-03-08",
             "count": 71,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-03-09",
@@ -3799,7 +3801,7 @@
           {
             "date": "2026-05-11",
             "count": 66,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-12",
@@ -3859,7 +3861,7 @@
           {
             "date": "2026-05-22",
             "count": 63,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-23",
@@ -3894,7 +3896,7 @@
           {
             "date": "2026-05-28",
             "count": 70,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-05-29",
@@ -3924,12 +3926,12 @@
           {
             "date": "2026-06-02",
             "count": 62,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-03",
             "count": 66,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-04",
@@ -3939,7 +3941,7 @@
           {
             "date": "2026-06-05",
             "count": 70,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-06",
@@ -3959,7 +3961,7 @@
           {
             "date": "2026-06-08",
             "count": 75,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-09",
@@ -4019,7 +4021,7 @@
           {
             "date": "2026-06-19",
             "count": 141,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-06-20",
@@ -4034,12 +4036,12 @@
           {
             "date": "2026-06-21",
             "count": 75,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-06-22",
             "count": 122,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-06-23",
@@ -4059,7 +4061,7 @@
           {
             "date": "2026-06-26",
             "count": 118,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-06-27",
@@ -4159,7 +4161,7 @@
           {
             "date": "2026-07-13",
             "count": 63,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-07-14",
@@ -4174,7 +4176,7 @@
           {
             "date": "2026-07-16",
             "count": 67,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-07-17",
@@ -4204,7 +4206,7 @@
           {
             "date": "2026-07-21",
             "count": 129,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-07-22",
@@ -4239,12 +4241,12 @@
           {
             "date": "2026-07-27",
             "count": 191,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-07-28",
             "count": 63,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-07-29",
@@ -4254,7 +4256,7 @@
           {
             "date": "2026-07-30",
             "count": 65,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-07-31",
@@ -4279,7 +4281,7 @@
           {
             "date": "2026-08-03",
             "count": 143,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-08-04",
@@ -4289,7 +4291,7 @@
           {
             "date": "2026-08-05",
             "count": 68,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-08-06",
@@ -4364,7 +4366,7 @@
           {
             "date": "2026-08-18",
             "count": 64,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-08-19",
@@ -4374,7 +4376,7 @@
           {
             "date": "2026-08-20",
             "count": 148,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-08-21",
@@ -4409,7 +4411,7 @@
           {
             "date": "2026-08-26",
             "count": 63,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-08-27",
@@ -4484,7 +4486,7 @@
           {
             "date": "2026-09-08",
             "count": 73,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-09-09",
@@ -4529,12 +4531,12 @@
           {
             "date": "2026-09-16",
             "count": 62,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-09-17",
             "count": 191,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-09-18",
@@ -4559,12 +4561,12 @@
           {
             "date": "2026-09-21",
             "count": 135,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-22",
             "count": 147,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-23",
@@ -4599,17 +4601,17 @@
           {
             "date": "2026-09-28",
             "count": 206,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-09-29",
             "count": 121,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-30",
             "count": 146,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-10-01",
@@ -4624,7 +4626,7 @@
           {
             "date": "2026-10-03",
             "count": 186,
-            "level": 4
+            "level": 3
           }
         ]
       },
@@ -4649,7 +4651,7 @@
           {
             "date": "2026-10-07",
             "count": 136,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-10-08",
@@ -4659,7 +4661,7 @@
           {
             "date": "2026-10-09",
             "count": 197,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-10-10",
@@ -4698,8 +4700,13 @@
           },
           {
             "date": "2026-10-16",
-            "count": 86,
-            "level": 2
+            "count": 302,
+            "level": 4
+          },
+          {
+            "date": "2026-10-17",
+            "count": 1,
+            "level": 1
           }
         ]
       }
