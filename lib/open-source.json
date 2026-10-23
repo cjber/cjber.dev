@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:58:15.344Z",
+  "generatedAt": "2026-10-23T06:58:03.363Z",
   "username": "cjber",
   "repositories": [
     {
@@ -76,6 +76,13 @@
       "name": "cjber/dotfiles",
       "url": "https://github.com/cjber/dotfiles",
       "description": "My personal dotfiles; Arch Linux, Neovim etc.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/forever-core",
+      "url": "https://github.com/cjber/forever-core",
+      "description": null,
       "archived": false,
       "fork": false
     },
