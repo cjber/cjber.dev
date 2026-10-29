@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T06:46:57.733Z",
+  "generatedAt": "2026-10-29T06:47:48.375Z",
   "username": "cjber",
   "repositories": [
     {
@@ -27,6 +27,13 @@
       "name": "cjber/adventure-guide-forever",
       "url": "https://github.com/cjber/adventure-guide-forever",
       "description": "WoW: Forever addon: where to go next, for your level, on the world map.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/atlas-forever",
+      "url": "https://github.com/cjber/atlas-forever",
+      "description": null,
       "archived": false,
       "fork": false
     },
@@ -59,6 +66,13 @@
       "fork": false
     },
     {
+      "name": "cjber/commissions-forever",
+      "url": "https://github.com/cjber/commissions-forever",
+      "description": null,
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "cjber/dapr_modules",
       "url": "https://github.com/cjber/dapr_modules",
       "description": null,
@@ -76,6 +90,13 @@
       "name": "cjber/dotfiles",
       "url": "https://github.com/cjber/dotfiles",
       "description": "My personal dotfiles; Arch Linux, Neovim etc.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/field-guide-forever",
+      "url": "https://github.com/cjber/field-guide-forever",
+      "description": null,
       "archived": false,
       "fork": false
     },
@@ -112,6 +133,13 @@
       "url": "https://github.com/cjber/ger-wiki",
       "description": "Transformer based place name identification.",
       "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/hoard-forever",
+      "url": "https://github.com/cjber/hoard-forever",
+      "description": null,
+      "archived": false,
       "fork": false
     },
     {
