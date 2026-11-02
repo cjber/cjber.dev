@@ -16,7 +16,13 @@ function RepositoryRow({ repository }: { repository: Repository }) {
       {mark ? (
         // eslint-disable-next-line @next/next/no-img-element -- Preserve each project's existing mark.
         <img src={mark.icon} alt="" width={mark.wide ? 96 : 40} height="40" loading="lazy" className={`${mark.wide ? "w-24 bg-zinc-100 p-1" : "w-10"} h-10 object-contain shrink-0 rounded-md`} />
-      ) : <span className="w-10 shrink-0" aria-hidden />}
+      ) : (
+        <span className="w-10 h-10 shrink-0 rounded-md border border-border/60 text-muted-foreground grid place-items-center" aria-hidden>
+          <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10l2 2h6.5A1.5 1.5 0 0 1 20 7.5v11A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5z" />
+          </svg>
+        </span>
+      )}
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-4">
           <a href={repository.url} target="_blank" rel="noopener noreferrer" className="font-mono text-base hover:text-primary transition-colors break-words">

@@ -29,9 +29,24 @@
     "source": "https://github.com/cjber/hyprview/blob/main/.github/logo.svg",
     "wide": false
   },
+  "keeper": {
+    "icon": "/project-icons/keeper.svg",
+    "source": "https://github.com/cjber/keeper/blob/main/assets/logo.svg",
+    "wide": false
+  },
   "oxide": {
     "icon": "/project-icons/oxide.svg",
     "source": "https://github.com/cjber/oxide/blob/main/.github/logo.svg",
+    "wide": false
+  },
+  "cjber.dev": {
+    "icon": "/project-icons/cjber.dev.png",
+    "source": "https://github.com/cjber/cjber.dev/blob/main/app/favicon.ico",
+    "wide": false
+  },
+  "wow.cjber.dev": {
+    "icon": "/project-icons/wow.cjber.dev.svg",
+    "source": "https://github.com/cjber/wow.cjber.dev/blob/main/site/favicon.svg",
     "wide": false
   },
   "semantic-catalogue": {
