@@ -1,5 +1,5 @@
 {
-  "name": "cillian.dev",
+  "name": "cjber.dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "build-cv": "tsx scripts/build-cv-pdf.ts",
     "build": "npm run build-cv && next build",
     "lint": "eslint",
-    "fetch-open-source": "tsx scripts/fetch-open-source.ts"
+    "fetch-open-source": "tsx scripts/fetch-open-source.ts",
+    "check-sync": "tsx scripts/check-sync.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

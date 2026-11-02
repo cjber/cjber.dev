@@ -1,5 +1,6 @@
 import { writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
+import { githubFetch } from './github-fetch'
 import { config as loadEnv } from 'dotenv'
 
 loadEnv({ path: '.env.local' })
@@ -18,7 +19,6 @@ const PINNED_REPOS: Array<{ owner: string; name: string }> = [
   { owner: 'thirdweb-dev', name: 'js' },
   { owner: 'thirdweb-dev', name: 'engine' },
   { owner: 'cjber', name: 'cjber.dev' },
-  { owner: 'cjber', name: 'dotfiles' },
 ]
 
 if (!TOKEN) {
@@ -58,14 +58,14 @@ const baseHeaders = {
   Authorization: `Bearer ${TOKEN}`,
   Accept: 'application/vnd.github+json',
   'X-GitHub-Api-Version': '2022-11-28',
-  'User-Agent': 'cillian.dev-build',
+  'User-Agent': 'cjber.dev-build',
 }
 
 async function ghPaginate<T>(url: string): Promise<T[]> {
   const out: T[] = []
   let next: string | null = url
   while (next) {
-    const res: Response = await fetch(next, { headers: baseHeaders })
+    const res: Response = await githubFetch(next, { headers: baseHeaders })
     if (!res.ok) throw new Error(`GitHub ${res.status} ${next}`)
     const page = (await res.json()) as T[]
     out.push(...page)
@@ -84,7 +84,7 @@ function parseNext(link: string): string | null {
 }
 
 async function graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
-  const res = await fetch('https://api.github.com/graphql', {
+  const res = await githubFetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: { ...baseHeaders, 'Content-Type': 'application/json' },
     body: JSON.stringify({ query, variables }),
@@ -334,7 +334,7 @@ async function fetchCalendar() {
       }
     }
   `
-  const res = await fetch('https://api.github.com/graphql', {
+  const res = await githubFetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: { ...baseHeaders, 'Content-Type': 'application/json' },
     body: JSON.stringify({ query, variables: { login: USERNAME } }),

@@ -4,6 +4,8 @@ import { OpenSourceProjects } from '@/components/open-source-projects'
 import { LINKS, PUBLICATIONS } from '@/lib/cv'
 import {
   FastbrowseIcon,
+  KilnIcon,
+  PatrolIcon,
   NebulaIcon,
   ThirdwebIcon,
   ResearchIcon,
@@ -12,7 +14,7 @@ import {
 export const metadata = {
   title: 'Projects - Cillian Berragan',
   description:
-    'What Cillian Berragan has built: Nebula, fastbrowse, thirdweb AI, published research and open-source tools.',
+    'What Cillian Berragan has built: Nebula, fastbrowse, the patrols, kiln, thirdweb AI, published research and open-source tools.',
   alternates: { canonical: '/projects' },
 }
 
@@ -47,6 +49,28 @@ const ENTRIES: Entry[] = [
       { label: 'PyPI', href: 'https://pypi.org/project/fastbrowse/' },
     ],
     Icon: FastbrowseIcon,
+  },
+  {
+    name: 'The patrols',
+    description:
+      'Open-source agents that look after a codebase. bugpatrol tests an app and files the bugs it finds, sloppatrol refactors and cleans up code, speedpatrol makes measured performance improvements, and mergepatrol is a merge queue that resolves rebase conflicts.',
+    meta: 'Open source',
+    links: [
+      { label: 'bugpatrol', href: 'https://github.com/agent-labs-dev/bugpatrol' },
+      { label: 'sloppatrol', href: 'https://github.com/agent-labs-dev/sloppatrol' },
+      { label: 'speedpatrol', href: 'https://github.com/agent-labs-dev/speedpatrol' },
+      { label: 'mergepatrol', href: 'https://github.com/agent-labs-dev/mergepatrol' },
+      { label: 'mergepatrol.ai', href: 'https://mergepatrol.ai' },
+    ],
+    Icon: PatrolIcon,
+  },
+  {
+    name: 'kiln',
+    description:
+      'Every Claude Code, Codex and Pi session on the machine in one vim-keyed terminal list.',
+    meta: 'Open source',
+    primary: { label: 'GitHub', href: 'https://github.com/cjber/kiln' },
+    Icon: KilnIcon,
   },
   {
     name: 'thirdweb AI',

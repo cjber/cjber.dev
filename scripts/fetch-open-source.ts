@@ -1,5 +1,6 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { githubFetch } from './github-fetch'
 import { config } from 'dotenv'
 
 config({ path: '.env.local' })
@@ -13,7 +14,7 @@ const headers = {
 }
 
 async function get<T>(path: string): Promise<T> {
-  const response = await fetch(`https://api.github.com${path}`, { headers })
+  const response = await githubFetch(`https://api.github.com${path}`, { headers })
   if (!response.ok) throw new Error(`GitHub ${response.status}: ${path}`)
   return response.json() as Promise<T>
 }

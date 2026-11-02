@@ -1,25 +1,27 @@
 name: Refresh GitHub snapshot
 
-# Fetches a fresh contributions and LoC snapshot from the GitHub API and
-# commits the activity and public-project snapshots. The git push then triggers Cloudflare
-# Pages' git-integration auto-deploy, so the live site shows current
-# data without needing a CF deploy hook or CF-side GITHUB_TOKEN.
+# Fetches fresh activity and public-project snapshots, checks the site still
+# matches them, and lands the change on main through a pull request. The merge
+# triggers the Cloudflare deploy.
 #
-# Setup once:
-#   gh secret set GH_PAT -R cjber/cjber.dev
-# (paste a PAT with `repo` scope so the fetcher can read commits in
-# private thirdweb-dev repos. Public-only repos work with the default
-# secrets.GITHUB_TOKEN but Nebula needs `repo`.)
+# main requires signed commits, a pull request and the CI check, so the
+# snapshot commit goes through the GitHub API (which signs it) and the merge
+# waits for CI. GH_PAT is a token with `repo` scope: it reads commits in
+# private repos and, unlike GITHUB_TOKEN, opens pull requests that trigger CI.
+#
+# When the sync check fails, the job opens or updates one "Site out of sync"
+# issue with the list of fixes instead.
 
 on:
   schedule:
     - cron: '30 6 * * *'   # daily, 06:30 UTC
-  workflow_dispatch:       # manual trigger button
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'scripts/fetch-github-data.ts'
       - 'scripts/fetch-open-source.ts'
+      - 'scripts/github-fetch.ts'
       - '.github/workflows/refresh-github-stats.yml'
 
 concurrency:
@@ -29,15 +31,21 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
-      contents: write
+      contents: read
+    env:
+      GH_TOKEN: ${{ secrets.GH_PAT }}
+      BRANCH: data/refresh
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '22'
-          cache: 'npm'
+          cache: npm
 
       - run: npm ci --no-audit --no-fund
 
@@ -49,14 +57,66 @@ jobs:
           npm run fetch-data
           npm run fetch-open-source
 
-      - name: Commit if changed
+      - name: Check the site matches the snapshot
+        id: sync
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          set -o pipefail
+          npm run -s check-sync | tee sync.txt
+
+      - name: Report drift
+        if: failure() && steps.sync.outcome == 'failure'
+        run: |
+          {
+            echo 'The daily refresh found parts of the site that no longer match GitHub. Fix these, then rerun the "Refresh GitHub snapshot" workflow:'
+            echo
+            cat sync.txt
+            echo
+            echo "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > issue.md
+          number=$(gh issue list --state open --search 'in:title "Site out of sync"' --json number -q '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file issue.md
+          else
+            gh issue create --title 'Site out of sync' --body-file issue.md
+          fi
+
+      - name: Close the drift issue
+        run: |
+          number=$(gh issue list --state open --search 'in:title "Site out of sync"' --json number -q '.[0].number')
+          [ -z "$number" ] || gh issue close "$number" --comment "In sync again as of $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID."
+
+      - name: Commit the snapshot to a branch
+        id: commit
+        run: |
           if git diff --quiet -- lib/github-data.json lib/open-source.json; then
             echo "no snapshot changes"
             exit 0
           fi
-          git add lib/github-data.json lib/open-source.json
-          git commit -m "data: refresh GitHub snapshot ($(date -u +%Y-%m-%d))"
-          git push
+          head=$(git rev-parse HEAD)
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/heads/$BRANCH" -f sha="$head" -F force=true >/dev/null \
+            || gh api "repos/$GITHUB_REPOSITORY/git/refs" -f ref="refs/heads/$BRANCH" -f sha="$head" >/dev/null
+          jq -n \
+            --arg repo "$GITHUB_REPOSITORY" --arg branch "$BRANCH" --arg head "$head" \
+            --arg headline "data: refresh GitHub snapshot ($(date -u +%Y-%m-%d))" \
+            --arg activity "$(base64 -w0 lib/github-data.json)" \
+            --arg projects "$(base64 -w0 lib/open-source.json)" \
+            '{query: "mutation($input: CreateCommitOnBranchInput!) { createCommitOnBranch(input: $input) { commit { oid } } }",
+              variables: {input: {
+                branch: {repositoryNameWithOwner: $repo, branchName: $branch},
+                expectedHeadOid: $head,
+                message: {headline: $headline},
+                fileChanges: {additions: [
+                  {path: "lib/github-data.json", contents: $activity},
+                  {path: "lib/open-source.json", contents: $projects}]}}}}' \
+            | gh api graphql --input - >/dev/null
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Merge once CI passes
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -qx OPEN \
+            || gh pr create --head "$BRANCH" --title 'data: refresh GitHub snapshot' \
+                 --body 'Daily snapshot refresh from the "Refresh GitHub snapshot" workflow.'
+          until [ "$(gh pr checks "$BRANCH" --required --json name -q length 2>/dev/null || echo 0)" -gt 0 ]; do sleep 10; done
+          gh pr checks "$BRANCH" --required --watch --fail-fast
+          gh pr merge "$BRANCH" --squash --delete-branch

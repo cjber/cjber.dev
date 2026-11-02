@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { PROFILE } from "@/lib/cv";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cillian.dev"),
+  metadataBase: new URL(PROFILE.site),
   title: "Cillian Berragan",
   description:
     "Founding AI Engineer at Nebula, building AI agents and the backend that runs them. Author of fastbrowse. Previously thirdweb. PhD in NLP.",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://cillian.dev",
+    url: PROFILE.site,
     siteName: "Cillian Berragan",
     title: "Cillian Berragan",
     description: "Founding AI Engineer at Nebula. Author of fastbrowse.",

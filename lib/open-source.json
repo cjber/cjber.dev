@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T06:40:25.464Z",
+  "generatedAt": "2026-11-02T13:24:39.136Z",
   "username": "cjber",
   "repositories": [
     {
@@ -34,7 +34,7 @@
       "name": "cjber/atlas-forever",
       "url": "https://github.com/cjber/atlas-forever",
       "description": null,
-      "archived": false,
+      "archived": true,
       "fork": false
     },
     {
@@ -54,7 +54,7 @@
     {
       "name": "cjber/cjber.dev",
       "url": "https://github.com/cjber/cjber.dev",
-      "description": "Source for cillian.dev",
+      "description": "Source for cjber.dev",
       "archived": false,
       "fork": false
     },
@@ -84,13 +84,6 @@
       "url": "https://github.com/cjber/dissertation",
       "description": null,
       "archived": true,
-      "fork": false
-    },
-    {
-      "name": "cjber/dotfiles",
-      "url": "https://github.com/cjber/dotfiles",
-      "description": "My personal dotfiles; Arch Linux, Neovim etc.",
-      "archived": false,
       "fork": false
     },
     {
@@ -230,13 +223,6 @@
       "name": "cjber/shortest-path-forever",
       "url": "https://github.com/cjber/shortest-path-forever",
       "description": "The fastest way anywhere in WoW: Forever: walks, flight paths, boats, zeppelins, lifts, the tram and portals, guided turn by turn",
-      "archived": false,
-      "fork": false
-    },
-    {
-      "name": "cjber/skills",
-      "url": "https://github.com/cjber/skills",
-      "description": "Claude Code skills: /pr ships one green PR across two models, /deadcode proves code dead before deleting it",
       "archived": false,
       "fork": false
     },

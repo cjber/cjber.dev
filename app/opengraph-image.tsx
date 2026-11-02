@@ -29,7 +29,7 @@ export default function OpengraphImage() {
         <div style={{ fontSize: 30, marginTop: 48, color: '#737373' }}>
           AI agents and the systems that run them. Author of fastbrowse.
         </div>
-        <div style={{ fontSize: 28, marginTop: 72, color: '#525252' }}>cillian.dev</div>
+        <div style={{ fontSize: 28, marginTop: 72, color: '#525252' }}>{new URL(PROFILE.site).host}</div>
       </div>
     ),
     size,
