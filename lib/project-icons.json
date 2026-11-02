@@ -43,10 +43,5 @@
     "icon": "/project-icons/ukroutes.svg",
     "source": "https://github.com/cjber/ukroutes/blob/main/figs/logo/svg/logo-no-background.svg",
     "wide": true
-  },
-  "kiln": {
-    "icon": "/kiln.svg",
-    "source": "https://github.com/cjber/kiln/blob/main/assets/icon.svg",
-    "wide": false
   }
 }

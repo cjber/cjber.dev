@@ -72,12 +72,23 @@ export function FastbrowseIcon({ className }: IconProps) {
   )
 }
 
-export function DotfilesIcon({ className }: IconProps) {
-  // Terminal prompt: $ + cursor.
+export function KilnIcon({ className }: IconProps) {
+  // Kiln dome with a terminal prompt inside.
   return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M4 7l4 5-4 5" />
-      <path d="M12 17h8" />
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 20v-8a8 8 0 0 1 16 0v8" />
+      <path d="M9 12l3 3-3 3" />
+      <path d="M13 18h3" />
+    </svg>
+  )
+}
+
+export function PatrolIcon({ className }: IconProps) {
+  // Shield with a check mark.
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
+      <path d="M9 12l2 2 4-4" />
     </svg>
   )
 }

@@ -7,7 +7,7 @@ export const PROFILE = {
   employer: { name: 'Nebula', url: 'https://nebula.gg' },
   location: 'Glasgow, Scotland',
   email: 'cillian@berragan.co.uk',
-  site: 'https://cillian.dev',
+  site: 'https://cjber.dev',
   summary:
     'I build AI agents and the systems that run them. At Nebula I own the backend: agent execution, durable workflows and integrations with hundreds of apps. I also wrote fastbrowse, an open-source browser agent. PhD in natural language processing.',
 }
