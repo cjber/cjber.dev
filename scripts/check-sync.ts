@@ -42,8 +42,9 @@ const probe = (url: string) => url.replace('https://doi.org/', 'https://doi.org/
 async function checkLink(url: string) {
   try {
     const response = await fetch(probe(url), { redirect: 'follow', signal: AbortSignal.timeout(20_000) })
-    // 429 means the site rate-limits bots, not that the page is gone.
-    if (response.status >= 400 && response.status !== 429) problems.push(`${url} returns ${response.status}`)
+    // Sites such as X and Google Scholar answer CI runners with 403 or 429, so
+    // only a status that says the page is gone or the site is down counts.
+    if ([404, 410].includes(response.status) || response.status >= 500) problems.push(`${url} returns ${response.status}`)
   } catch (error) {
     problems.push(`${url} failed: ${String(error)}`)
   }

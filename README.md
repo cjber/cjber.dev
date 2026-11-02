@@ -16,5 +16,5 @@ CV page, the PDF, the homepage summary and the publication list.
 The projects page groups public repositories by type, from `lib/projects.ts`.
 Both GitHub snapshots refresh daily through a pull request that merges once CI
 passes. CI runs `check-sync`, which fails when a grouped repository is no longer
-public, an active public repository has no group, or an external link is broken.
+public, an active public repository has no group, or an external link returns 404, 410 or 5xx.
 A failing daily run opens a "Site out of sync" issue listing the fixes.
