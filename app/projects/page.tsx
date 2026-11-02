@@ -72,14 +72,7 @@ const ENTRIES: Entry[] = [
 function EntryRow({ entry }: { entry: Entry }) {
   const Icon = entry.Icon
   const titleHref = entry.primary?.href
-  const TitleEl: (props: React.HTMLAttributes<HTMLElement> & { href?: string }) => React.ReactElement =
-    titleHref
-      ? (p) => (
-          <a {...p} href={titleHref} target="_blank" rel="noopener noreferrer">
-            {p.children}
-          </a>
-        )
-      : (p) => <span {...p}>{p.children}</span>
+  const titleClass = 'text-foreground group-hover:text-primary transition-colors'
 
   return (
     <div className="group py-5 first:pt-2">
@@ -88,9 +81,13 @@ function EntryRow({ entry }: { entry: Entry }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline justify-between gap-3">
             <h3 className="font-mono text-base">
-              <TitleEl className="text-foreground group-hover:text-primary transition-colors">
-                {entry.name}
-              </TitleEl>
+              {titleHref ? (
+                <a href={titleHref} target="_blank" rel="noopener noreferrer" className={titleClass}>
+                  {entry.name}
+                </a>
+              ) : (
+                <span className={titleClass}>{entry.name}</span>
+              )}
             </h3>
             {entry.meta && (
               <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground shrink-0">
