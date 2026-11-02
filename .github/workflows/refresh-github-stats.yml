@@ -88,6 +88,7 @@ jobs:
       - name: Commit the snapshot to a branch
         id: commit
         run: |
+          set -o pipefail
           if git diff --quiet -- lib/github-data.json lib/open-source.json; then
             echo "no snapshot changes"
             exit 0
@@ -95,11 +96,14 @@ jobs:
           head=$(git rev-parse HEAD)
           gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/heads/$BRANCH" -f sha="$head" -F force=true >/dev/null \
             || gh api "repos/$GITHUB_REPOSITORY/git/refs" -f ref="refs/heads/$BRANCH" -f sha="$head" >/dev/null
+          # The activity snapshot is too large for a command-line argument.
+          base64 -w0 lib/github-data.json > "$RUNNER_TEMP/activity.b64"
+          base64 -w0 lib/open-source.json > "$RUNNER_TEMP/projects.b64"
           jq -n \
             --arg repo "$GITHUB_REPOSITORY" --arg branch "$BRANCH" --arg head "$head" \
             --arg headline "data: refresh GitHub snapshot ($(date -u +%Y-%m-%d))" \
-            --arg activity "$(base64 -w0 lib/github-data.json)" \
-            --arg projects "$(base64 -w0 lib/open-source.json)" \
+            --rawfile activity "$RUNNER_TEMP/activity.b64" \
+            --rawfile projects "$RUNNER_TEMP/projects.b64" \
             '{query: "mutation($input: CreateCommitOnBranchInput!) { createCommitOnBranch(input: $input) { commit { oid } } }",
               variables: {input: {
                 branch: {repositoryNameWithOwner: $repo, branchName: $branch},
