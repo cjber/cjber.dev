@@ -1,6 +1,6 @@
 import snapshot from '@/lib/open-source.json'
 import icons from '@/lib/project-icons.json'
-import { EXCLUDED, GROUPS, RESEARCH_GROUP } from '@/lib/projects'
+import { EXCLUDED, GROUPS, PROJECT_NAMES, RESEARCH_GROUP } from '@/lib/projects'
 
 type Repository = (typeof snapshot.repositories)[number]
 
@@ -9,6 +9,7 @@ const groups = [...GROUPS, { name: RESEARCH_GROUP, projects: [] as string[] }]
 
 function RepositoryRow({ repository }: { repository: Repository }) {
   const name = repository.name.split('/')[1]
+  const title = PROJECT_NAMES[name] ?? name
   const mark = icons[name as keyof typeof icons]
   return (
     <li className="py-4 flex items-start gap-4">
@@ -19,7 +20,7 @@ function RepositoryRow({ repository }: { repository: Repository }) {
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-4">
           <a href={repository.url} target="_blank" rel="noopener noreferrer" className="font-mono text-base hover:text-primary transition-colors break-words">
-            {name}
+            {title}
           </a>
           {repository.fork && <span className="font-mono text-xs text-muted-foreground">Fork</span>}
         </div>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T14:08:41.300Z",
+  "generatedAt": "2026-11-02T15:33:07.512Z",
   "username": "cjber",
   "repositories": [
     {
@@ -143,6 +143,13 @@
       "fork": false
     },
     {
+      "name": "cjber/keeper",
+      "url": "https://github.com/cjber/keeper",
+      "description": null,
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "cjber/kiln",
       "url": "https://github.com/cjber/kiln",
       "description": "Every Claude Code, Codex and Pi session on your machine in one vim-keyed terminal list",
@@ -280,6 +287,13 @@
       "url": "https://github.com/cjber/uolrmarkdown",
       "description": null,
       "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/wow.cjber.dev",
+      "url": "https://github.com/cjber/wow.cjber.dev",
+      "description": "Website for the WoW: Forever addons",
+      "archived": false,
       "fork": false
     }
   ]
