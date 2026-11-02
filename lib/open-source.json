@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T13:10:00.408Z",
+  "generatedAt": "2026-11-02T13:24:39.136Z",
   "username": "cjber",
   "repositories": [
     {
@@ -54,7 +54,7 @@
     {
       "name": "cjber/cjber.dev",
       "url": "https://github.com/cjber/cjber.dev",
-      "description": "Source for cillian.dev",
+      "description": "Source for cjber.dev",
       "archived": false,
       "fork": false
     },
