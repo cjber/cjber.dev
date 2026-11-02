@@ -1,12 +1,11 @@
 name: Refresh GitHub snapshot
 
 # Fetches fresh activity and public-project snapshots, checks the site still
-# matches them, and lands the change on main through a pull request. The merge
-# triggers the Cloudflare deploy.
+# matches them, and queues a pull request with the change in Mergepatrol,
+# which merges it once CI passes. The merge triggers the Cloudflare deploy.
 #
 # main requires signed commits, a pull request and the CI check, so the
-# snapshot commit goes through the GitHub API (which signs it) and the merge
-# waits for CI. GH_PAT is a token with `repo` scope: it reads commits in
+# snapshot commit goes through the GitHub API (which signs it). GH_PAT is a token with `repo` scope: it reads commits in
 # private repos and, unlike GITHUB_TOKEN, opens pull requests that trigger CI.
 #
 # When the sync check fails, the job opens or updates one "Site out of sync"
@@ -115,12 +114,10 @@ jobs:
             | gh api graphql --input - >/dev/null
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Merge once CI passes
+      - name: Queue the pull request
         if: steps.commit.outputs.changed == 'true'
         run: |
           gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -qx OPEN \
             || gh pr create --head "$BRANCH" --title 'data: refresh GitHub snapshot' \
                  --body 'Daily snapshot refresh from the "Refresh GitHub snapshot" workflow.'
-          until [ "$(gh pr checks "$BRANCH" --required --json name -q length 2>/dev/null || echo 0)" -gt 0 ]; do sleep 10; done
-          gh pr checks "$BRANCH" --required --watch --fail-fast
-          gh pr merge "$BRANCH" --squash --delete-branch
+          gh pr edit "$BRANCH" --add-label mergepatrol
