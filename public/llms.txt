@@ -1,0 +1,13 @@
+# cjber.dev
+
+> Cillian Berragan's site: research, writing and open source. The tools below are built for coding agents to drive, and each ships a skill that tells an agent how.
+
+## Tools for agents
+
+- [keeper](https://keeper.cjber.dev/llms.txt): keeps an Arch machine clean, with your agent doing the deciding. Skill: `npx skills add cjber/keeper`
+- [kiln](https://kiln.cjber.dev/llms.txt): every Claude Code, Codex, OpenCode and Pi session on a machine in one terminal list. Skills: `npx skills add cjber/kiln`
+
+## Other projects
+
+- [WoW: Forever addons](https://wow.cjber.dev): free addons for questing, travel, professions and challenges
+- [Projects](https://cjber.dev/projects): everything else, with source on [GitHub](https://github.com/cjber)
