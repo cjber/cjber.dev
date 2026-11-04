@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:33:07.512Z",
+  "generatedAt": "2026-11-03T11:12:06.000Z",
   "username": "cjber",
   "repositories": [
     {
@@ -293,6 +293,13 @@
       "name": "cjber/wow.cjber.dev",
       "url": "https://github.com/cjber/wow.cjber.dev",
       "description": "Website for the WoW: Forever addons",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/zerosprey42-binds",
+      "url": "https://github.com/cjber/zerosprey42-binds",
+      "description": "Plan WoW: Forever keybinds, levels and macros for the Zerosprey42",
       "archived": false,
       "fork": false
     }

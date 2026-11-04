@@ -21,6 +21,7 @@ export const PROJECT_NAMES: Record<string, string> = {
   'shortest-path-forever': 'Shortest Path Forever',
   'skillup-forever': 'SkillUp Forever',
   'tweaks-forever': 'Tweaks Forever',
+  'zerosprey42-binds': 'Zerosprey42 Binds',
 }
 
 export const GROUPS = [
@@ -33,6 +34,7 @@ export const GROUPS = [
       'shortest-path-forever',
       'skillup-forever',
       'tweaks-forever',
+      'zerosprey42-binds',
     ],
   },
   { name: 'Personal website', projects: ['cjber.dev', 'wow.cjber.dev'] },
