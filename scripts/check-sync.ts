@@ -39,14 +39,19 @@ const links = new Set(
 // whether the DOI resolves instead of fetching the article.
 const probe = (url: string) => url.replace('https://doi.org/', 'https://doi.org/api/handles/')
 
+// A runner's network drops the odd request ("fetch failed"), so a link only
+// counts as broken after it fails twice.
 async function checkLink(url: string) {
-  try {
-    const response = await fetch(probe(url), { redirect: 'follow', signal: AbortSignal.timeout(20_000) })
-    // Sites such as X and Google Scholar answer CI runners with 403 or 429, so
-    // only a status that says the page is gone or the site is down counts.
-    if ([404, 410].includes(response.status) || response.status >= 500) problems.push(`${url} returns ${response.status}`)
-  } catch (error) {
-    problems.push(`${url} failed: ${String(error)}`)
+  for (const attempt of [1, 2]) {
+    try {
+      const response = await fetch(probe(url), { redirect: 'follow', signal: AbortSignal.timeout(20_000) })
+      // Sites such as X and Google Scholar answer CI runners with 403 or 429, so
+      // only a status that says the page is gone or the site is down counts.
+      if ([404, 410].includes(response.status) || response.status >= 500) problems.push(`${url} returns ${response.status}`)
+      return
+    } catch (error) {
+      if (attempt === 2) problems.push(`${url} failed: ${String(error)}`)
+    }
   }
 }
 
