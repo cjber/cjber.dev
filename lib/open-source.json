@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:42:17.508Z",
+  "generatedAt": "2026-11-06T06:43:03.837Z",
   "username": "cjber",
   "repositories": [
     {
@@ -131,8 +131,8 @@
     {
       "name": "cjber/hoard-forever",
       "url": "https://github.com/cjber/hoard-forever",
-      "description": null,
-      "archived": false,
+      "description": "Retired, no longer maintained: use Baganator instead. Was an inventory search addon for WoW: Forever.",
+      "archived": true,
       "fork": false
     },
     {
