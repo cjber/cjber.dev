@@ -27,6 +27,8 @@ concurrency:
   group: refresh-github-snapshot
   cancel-in-progress: false
 
+permissions: {}
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
