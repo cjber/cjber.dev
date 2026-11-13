@@ -1,0 +1,27 @@
+warnDays: 30
+staleDays: 365
+idleDays: 90
+secretPatterns: []
+ignore: []
+credentialNames: []
+ignorePaths: []
+sources: []
+keys:
+  - id: gh-pat
+    service: github
+    group: site
+    owner: cjber
+    locations:
+      - github: GH_PAT
+    expires: unknown
+    limit: none
+    note: a token with repo scope; refresh-github-stats.yml reads private commits and opens the snapshot pull request with it
+  - id: cloudflare-api-token
+    service: cloudflare
+    group: site
+    owner: cjber
+    locations:
+      - github: CLOUDFLARE_API_TOKEN
+    expires: unknown
+    limit: none
+    note: no workflow reads it; last set 2025-09-07
