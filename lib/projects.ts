@@ -22,15 +22,19 @@ export const PROJECT_NAMES: Record<string, string> = {
   'skillup-forever': 'SkillUp Forever',
   'tweaks-forever': 'Tweaks Forever',
   'zerosprey42-binds': 'Zerosprey42 Binds',
+  'kiln-forever': 'Kiln Forever',
+  'macro-assist-forever': 'Macro Assist Forever',
 }
 
 export const GROUPS = [
-  { name: 'Developer tools', projects: ['keeper', 'oxide', 'hyprview'] },
+  { name: 'Developer tools', projects: ['deskpilot', 'keeper', 'oxide', 'hyprview', 'wowaddon'] },
   {
     name: 'WoW addons',
     projects: [
       'adventure-guide-forever',
+      'kiln-forever',
       'legacy-forever',
+      'macro-assist-forever',
       'shortest-path-forever',
       'skillup-forever',
       'tweaks-forever',

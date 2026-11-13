@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T06:50:46.228Z",
+  "generatedAt": "2026-11-12T14:37:34.966Z",
   "username": "cjber",
   "repositories": [
     {
@@ -68,7 +68,7 @@
     {
       "name": "cjber/commissions-forever",
       "url": "https://github.com/cjber/commissions-forever",
-      "description": null,
+      "description": "Tracks repeatable Classic turn-ins and the materials in your bags, for WoW: Forever",
       "archived": false,
       "fork": false
     },
@@ -77,6 +77,13 @@
       "url": "https://github.com/cjber/dapr_modules",
       "description": null,
       "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/deskpilot",
+      "url": "https://github.com/cjber/deskpilot",
+      "description": "Desktop control for agents on Hyprland: window-relative screenshots, clicks and keys that leave the user's pointer and focus alone",
+      "archived": false,
       "fork": false
     },
     {
@@ -89,14 +96,14 @@
     {
       "name": "cjber/field-guide-forever",
       "url": "https://github.com/cjber/field-guide-forever",
-      "description": null,
+      "description": "A cosmetic creature catalogue for WoW: Forever: track kills and the bronze, silver, gold and shiny spawns you meet zone by zone",
       "archived": false,
       "fork": false
     },
     {
       "name": "cjber/forever-core",
       "url": "https://github.com/cjber/forever-core",
-      "description": null,
+      "description": "The shared library every WoW: Forever addon needs: tracker column, report window, leaderboards, log and settings chrome",
       "archived": false,
       "fork": false
     },
@@ -145,7 +152,7 @@
     {
       "name": "cjber/keeper",
       "url": "https://github.com/cjber/keeper",
-      "description": null,
+      "description": "Keeps an Arch machine clean, with your agent doing the deciding: stale worktrees, caches, orphans and agent leftovers",
       "archived": false,
       "fork": false
     },
@@ -157,9 +164,23 @@
       "fork": false
     },
     {
+      "name": "cjber/kiln-forever",
+      "url": "https://github.com/cjber/kiln-forever",
+      "description": "Watch and steer kiln agent sessions from inside WoW: Forever",
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "cjber/legacy-forever",
       "url": "https://github.com/cjber/legacy-forever",
       "description": "WoW: Forever addon: your unfinished Legacy challenges on the world map, with live progress in the objective tracker.",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/macro-assist-forever",
+      "url": "https://github.com/cjber/macro-assist-forever",
+      "description": "Autocomplete, line numbers and live checks in WoW: Forever's macro window",
       "archived": false,
       "fork": false
     },
@@ -293,6 +314,13 @@
       "name": "cjber/wow.cjber.dev",
       "url": "https://github.com/cjber/wow.cjber.dev",
       "description": "Website for the WoW: Forever addons",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/wowaddon",
+      "url": "https://github.com/cjber/wowaddon",
+      "description": "Find, install, update and remove WoW addons from GitHub, CurseForge, WoWInterface, Tukui and Wago, from the command line or a TUI",
       "archived": false,
       "fork": false
     },
