@@ -4,11 +4,11 @@ Source for cjber.dev: Next.js, deployed on Cloudflare Workers. `lib/github-data.
 
 ## Commands
 
-- `npm ci`, then `npm run lint`, `npx tsc --noEmit`, `npm run check-sync` and `npm run build`: the `check` job.
+- `npm ci`, then `npm run gate` (lint, typecheck, check-sync) or `npm run gate:changed` (eslint on changed files, then typecheck and check-sync). CI's `check` job adds `npm run build`.
 - `npm run fetch-data` and `npm run fetch-open-source` refresh the snapshots; `npm run dev` serves the site.
 
 CI runs `check`, `workflows` (actionlint, zizmor) and `secrets` (gitleaks); the ruleset requires them by name.
 
 ## Standards
 
-- `repo-standards`: the RS-* requirements every cjber repo meets (repo, Actions and security settings, rulesets, CI hardening, community files), a skill in cjber/skills whose `audit.py` checks this repo
+- `repo-standards`: the RS-* requirements every cjber and agent-labs-dev repo meets; its `audit.py` checks this repo.

@@ -9,7 +9,9 @@
     "build": "npm run build-cv && next build",
     "lint": "eslint",
     "fetch-open-source": "tsx scripts/fetch-open-source.ts",
-    "check-sync": "tsx scripts/check-sync.ts"
+    "check-sync": "tsx scripts/check-sync.ts",
+    "gate": "eslint && tsc --noEmit && npm run check-sync",
+    "gate:changed": "scripts/gate-changed.sh"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
