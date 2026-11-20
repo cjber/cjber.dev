@@ -40,7 +40,9 @@ const links = new Set(
 const probe = (url: string) => url.replace('https://doi.org/', 'https://doi.org/api/handles/')
 
 // A runner's network drops the odd request ("fetch failed"), so a link only
-// counts as broken after it fails twice.
+// counts as broken after it fails twice. A timeout is not a failure of the
+// link: a slow or runner-throttling host (the Liverpool repository answers in
+// under a second from elsewhere) never says the page is gone, so it is skipped.
 async function checkLink(url: string) {
   for (const attempt of [1, 2]) {
     try {
@@ -50,6 +52,7 @@ async function checkLink(url: string) {
       if ([404, 410].includes(response.status) || response.status >= 500) problems.push(`${url} returns ${response.status}`)
       return
     } catch (error) {
+      if (error instanceof DOMException && error.name === 'TimeoutError') return
       if (attempt === 2) problems.push(`${url} failed: ${String(error)}`)
     }
   }

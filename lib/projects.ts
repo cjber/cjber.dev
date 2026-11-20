@@ -26,6 +26,10 @@ export const PROJECT_NAMES: Record<string, string> = {
   'macro-assist-forever': 'Macro Assist Forever',
 }
 
+// Public repositories that live outside the user account, as owner/name. The
+// snapshot fetches them by name; the user's repository list never includes them.
+export const EXTRA_REPOSITORIES = ['agent-labs-dev/deskpilot']
+
 export const GROUPS = [
   { name: 'Developer tools', projects: ['deskpilot', 'keeper', 'oxide', 'hyprview', 'wowaddon'] },
   {
