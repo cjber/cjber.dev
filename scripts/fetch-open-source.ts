@@ -1,5 +1,6 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { EXTRA_REPOSITORIES } from '../lib/projects'
 import { githubFetch } from './github-fetch'
 import { config } from 'dotenv'
 
@@ -35,6 +36,13 @@ async function main() {
     repositories.push(...batch.filter(repo => !repo.private))
     if (batch.length < 100) break
   }
+
+  for (const fullName of EXTRA_REPOSITORIES) {
+    if (repositories.some(repo => repo.full_name === fullName)) continue
+    const repo = await get<Repository>(`/repos/${fullName}`)
+    if (!repo.private) repositories.push(repo)
+  }
+  repositories.sort((a, b) => a.full_name.localeCompare(b.full_name))
 
   const snapshot = {
     generatedAt: new Date().toISOString(),

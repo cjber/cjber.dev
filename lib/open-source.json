@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-11-18T15:58:59.765Z",
+  "generatedAt": "2026-11-20T02:12:42.437Z",
   "username": "cjber",
   "repositories": [
+    {
+      "name": "agent-labs-dev/deskpilot",
+      "url": "https://github.com/agent-labs-dev/deskpilot",
+      "description": "Desktop control for agents on Hyprland: window-relative screenshots, clicks and keys that leave the user's pointer and focus alone",
+      "archived": false,
+      "fork": false
+    },
     {
       "name": "cjber/.github",
       "url": "https://github.com/cjber/.github",
@@ -77,13 +84,6 @@
       "url": "https://github.com/cjber/dapr_modules",
       "description": null,
       "archived": true,
-      "fork": false
-    },
-    {
-      "name": "cjber/deskpilot",
-      "url": "https://github.com/cjber/deskpilot",
-      "description": "Desktop control for agents on Hyprland: window-relative screenshots, clicks and keys that leave the user's pointer and focus alone",
-      "archived": false,
       "fork": false
     },
     {
