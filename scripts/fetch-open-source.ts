@@ -38,6 +38,7 @@ async function main() {
   }
 
   for (const fullName of EXTRA_REPOSITORIES) {
+    if (repositories.some(repo => repo.full_name === fullName)) continue
     const repo = await get<Repository>(`/repos/${fullName}`)
     if (!repo.private) repositories.push(repo)
   }
