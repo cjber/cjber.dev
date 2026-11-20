@@ -44,6 +44,7 @@ const probe = (url: string) => url.replace('https://doi.org/', 'https://doi.org/
 // link: a slow or runner-throttling host (the Liverpool repository answers in
 // under a second from elsewhere) never says the page is gone, so it is skipped.
 async function checkLink(url: string) {
+  let failure = ''
   for (const attempt of [1, 2]) {
     try {
       const response = await fetch(probe(url), { redirect: 'follow', signal: AbortSignal.timeout(20_000) })
@@ -52,8 +53,13 @@ async function checkLink(url: string) {
       if ([404, 410].includes(response.status) || response.status >= 500) problems.push(`${url} returns ${response.status}`)
       return
     } catch (error) {
-      if (error instanceof DOMException && error.name === 'TimeoutError') return
-      if (attempt === 2) problems.push(`${url} failed: ${String(error)}`)
+      if (error instanceof DOMException && error.name === 'TimeoutError') {
+        // A timeout after a real failure still leaves that failure standing.
+        if (failure) problems.push(failure)
+        return
+      }
+      failure = `${url} failed: ${String(error)}`
+      if (attempt === 2) problems.push(failure)
     }
   }
 }
