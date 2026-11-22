@@ -17,6 +17,9 @@ export const EXCLUDED = [
 // Product names for repositories whose slug is not the name to show.
 export const PROJECT_NAMES: Record<string, string> = {
   'adventure-guide-forever': 'Adventure Guide Forever',
+  'gathering-guide-forever': 'Gathering Guide Forever',
+  'ledger-forever': 'Ledger Forever',
+  'tradewind-forever': 'Tradewind Forever',
   'legacy-forever': 'Legacy Forever',
   'shortest-path-forever': 'Shortest Path Forever',
   'skillup-forever': 'SkillUp Forever',
@@ -36,11 +39,14 @@ export const GROUPS = [
     name: 'WoW addons',
     projects: [
       'adventure-guide-forever',
+      'gathering-guide-forever',
       'kiln-forever',
+      'ledger-forever',
       'legacy-forever',
       'macro-assist-forever',
       'shortest-path-forever',
       'skillup-forever',
+      'tradewind-forever',
       'tweaks-forever',
       'zerosprey42-binds',
     ],

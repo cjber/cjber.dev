@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T02:41:06.201Z",
+  "generatedAt": "2026-11-22T02:12:33.022Z",
   "username": "cjber",
   "repositories": [
     {
@@ -108,6 +108,13 @@
       "fork": false
     },
     {
+      "name": "cjber/gathering-guide-forever",
+      "url": "https://github.com/cjber/gathering-guide-forever",
+      "description": "Gathering tours for WoW: Forever: the best Mining and Herbalism zones for your skill, a node tour on the map, and farm lists.",
+      "archived": false,
+      "fork": false
+    },
+    {
       "name": "cjber/gds",
       "url": "https://github.com/cjber/gds",
       "description": null,
@@ -159,7 +166,7 @@
     {
       "name": "cjber/kiln",
       "url": "https://github.com/cjber/kiln",
-      "description": "Every Claude Code, Codex and Pi session on your machine in one vim-keyed terminal list",
+      "description": "Run Claude Code, Codex, OpenCode, Pi, Muse and Antigravity sessions in one vim-keyed list. Agents message, interrupt and spawn each other; usage-limit failover; Android client.",
       "archived": false,
       "fork": false
     },
@@ -167,6 +174,13 @@
       "name": "cjber/kiln-forever",
       "url": "https://github.com/cjber/kiln-forever",
       "description": "Watch and steer kiln agent sessions from inside WoW: Forever",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "name": "cjber/ledger-forever",
+      "url": "https://github.com/cjber/ledger-forever",
+      "description": "One progress book for WoW: Forever: daily orders, zone stamps and a cosmetic rank ladder",
       "archived": false,
       "fork": false
     },
@@ -266,6 +280,13 @@
       "url": "https://github.com/cjber/thesis",
       "description": "PhD Thesis at the University of Liverpool. Built using Quarto Thesis template: nmfs-opensci/quarto-thesis",
       "archived": true,
+      "fork": false
+    },
+    {
+      "name": "cjber/tradewind-forever",
+      "url": "https://github.com/cjber/tradewind-forever",
+      "description": "Crafting profit list across all your WoW: Forever characters",
+      "archived": false,
       "fork": false
     },
     {
